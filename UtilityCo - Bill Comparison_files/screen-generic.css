@@ -2720,7 +2720,7 @@ body,
 }
 #colorbox,
 #cboxOverlay,
-#cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxWrapper{position:absolute; top:0; left:0; z-index:99999; overflow:hidden;}
 #cboxOverlay{position:fixed; width:100%; height:100%;}
 #cboxMiddleLeft, #cboxBottomLeft{clear:left;}
 #cboxContent{position:relative; overflow:hidden;}
@@ -2733,7 +2733,7 @@ body,
 #cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
 #cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
 
-#cboxOverlay{background:#333;}
+#cboxOverlay{background:#333; }
 #colorbox{
   font-size: 13px;
   background:#fff;

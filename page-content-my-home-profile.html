@@ -629,16 +629,18 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 <div id="home-energy-analyses-q">
 	<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
    <style>
-	   		#home-energy-analyses-q {
-		   		position: relative;
-		   		z-index: 0;
-	   		}
+			#home-energy-analyses-q {
+				position: relative;
+				z-index: 0;
+				height:650px
+			}
         .hea-quiz {
           overflow: hidden;
           width:900px;
           height:650px;
           clear:both;
           margin:0 0 20px 0;
+		  position:relative;
         }
 
           .hea-quiz img {
@@ -647,16 +649,30 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 
           .hea-center {
-            width:50%;
+	  	 	position:absolute;
+	   	 	bottom:155px;
+			right:0;
+	        width:11%;
             margin:0 auto;
+			z-index:1000;
           }
 
           .prevControl,
           .nextControl {
-            padding:10px;
-            background:#e9e9e9;
+			color:#107cb2;
+            padding:10px 17px;
+            background:#fff;
             font-size:14px;
-            cursor:pointer;
+            cursor:pointer; 
+			border-radius: 4px;
+			border:1px solid #E1E1E1;
+			-webkit-transition: all 0.2s;
+			-moz-transition: all 0.2s;
+			transition: all 0.2s; 
+			display: inline-block; 
+			font-weight: normal;
+			position: relative;
+			text-align: center;  
           }
 
 
@@ -664,9 +680,12 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
           .nextControl {float:right;}
   </style>
 
-    <div class="hea-quiz cycle-slideshow"
-          data-cycle-prev=".prevControl"
-          data-cycle-next=".nextControl">
+
+	  <div class="hea-quiz cycle-slideshow"
+		   data-timeout="0"
+	          data-cycle-fx="fadeout" 
+    	data-cycle-prev=".prevControl"
+      	data-cycle-next=".nextControl" >
 
               <img src="images-hea-slider/step-1.png">
               <img src="images-hea-slider/step-2.png">
@@ -686,19 +705,14 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
               <img src="images-hea-slider/step-16.jpg">
               <img src="images-hea-slider/step-17.jpg">
 
-              <div class="hea-center">
-                 <span class="prevControl" >&#8592; Prev </span>
-                 <span class="nextControl" > Next &#8594;</span>
-              </div>
+            
     </div><!-- eo / hea-quiz -->
-
+  <div class="hea-center">
+                 <span class="prevControl" >&#8595;</span>
+                 <span class="nextControl" >&#8593;</span>
+              </div>
     <script>
-      $('.cycle-slideshow').cycle({
-//           speed: 600,
-          manualSpeed: 100,
-          timeout: 0,
-
-      });
+      $('.cycle-slideshow').cycle('stop');
     </script>
 </div>
 <!-- END HEA -->
