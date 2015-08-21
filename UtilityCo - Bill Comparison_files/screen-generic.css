@@ -7902,7 +7902,8 @@ margin-left: 1em;
 #widget-container-opower #nav-tabbed .here a:hover,
 #widget-container-opower .whats-this,
 #widget-container-opower #cboxClose {
-	color: #0099cc;
+/* 	color: #0099cc; */
+	color: #cc0033;
 }
 #widget-container-opower .friends-you:after {
 	border-color: transparent transparent #0099cc;
