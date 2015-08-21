@@ -617,6 +617,101 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 	</div>
 
 
+
+
+
+
+
+
+
+
+<!-- START HEA -->
+<div id="home-energy-analyses-q">
+	<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+   <style>
+	   		#home-energy-analyses-q {
+		   		position: relative;
+		   		z-index: 0;
+	   		}
+        .hea-quiz {
+          overflow: hidden;
+          width:900px;
+          height:650px;
+          clear:both;
+          margin:0 0 20px 0;
+        }
+
+          .hea-quiz img {
+/*             width:95%; */
+          }
+
+
+          .hea-center {
+            width:50%;
+            margin:0 auto;
+          }
+
+          .prevControl,
+          .nextControl {
+            padding:10px;
+            background:#e9e9e9;
+            font-size:14px;
+            cursor:pointer;
+          }
+
+
+          .prevControl {float:left;}
+          .nextControl {float:right;}
+  </style>
+
+    <div class="hea-quiz cycle-slideshow"
+          data-cycle-prev=".prevControl"
+          data-cycle-next=".nextControl">
+
+              <img src="images-hea-slider/step-1.png">
+              <img src="images-hea-slider/step-2.png">
+              <img src="images-hea-slider/step-3.jpg">
+              <img src="images-hea-slider/step-4.jpg">
+              <img src="images-hea-slider/step-5.jpg">
+              <img src="images-hea-slider/step-6.jpg">
+              <img src="images-hea-slider/step-7.jpg">
+              <img src="images-hea-slider/step-8.jpg">
+              <img src="images-hea-slider/step-9.jpg">
+              <img src="images-hea-slider/step-10.jpg">
+              <img src="images-hea-slider/step-11.jpg">
+              <img src="images-hea-slider/step-12.jpg">
+              <img src="images-hea-slider/step-13.jpg">
+              <img src="images-hea-slider/step-14.jpg">
+              <img src="images-hea-slider/step-15.jpg">
+              <img src="images-hea-slider/step-16.jpg">
+              <img src="images-hea-slider/step-17.jpg">
+
+              <div class="hea-center">
+                 <span class="prevControl" >&#8592; Prev </span>
+                 <span class="nextControl" > Next &#8594;</span>
+              </div>
+    </div><!-- eo / hea-quiz -->
+
+    <script>
+      $('.cycle-slideshow').cycle({
+//           speed: 600,
+          manualSpeed: 100,
+          timeout: 0,
+
+      });
+    </script>
+</div>
+<!-- END HEA -->
+
+
+
+
+
+
+
+
+
+
                     <span id="DeltaPlaceHolderMain">
 
 	<div class="welcome welcome-links">
@@ -668,120 +763,15 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 
 <!-- START INSERT INSERT -->
-<div id="widget-container-opower">
-
-
-<link rel="stylesheet" href="UtilityCo - Bill Comparison_files/screen-generic.css" type="text/css">
-<link rel="stylesheet" href="UtilityCo - Bill Comparison_files/style.css" type="text/css">
-
-
-<!-- popup box cerated by js. content on the bottom of this file -->
-    <div id="colorbox" class="" style="padding-bottom: 40px; padding-right: 40px; display: none;"></div>
-
-<!-- content -->
-    <div id="wrapper">
-        <div id="content">
-            <div class="row module">
-                <h2 class="moduleHeading">Compare my bills</h2>
-
-                <div class="section billCompare" id="billCompare">
-                    <div class="hr short"></div>
-<!-- graph bar column, left -->
-                    <div class="col col11">
-                        <div class="graph">
-                            <div class="bar">
-                                <h4>Previous bill</h4>
-
-                                <div class="billAmount" data-billamount="42">
-                                    $42
-                                    <div style="background-color:#cc0033;"></div>
-                                </div>
-                                <div class="graphFooter">
-                                    <strong>May 5 – Jun 2, 2011</strong> 31 days
-                                </div>
-                            </div>
-
-                            <div class="bar">
-                                <h4>Most recent bill</h4>
-                                <div class="billAmount" data-billamount="58">
-                                    $58
-                                    <div style="background-color:#cc0033;"></div>
-                                </div>
-                                <div class="graphFooter">
-                                    <strong>Jun 3 – Jul 4, 2011</strong> 30 days
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-<!-- insights column, right -->
-                    <div class="col col11">
-                        <div class="insight">
-                            <h4 class="billMore active" style="-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none;"><span class="icon billMore"></span>More than previous bill</h4>
-                            <p>You spent <strong>$16 more</strong> than previous bill, likely due to a difference in weather.</p><a class="viewMore colorbox right" href="#modal_electricity_1" data-width="600">View details</a>
-                        </div>
-
-                        <div class="insight">
-                                <h4 class="billLess active" style="-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none;"><span class="icon billLess"></span>Less than last year</h4>
-                            <p>You spent <strong>$4 less</strong> than the same time last year.</p><a class="viewMore colorbox right geomicon" href="#modal_electricity_2" data-width="600">View details</a>
-                        </div>
-
-                        <div class="billInfo">
-                            <!--<p><span class="icon info"></span>Additional text here if there is any other information about the bill or bill pay that might be useful to customers. This and button can be configured on or off.</p>-->
-                            <a class="viewBill btn wide right medium" href="#">View and pay bill</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="disclaimer wide">
-                Note: The information presented is an estimate of your monthly costs. Because you are on a plan with semi-annual meter reads, these estimates are note based your your monthly usage and may not be accurate.
-            </div>
-        </div>
-
-
-<!-- popup box content -->
-        <div class="hide">
-            <div id="modal_electricity_1" class="billCompareModal">
-                <div>
-                    <h4>Bill analysis</h4>
-                    <p class="lead">These factors contributed to the change in your bill compared to: <strong>previous bill</strong>.</p>
-                    <ul>
-                        <li>There was a change in your rate plan. <span class="amount">+ $3</span></li>
-                        <li>There was 1 more day in the billing period. <span class="amount">+ $4</span></li>
-                        <li>Weather was a major factor. <span class="amount">+ $10</span></li>
-                        <li>Other factors: differences in usage not explained by the above reasons could include: being on vacation one month and not another, buying a new appliance, having additional people in your home, or a variety of other reasons. <span class="amount">- $1</span></li>
-                        <li class="total">Total: <strong>$16 more</strong></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="modal_electricity_2" class="billCompareModal">
-                <div>
-                    <h4>Bill analysis</h4>
-                    <p class="lead">These factors contributed to the change in your bill compared to: <strong>last year</strong>.</p>
-                    <ul>
-                        <li>There was a change in your rate plan. <span class="amount">+ $1</span></li>
-                        <li>Weather wasn't a major factor. <span class="amount">$0</span></li>
-                        <li>Other factors: differences in usage not explained by the above reasons could include: being on vacation one month and not another, buying a new appliance, having additional people in your home, or a variety of other reasons. <span class="amount">- $5</span></li>
-                        <li class="total">Total: <strong>$4 less</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div><!-- <div class="hide"> -->
-
-<!-- 		scripts -->
-    <script type="text/javascript" src="UtilityCo - Bill Comparison_files/jquery.js"></script>
-    <script type="text/javascript" src="UtilityCo - Bill Comparison_files/core.js"></script>
-		<script type="text/javascript" src="UtilityCo - Bill Comparison_files/jquery.colorbox.js"></script>
-		<script type="text/javascript" src="UtilityCo - Bill Comparison_files/myenergyuse-billcompare.js"></script>
 
 
 
 
 
 
-</div>
+
+
+
 <!-- END INSERT INSERT -->
 
 
