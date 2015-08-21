@@ -1,0 +1,85 @@
+
+
+    .farbtasticWrapper {
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-box-shadow: 0 2px 4px rgba(0,0,0,.25);
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.4);
+      position: absolute;
+      top: 20px;
+      left: 0;
+      height: 215px;
+      width: 215px;
+      z-index: 100;
+    }
+
+    .logo_colors {
+      background-color: #fff;
+      color: #9B9F9F;
+      cursor: pointer;
+      display: block;
+      line-height: 26px;
+      padding:10px;
+      text-align: left;
+    }
+      .logo_colors div {
+        background-color: #000;
+        border:1px solid #ccc;
+        box-shadow:inset 0 0 0 1px #fff;
+        display: block; height: 24px; width: 30px;
+        float: right;
+        margin-left:4px;
+      }
+       .logo_colors div.active {
+        border-color:#616365;
+        }
+
+    .farbtastic {
+      background-color: #fff;
+      padding:10px;
+      position: relative;
+    }
+
+    .farbtastic * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: crosshair;
+    }
+
+    .farbtastic,
+    .farbtastic .wheel {
+      width: 195px;
+      height: 195px;
+    }
+
+    .farbtastic .color,
+    .farbtastic .overlay {
+      top: 57px;
+      left: 57px;
+      width: 101px;
+      height: 101px;
+    }
+
+    .farbtastic .wheel {
+      background: url(images/config/wheel.png) no-repeat;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 195px;
+      height: 195px;
+    }
+
+    .farbtastic .overlay {
+      background: url(images/config/mask.png) no-repeat;
+    }
+
+    .farbtastic .marker {
+      width: 17px;
+      height: 17px;
+      margin: -8px 0 0 -8px;
+      overflow: hidden;
+      background: url(images/config/marker.png) no-repeat;
+    }
+
+  /* @end */
