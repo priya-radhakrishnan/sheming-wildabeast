@@ -1,0 +1,75 @@
+        <div ng-include="'img/icons/icons.svg'"></div>
+
+        <div class="page-container {{$stateParams.utility}}" ui-view="prototypeView" ng-controller="ceVisionController">
+            <div class="header">    
+                <div class="logo">
+                    <a href="#/{{$stateParams.utility}}/energy-trends/home-energy-analysis-hook">
+                        <img src="img/logos/{{$stateParams.utility}}-logo.png">
+                    </a>
+                </div>
+                <div class="top-strip"></div>
+                <div class="mobile-nav-toggle" ng-class="{'active': mobileNav === true}" ng-click="toggleMobileNav()"></div>
+                <ul class="utility-nav">
+                    <li>
+                        You're logged in as <a href="">Ryan Devenish</a>. 
+                    </li>
+                    <li>
+                        <a href="#">
+                            Logout
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Contact us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Help
+                        </a>
+                    </li>
+                </ul>
+                <ul class="primary-nav" ng-class="{'open': mobileNav}">
+                    <li ng-repeat="menuItem in menuItems" ng-if="menuItem.menu && menuItem.parent=='prototype'">
+                        <a href="#/prototype{{menuItem.url}}" ng-class="{'on' : $state.includes(menuItem.name)}">
+                            <span>{{menuItem.label}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <div ui-view></div>
+            </div>
+            <div class="footer">
+                <ul>
+                    <li>
+                        <a href="#">
+                            About Brilliant Energy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Terms of Use
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Help
+                        </a>
+                    </li>
+                </ul>
+                <p class="opower-tag">
+                    Runs on Opower. &copy; 2014 Opower. All Rights Reserved.
+                </p>
+            </div>
+        </div>

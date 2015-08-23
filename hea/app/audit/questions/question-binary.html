@@ -1,0 +1,15 @@
+<div class="question">
+    <div class="question-header">
+        {{question.title}}
+    </div>
+</div>
+<div class="answers">
+    <label ng-repeat="selection in question.selections" ng-class="selectionColor(question.answer,selection.data)" class="binary-btn" ng-model="question.answer" btn-radio="{{selection.data}}" uncheckable>
+        <div>{{selection.text}}</div>
+    </label>
+</div>
+<div ng-if="question.unsureOption">
+    <div class="unsure" ng-if="question.status !== 'unsure'"><a ng-click="clickedUnsure()">Not sure&mdash;skip this question</a></div>
+    <div class="question-skipped" ng-if="question.status === 'unsure'">You skipped this question.</div>
+</div>
+

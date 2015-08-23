@@ -1,0 +1,33 @@
+<div class="primary-content" ng-controller="auditController">
+    <div class="row my-account-header">
+        <div class="small-12 columns">
+            <h1 class="slab-title">About my restaurant</h1>
+            <a href="#/energy-trends/by-category" class="save-close">Save & Close<span class="geomicon geomicon-circle-close"></span></span></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-3 columns my-account-progress">
+            <div class="panel savings-total">
+                <p>Potential Yearly Savings <strong>$<span count-to="{{savingsTo}}" value="{{savingsFrom}}" duration="0.5"></span></strong></p>
+                <a href="">View Saving Recommendations</a>
+            </div>
+            <div class="total-progress">
+                <div class="progress">
+                    <span ng-style="currentForm.progress"></span>
+                </div>
+                <p>{{currentForm.questions_left}} Questions left</p>
+            </div>
+            <ul class="progress-position">
+                <li ng-class="sectionPosition(1)"><a href="">Business Information</a></li>
+                <li ng-class="sectionPosition(2)"><a href="">Heating & Cooling</a></li>
+                <li ng-class="sectionPosition(3)"><a href="">Water Heating</a></li>
+                <li ng-class="sectionPosition(4)"><a href="">Cooking & Refrigeration</a></li>
+                <li ng-class="sectionPosition(5)"><a href="">Lighting</a></li>
+                <li ng-class="sectionPosition(6)"><a href="">Other</a></li>
+            </ul>
+        </div>
+        <div class="large-9 columns my-account-form">
+            <div ng-include="currentForm.formURL"></div>
+        </div>
+    </div>
+</div>

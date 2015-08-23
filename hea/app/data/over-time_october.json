@@ -1,0 +1,109 @@
+[
+    {
+        "value": 32,
+        "day": "Thursday, October 15"
+    }, {
+        "value": 77,
+        "day": "Friday, October 16"
+    }, {
+        "value": 78,
+        "day": "Saturday, October 17",
+        "weekend": true
+    }, {
+        "value": 92,
+        "day": "Sunday, October 18",
+        "weekend": true
+    }, {
+        "value": 66,
+        "day": "Monday, October 19"
+    }, {
+        "value": 35,
+        "day": "Tuesday, October 20"
+    }, {
+        "value": 22,
+        "day": "Wednesday, October 21"
+    }, {
+        "value": 30,
+        "day": "Thursday, October 22"
+    }, {
+        "value": 87,
+        "day": "Friday, October 23"
+    }, {
+        "value": 71,
+        "day": "Saturday, October 24",
+        "weekend": true
+    }, {
+        "value": 60,
+        "day": "Sunday, October 25",
+        "weekend": true
+    }, {
+        "value": 50,
+        "day": "Monday, October 26"
+    }, {
+        "value": 52,
+        "day": "Tuesday, October 27"
+    }, {
+        "value": 71,
+        "day": "Wednesday, October 28"
+    }, {
+        "value": 93,
+        "day": "Thursday, October 29"
+    }, {
+        "value": 100,
+        "day": "Friday, October 30"
+    }, {
+        "value": 89,
+        "day": "Saturday, October 31",
+        "weekend": true
+    }, {
+        "value": 76,
+        "day": "Sunday, November 1",
+        "weekend": true
+    }, {
+        "value": 52,
+        "day": "Monday, November 2"
+    }, {
+        "value": 45,
+        "day": "Tuesday, November 3"
+    }, {
+        "value": 60,
+        "day": "Wednesday, November 4"
+    }, {
+        "value": 50,
+        "day": "Thursday, November 5"
+    }, {
+        "value": 52,
+        "day": "Friday, November 6"
+    }, {
+        "value": 72,
+        "day": "Saturday, November 7",
+        "weekend": true
+    }, {
+        "value": 33,
+        "day": "Sunday, November 8",
+        "weekend": true
+    }, {
+        "value": 33,
+        "day": "Monday, November 9"
+    }, {
+        "value": 34,
+        "day": "Tuesday, November 10"
+    }, {
+        "value": 28,
+        "day": "Wednesday, November 11"
+    }, {
+        "value": 23,
+        "day": "Thursday, November 12"
+    }, {
+        "value": 22,
+        "day": "Friday, November 13"
+    }, {
+        "value": 26,
+        "day": "Saturday, November 14",
+        "weekend": true
+    }, {
+        "value": 30,
+        "day": "Sunday, November 15",
+        "weekend": true
+    }
+]

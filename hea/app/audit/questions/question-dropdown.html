@@ -1,0 +1,20 @@
+<svg version="1.1" id="icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80px" height="80px" viewBox="0 0 80 80" style="enable-background:new 0 0 80 80; display:none;" xml:space="preserve">
+    <path id="caret" style="display:inline;" d="M6.912,28.676C3.095,23.904,4.971,20,11.081,20h57.771c6.11,0,7.985,3.902,4.169,8.676L46.906,61.32c-3.818,4.771-10.064,4.771-13.881,0L6.912,28.676z"/>
+</svg>
+<div class="question">
+    <div class="question-header">
+        {{question.title}}
+    </div>
+</div>
+<div class="answers custom-select">
+    <select class="medium" ng-model="question.answer" ng-options="selection.text for selection in question.selections">
+        <option value="" disabled selected style="display:none;">Select One</option>
+    </select>
+    <svg class="icon" viewBox="0 0 80 80">
+        <use xlink:href="#caret"></use>
+    </svg>
+</div>
+<div ng-if="question.unsureOption">
+    <div class="unsure" ng-if="question.status !== 'unsure'"><a ng-click="clickedUnsure()">Not sure&mdash;skip this question</a></div>
+    <div class="question-skipped" ng-if="question.status === 'unsure'">You skipped this question.</div>
+</div>

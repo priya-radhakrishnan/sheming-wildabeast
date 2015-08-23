@@ -1,0 +1,20 @@
+<div class="questions-continue" ng-controller="homeProfileContinueController" class="page-container">
+    <div class="audit-container">
+        <div class="questions-container">
+            <div class="questions">
+                <div class="heading-display-small">
+                    {{incompleteTitle}}
+                </div>
+                <p>
+                    Finish answering questions about your home.</br>
+                    It'll take less than {{minutesLeft}}.
+                </p>
+                <div class="progressbar-container">
+                    <progressbar value="surveyProgress()"></progressbar>
+                    <div class="percentage">{{surveyProgress()}}% complete</div>
+                </div>
+                <a class="continue-button button primary" ng-click="continueSurvey()" href="#/{{$stateParams.utility}}/questions">Complete your analysis</a>
+            </div>
+        </div>
+    </div>
+</div>

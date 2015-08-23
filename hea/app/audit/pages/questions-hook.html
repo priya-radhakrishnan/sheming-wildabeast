@@ -1,0 +1,23 @@
+<div class="questions-hook" ng-controller="homeProfileHookController" class="page-container">
+    <div class="audit-container">
+        <div class="questions-container">
+            <div class="questions">
+                <div class="heading-display-small">
+                    Analyze your energy use
+                </div>
+                <p class="heading-description">
+                    Tell us a bit about your home&mdash;it takes less than five minutes
+                </p>
+                <div class="question-row" ng-show="q.show" ng-switch="q.type" id="{{q.id}}">
+                    <div class="question-whole" ng-show="q.show">
+                        <div ng-switch-when="binary" question-binary question="q" on-answered="answered(question,s,r)"></div>
+                        <div ng-switch-when="radio" question-radio question="q" on-answered="answered(question,s,r)"></div>
+                        <div ng-switch-when="dropdown" question-dropdown question="q" on-answered="answered(question,s,r)"></div>
+                        <div ng-switch-when="textbox" question-textbox question="q" on-answered="answered(question,s,r)"></div>
+                        <div ng-switch-when="checkbox" question-checkbox question="q" on-answered="answered(question,s,r)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve" display="none">
+    <g id="check-circle" style="display:inline;">
+        <path d="M40,0C17.901,0,0,17.912,0,40c0,22.088,17.901,40,40,40c22.089,0,40-17.912,40-40
+            C80,17.912,62.089,0,40,0z M58.901,30.625l-20,25c-0.886,1.107-2.209,1.791-3.631,1.869C35.183,57.5,35.089,57.5,35,57.5
+            c-1.323,0-2.599-0.525-3.536-1.463l-10-10c-1.953-1.953-1.953-5.121,0-7.074c1.953-1.953,5.119-1.953,7.072,0l6.047,6.05
+            l16.511-20.639c1.724-2.156,4.87-2.505,7.026-0.781C60.281,25.318,60.625,28.469,58.901,30.625z"/>
+    </g>
+</svg>
+<div class="row loading-row" ng-controller="loadingAnimationController">
+    <div class="medium-8 columns">
+        <div id="progress-circle-container">
+        </div>
+    </div>
+    <div class="medium-4 columns">
+        <ul class="loading-legend">
+            <li ng-class="sequenceClass(sequenceOne)"><span class="loading-sequence-icon"><span class="spin-loader"></span><svg class="icon" viewBox="0 0 80 80"><use xlink:href="#check-circle"></use></svg></span>Reviewing your answers</li>
+            <li ng-class="sequenceClass(sequenceTwo)"><span class="loading-sequence-icon"><span class="spin-loader"></span><svg class="icon" viewBox="0 0 80 80"><use xlink:href="#check-circle"></use></svg></span>Creating your energy analysis</li>
+        </ul>
+    </div>
+</div>

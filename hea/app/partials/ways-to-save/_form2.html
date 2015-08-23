@@ -1,0 +1,108 @@
+<div class="row">
+    <div class="large-12 columns form-header">
+        <h3 class="slab-title">Cooking & Refrigeration 1 of 3</h3>
+        <h4>Does your restaurant have any of the following appliances?</h4>
+    </div>
+</div>
+<div>
+    <ul class="small-block-grid-2 medium-block-grid-3 equipment-selection">
+        <li>
+            <img src="img/smb-stuff-1.png" /> 
+            <div class="custom-checkbox">
+               <input name="checkbox" type="checkbox" id="checkbox1">
+               <label for="checkbox1" class="custom checkbox">
+                   Refrigerator
+                    <svg class="icon" viewBox="0 0 80 80">
+                        <use xlink:href="#check"></use>
+                    </svg>
+                </label>
+            </div>            
+        </li>
+        <li>
+            <img src="img/smb-stuff-2.png" />
+            <div class="custom-checkbox">
+                <input name="checkbox" type="checkbox" id="checkbox2">
+                <label for="checkbox2">
+                    Dishwasher
+                    <svg class="icon" viewBox="0 0 80 80">
+                        <use xlink:href="#check"></use>
+                    </svg>
+                </label>
+            </div>                
+        </li>
+        <li>
+            <img src="img/smb-stuff-3.png" />
+            <div class="custom-checkbox">
+                <input name="checkbox" type="checkbox" id="checkbox3">
+                <label for="checkbox3">
+                    Fryer
+                    <svg class="icon" viewBox="0 0 80 80">
+                        <use xlink:href="#check"></use>
+                    </svg>
+                </label>
+            </div>                
+        </li>
+        <li>
+            <img src="img/smb-stuff-4.png" />
+            <div class="custom-checkbox">
+                <input name="checkbox" type="checkbox" id="checkbox4">
+                <label for="checkbox4">
+                    Broiler
+                    <svg class="icon" viewBox="0 0 80 80">
+                        <use xlink:href="#check"></use>
+                    </svg>
+                </label>
+            </div>                
+        </li>
+        <li>
+            <img src="img/smb-stuff-5.png" />
+            <div class="custom-checkbox">
+                <input name="checkbox" type="checkbox" id="checkbox5">
+                <label for="checkbox5">
+                    Griddle
+                    <svg class="icon" viewBox="0 0 80 80">
+                        <use xlink:href="#check"></use>
+                    </svg>
+                </label>
+            </div>                
+        </li>
+        <li>
+            <img src="img/smb-stuff-6.png" />
+            <div class="custom-checkbox">
+                <input name="checkbox" type="checkbox" id="checkbox6">
+                <label for="checkbox6">
+                    Ice Machine
+                    <svg class="icon" viewBox="0 0 80 80">
+                        <use xlink:href="#check"></use>
+                    </svg>
+                </label>
+            </div>                
+        </li>                        
+
+    </ul>
+</div>
+<div class="form-buttons">
+    <div class="button-set-wrapper">
+        <div class="button-wrapper">
+            <a class="button secondary back" ng-click="previous()">
+                <span class="has-icon">
+                    <svg class="icon" viewBox="0 0 80 80">
+                        <use xlink:href="#left-arrow"></use>
+                    </svg>
+                    Back
+                </span>
+            </a>
+        </div>
+        <div class="button-wrapper">
+            <a href="#/energy-trends/by-category" class="button primary next" ng-click="finishedAudit()">
+                <span class="has-icon icon-opposite-side">
+                    Next
+                    <svg class="icon" viewBox="0 0 80 80">
+                        <use xlink:href="#right-arrow"></use>
+                    </svg>
+                </span>
+            </a>
+            <a class="skip" href="" ng-click="finishedAudit()">Skip Question</a>
+        </div>
+    </div>
+</div>

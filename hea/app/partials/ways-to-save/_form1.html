@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="large-12 columns form-header">
+        <h3 class="slab-title">Business information 1 of 3</h3>
+        <h4>What days and hours are your business open?</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="medium-1 columns day-of-week-title hide-for-small-only">
+        For
+    </div>
+    <div class="medium-11 columns day-of-week-selector"> 
+        <ul class="button-group">
+            <li ng-repeat="day in days">
+                <a href="" class="button secondary" ng-class="{'active':day.on}" ng-click="day.on = !day.on">{{day.name}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="large-12 columns">
+        <div class="hour-selector">
+            <h5>Open Hours</h5>
+            <slider floor="0" ceiling="1000" ng-model-low="mmin" ng-model-high="mmax"></slider>
+            <ul>
+                <li>12am</li>
+                <li>6am</li>
+                <li>noon</li>
+                <li>6pm</li>
+                <li>11pm</li>
+            </ul>
+            <a href="">+ Add a different schedule</a>
+        </div>
+    </div>
+</div>
+<div class="form-buttons">
+    <div class="button-set-wrapper">
+        <div class="button-wrapper">
+            <button class="button secondary back" ng-click="previous()">
+                <span class="has-icon">
+                    <svg class="icon" viewBox="0 0 80 80">
+                        <use xlink:href="#left-arrow"></use>
+                    </svg>
+                    Back
+                </span>
+            </button>
+        </div>
+        <div class="button-wrapper">
+            <button class="button primary next" ng-click="next()">
+                <span class="has-icon icon-opposite-side">
+                    Next
+                    <svg class="icon" viewBox="0 0 80 80">
+                        <use xlink:href="#right-arrow"></use>
+                    </svg>
+                </span>
+            </button>
+            <a class="skip" href="" ng-click="next()">Skip Question</a>
+        </div>
+    </div>
+</div>

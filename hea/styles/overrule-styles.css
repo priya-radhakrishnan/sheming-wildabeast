@@ -1,0 +1,19 @@
+.header {
+	display: none;
+}
+.footer {
+	display: none;
+}
+.sidebar {
+	display: none;
+}
+.audit-header {
+	display: none;
+}
+.how-this-works {
+    padding-bottom: 0px;
+    border-bottom:none;
+}
+.main {
+	border: none;
+}

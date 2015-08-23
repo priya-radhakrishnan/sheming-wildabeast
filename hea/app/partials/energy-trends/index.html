@@ -1,0 +1,16 @@
+<div>
+    <div class="sidebar-wrapper">
+        <ul class="sidebar">
+            <li ng-repeat="menuItem in menuItems" 
+                ng-if="menuItem.menu && menuItem.parent === 'energyTrends'" 
+                ng-class="{'active' : menuItem.label =='Home Energy Analysis'}">
+                <a class="{{menuItem.name}}">
+                    {{menuItem.label}} 
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="primary-content-wrapper">
+        <div ui-view></div>
+    </div>
+</div>

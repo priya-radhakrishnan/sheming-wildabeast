@@ -1,0 +1,17 @@
+<h3 class="lead-in">What uses most in my home?</h3> 
+<h4 class="category-label">{{activeData.label}}</h4>
+<p class="pie-content-detail">Cost {{activeData.value | currency}} last month</p>
+<p class="pie-content-detail" ng-if="activeData.value > activeData.previous_value">
+    You spent <b>{{activeData.value - activeData.previous_value | currency}} more</b> than similar homes
+</p>
+<p class="pie-content-detail" ng-if="activeData.value <= activeData.previous_value">
+    You spent <b>{{activeData.previous_value - activeData.value | currency}} less</b> than similar homes
+</p>
+<div class="pie-basedon">
+    <strong>Based on your:</strong>
+    <a href="#/ways-to-save">cooling use trends</a>,
+    <a href="">unknown cooling type</a>,
+    <a href="">thermostat settings</a>,
+    <a href="">unknown unit age</a>,
+    <a href="">unknown sun exposure</a>
+</div>

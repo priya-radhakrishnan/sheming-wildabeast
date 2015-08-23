@@ -1,0 +1,46 @@
+<div class="row-data">
+    <div class="small-12 columns">
+        <div class="graph-container has-controls" ng-controller="overTimeGraphController">
+            <div class="graph-controls tabs big-tabs">
+                <ul class="tab-list">
+                    <li class="tab graph-control">
+                        <a ng-click="activateFilter('total')" ng-class="{'active': activeFilter==='total'}">Total cost: <strong>$248.12</strong></a>
+                    </li>
+                    <li class="tab graph-control">
+                         <a ng-click="activateFilter('highest')" ng-class="{'active': activeFilter==='highest'}">Highest 5 days: <strong>$76.14</strong></a>
+                    </li>
+                    <li class="tab graph-control">
+                         <a ng-click="activateFilter('weekends')" ng-class="{'active': activeFilter==='weekends'}">Weekend use: <strong>$52.32</strong></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="y-axis y-axis-{{ yPoints.length }}">
+                <div class="y-axis-point graph-label" ng-repeat="point in yPoints">
+                    ${{ point.value }}
+                </div>
+                <div class="y-axis-point graph-label">
+                    $0
+                </div>
+            </div>
+            <div class="x-axis">
+                <div class="x-axis-start graph-label">
+                    {{ xStart }}
+                </div>
+                <div class="x-axis-end graph-label">
+                    {{ xEnd }}
+                </div>
+            </div>
+            <div 
+                op-bar-graph 
+                class="graph-wrapper bar-graph-wrapper pre-animation" 
+                graphdata="graphData" 
+                highest="fiveHighest" 
+                ng-class="{'show-weekends': activeFilter==='weekends', 'show-highest': activeFilter==='highest'}">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row-break">
+    <div class="small-12 columns" op-tip format="simple" tip="thermostat">
+    </div>
+</div>

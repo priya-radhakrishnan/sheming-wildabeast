@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="medium-6 columns">
+        <div class="chart">
+            <div class="pie-chart" data-ac-chart="'pie'" data-ac-data="pieData" data-ac-config="pieConfig"></div>
+            <div class="pie-center">
+                <h2 class="absolute-centered">${{activeData.value|number:0}}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="pie-content medium-6 columns" ng-include="activeData.contentUrl"></div>
+</div>

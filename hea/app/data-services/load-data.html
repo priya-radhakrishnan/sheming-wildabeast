@@ -1,0 +1,53 @@
+<div class="row-data">
+  <div ng-controller="dataLoaderController" class="data-loader">
+
+
+    <h1> Let's get started </h1>
+    <form>
+      <div class="row-form">
+        <h2> Step 1: Enter your contact information </h2>
+
+        <div class="row-input">
+          <input type="text" ng-model="email" placeholder="E-mail"></input> 
+        </div>
+        <div class="row-input">
+          <input type="text" ng-model="name" placeholder="Your Name"></input> 
+        </div>
+        <div class="row-input">
+          <input type="text" ng-model="billAmount" placeholder="Total due for your last bill"></input> 
+        </div>
+      </div>
+
+      <div class="row-form">
+
+        <h2> Step 2: Upload your green button data </h2>
+
+        <table> 
+          <tr> 
+            <th> File </th>
+            <th> Action </th>
+          </tr>
+          <tr>
+             <td> Your electricity data (pge_electricity_interval_data-xxx.csv) </td>
+            <td> 
+                <input id="electricityFile" type="file" electricityfile /> 
+                <label for="electricityFile"> Upload file </label>
+            </td>
+          </tr>
+          <tr>
+             <td> Your gas data (pge_natural_gas_interval_data-xxx.csv) </td>
+            <td> 
+              <input id="gasFile" type="file" class="btn-upload" gasfile /> 
+              <label for="gasFile"> Upload file </label>
+            </td>
+          </tr>        
+        </table>
+        <a href='/#/your-account'>
+          <input class="btn-submit" type="button" ng-click="start()" value="Start"/> 
+        </a>
+      </div>
+
+    </form>
+  </div>
+</div>
+
