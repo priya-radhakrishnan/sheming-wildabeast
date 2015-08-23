@@ -1,4 +1,4 @@
-/* 
+/*
   Title: core.js
   Purpose - Set up internal methods/vars required on all pages
   Author - Doug Avery, Viget Labs
@@ -8,19 +8,19 @@
 
   /*
      Constant: astro
-     
+
      Global scope for all variables/methods
   */
   window.astro = window.astro || {};
 
   /*
      Constant: astro.content
-     
+
      Object full of big, functions full of selectors and chained methods
      Used in document.ready and on AJAX responses
   */
   astro.content = {};
-  
+
 
 /* End  */
 
@@ -29,10 +29,10 @@
   Array.prototype.average = function() {
     /*
        Function: array.prototype.average
-     
+
        Arrays of integers need to be averages in some graphs
-     
-       See Also: 
+
+       See Also:
          <Original implementation at http://javascript.about.com/library/blaravg.htm>
     */
     var av = 0,
@@ -53,51 +53,51 @@
   astro.content_init = function( callback, scope ){
     /*
        Function: astro.content_init
-       
+
        Wraps a number of methods and takes a scope.
        This allows us to re-call a kind of document.ready after AJAX updates
-       
+
        Parameters:
          scope - The DOM elements to execute content-init inside of. Leave blank for window
-         callback - Big anonymous function, contains all the document.ready bindings. 
+         callback - Big anonymous function, contains all the document.ready bindings.
                     Optionally takes a string, which finds a function in astro.content
-         
+
         See also:
           <astro.content>
     */
 
-    var 
-      scope = astro.content_init._get_appropriate_scope( scope ),      
+    var
+      scope = astro.content_init._get_appropriate_scope( scope ),
       callback_is_all = ( callback == 'all' || this === document ),
       callback_is_string = ( ! callback_is_all && typeof ( callback ) == 'string' );
 
     if ( callback_is_string && callback_is_all == false ) {
       callback = astro.content[ callback ] || function(){};
-    } 
-    
+    }
+
     if ( callback_is_all ) {
       var callback_array = astro.content_init._get_all_content_callbacks( callback_array );
     } else {
-      var callback_array = [ callback ];      
+      var callback_array = [ callback ];
     }
 
-    astro.content_init._execute_all_callbacks( 
-      callback_array, 
-      scope 
+    astro.content_init._execute_all_callbacks(
+      callback_array,
+      scope
     );
-    
+
   }
-  
+
   astro.content_init._get_appropriate_scope = function( scope ){
     /*
        Function: astro.content_init._get_appropriate_scope
-       
+
        Gets the scope for content_init to execute with
-       
+
        Parameters:
          scope - Optional, the scope originally passed by a function
-       
-       Returns: 
+
+       Returns:
           Either a jQuery object or null
     */
     if ( scope === undefined || scope === null ) {
@@ -106,89 +106,89 @@
       return $( scope );
     }
   }
-  
+
   astro.content_init._get_all_content_callbacks = function() {
     /*
        Function: astro.content_init._get_all_content_callbacks
-       
+
        Parses astro.content and returns all the content callbacks specified in it
-       
-       Returns: 
+
+       Returns:
           Array full of callbacks
     */
     var callback_array = [];
-    
+
     for ( var key in astro.content ) {
       callback_array.push( astro.content[ key ] );
     }
-    
-    return callback_array;    
-    
+
+    return callback_array;
+
   }
-  
+
   astro.content_init._execute_all_callbacks = function( callback_array, scope ) {
     /*
        Function: astro.content_init._execute_all_callbacks
-       
+
        Parameters:
          callback_array - Array full of content callbacks
          scope - The scope to execute callbacks with
-       
-       Fire off all the callbacks in the callback_array       
-    */    
+
+       Fire off all the callbacks in the callback_array
+    */
     for ( var callback in callback_array ) {
       callback_array[ callback ]( scope );
     }
   }
-  
+
   astro.get_root = function(){
     /*
        Function: astro.get_root
-       
+
        Gets the root (http://proto.opower.com/astro/) of the app
-       
-       Returns: 
+
+       Returns:
          Full path to the root directory
-         
-       See also: 
+
+       See also:
          <astro.root>
     */
 
     return $('#getRoot').text() + '/';
-    
+
   }
-  
+
   astro.get_states = function(){
     /*
        Function: astro.get_states
-       
+
        Parse on-page JSON into a JS copy of the session
-       
-       Returns: 
+
+       Returns:
          Object with keys and values from the session
-         
-       See also: 
+
+       See also:
          <astro.states>
     */
-    var 
+    var
       states = {},
       states_from_JSON = $.parseJSON( $('#states').text() );
-      
+
     for( key in states_from_JSON ){
       states[key] = astro.toPrimitive( states_from_JSON[key] );
     };
 
     return states;
-    
+
   }
 
   astro.wait = function( fn, delay ){
     /*
        Function: astro.wait
-       
+
        Delays the execution of a function
-       
-       Parameters: 
+
+       Parameters:
          fn - The function
          delay - The time (in ms) to wait
     */
@@ -198,27 +198,27 @@
   astro.simpleToString = function( futureString ){
     /*
        Function: astro.toSring
-       
+
        Returns element as string
-       
-       Parameters: 
+
+       Parameters:
          futureString - What you want stringified
     */
-    return '' + futureString;    
+    return '' + futureString;
   };
 
   astro.toPrimitive = function( string ){
     /*
        Function: astro.toPrimitive
-       
+
        Converts a string to a more appropriate primitive variable (boolean, integer, etc)
        > value = astro.toPrimitive('true');
        > alert( value === true ) // alerts true
-       
-       Parameters: 
+
+       Parameters:
          string - String to be converted
-         
-       Returns: 
+
+       Returns:
          A primitive variable
     */
     switch (string){
@@ -244,10 +244,10 @@
   astro.text_before_and_afters = {
     /*
        Constant: astro.text_before_and_afters
-       
+
        Used when changing text on links/buttons to provide feedback
-       
-       See Also: 
+
+       See Also:
          <astro.textChange>
     */
     "OK, I'll Do It"                     : "Added to your plan",
@@ -268,21 +268,21 @@
   astro.states = astro.get_states(
     /*
        Constant: astro.states
-       
+
        Key/value copy of the user's session, used on the config page
-       
-       See Also: 
+
+       See Also:
          <astro.get_states>
     */
   );
-    
+
   astro.root = astro.get_root(
     /*
        Constant: astro.root
-       
+
        The root URL (http://proto.opower.com/astro/), used in some AJAX calls
-       
-       See Also: 
+
+       See Also:
          <astro.get_root>
     */
   );
@@ -290,10 +290,10 @@
   astro.optionsHaveClicks = $('body').hasClass('webkit') === false;
   /*
      Constant: astro.optionsHaveClicks
-     
+
      Whether or not option elements support click events
-     
-     See Also: 
+
+     See Also:
        <astro.detect_option_click_support>
   */
 
@@ -301,13 +301,13 @@ $.fn.getLocalData = function(){
 
   /*
     Function: $.fn.getLocalData
-    
+
     Use local storage to pull display a user-entered image
     Used for profiles, pictures, client logos
   */
 
   return this.each(function(){
-    
+
     var $img      = $(this),
         storageId = $img.attr('data-fileId'),
         alt       = $img.attr('data-fileAlt'),
@@ -315,18 +315,18 @@ $.fn.getLocalData = function(){
     src       = ( src ) ? src : alt;
 
     $img.attr( 'src', src );
-    
+
   });
-      
+
 };
 
 $(function(){
-  
+
   $('.getLocalData').getLocalData();
-  
+
 });
 
-/* 
+/*
   Title: sessioncontrol.js
   Purpose - Group the main session-manipulation methods we use throughout Astro
   Author - Doug Avery, Viget Labs
@@ -336,7 +336,7 @@ $.fn.sessionSet = function(key,value){
 
   /*
      Function: $.fn.sessionSet
-     
+
      Set a key/value pair in the session
 
      Parameters:
@@ -345,15 +345,15 @@ $.fn.sessionSet = function(key,value){
   */
 
   var data   = {};
-  
-  if (typeof key == 'object'){    
+
+  if (typeof key == 'object'){
     data = key;
   } else {
-    data[ key ] = value;  
+    data[ key ] = value;
   }
 
   console.log(data)
-    
+
   $.ajax({
     type:       'post',
     url:        astro.root + 'index.php?state',
@@ -369,14 +369,14 @@ $(function(){
 
   // Setting states on the overview page
   $('input[type="checkbox"].switchState, input[type="radio"].switchState, a.switchState').click(function(e){
-  
+
     var $this    = $(this),
         $par     = $this.parents('li'),
         key      = $this.attr('data-key'),
         val      = $this.attr('data-value');
 
     if ( $.fn.openOptions ) {
-      $this.openOptions(key, val);      
+      $this.openOptions(key, val);
     }
     /*
     if (!$this.hasClass('active')) {
@@ -401,7 +401,7 @@ $(function(){
       val = (val=='') ? 'electricity' : val;
     }
     setTimeout(function(){$this.sessionSet ( key, val );},100);
-    
+
     if ( key == 'reset' || key == 'package' || key == 'theme' ) {
       for (var i =0; i < localStorage.length; i++) {
           localStorage.removeItem(localStorage.key(i));
@@ -410,7 +410,7 @@ $(function(){
         location.reload();
       }, 1000 );
     };
-    
+
   });
 
   // checkbox session setter
@@ -423,9 +423,9 @@ $(function(){
     }
 
   });
-  
 
-  $('input.switchState[type="text"], textarea.switchState').bind('focus blur keypress', function(){    
+
+  $('input.switchState[type="text"], textarea.switchState').bind('focus blur keypress', function(){
     var $this = $(this);
     if( $this.val() != '' ){
       $this.siblings().removeClass('active').filter('.key').css('backgroundColor','#' + $this.val() );
@@ -443,31 +443,31 @@ $(function(){
   $('.clearOut').bind('click', function(e){
 
     e.preventDefault();
-    
+
     var $this    = $(this),
         $wrapper = $this.closest('.field'),
         $target  = $( $(this).attr('data-toClear') );
 
     $this.addClass('active');
     $target.val('');
-    
+
   });
 
   $('a.save').click(function(){
     location.reload();
   });
-  
-  
+
+
   // when cool-alert appears, set states in the form
   $('.setAlert').bind('appear',function(){
     $(this).sessionSet($(this).attr('data-key'),true);
   }).bind('hide',function(){
     $(this).sessionSet($(this).attr('data-key'),false);
   });
-  
+
 });
 
-/* 
+/*
   Title: tipactions.js
   Purpose - Add, remove, and complete tips. Optionally fire off social messages.
   Author - Doug Avery, Viget Labs
@@ -478,16 +478,16 @@ $(function(){
   astro.sendTip = function( $this, data ){
     /*
        Function: astro.sendTip
-       
+
        Send a tip action to the handler for processing
-       
+
        Parameters:
          $this - the DOM object of the clicked element
          data - key/value pairs
            data.action - action to complete with the tip. Options: completed, added, removed, ignored
            data.slug - tip slug, like "maintain-ac"
-         
-       Returns: 
+
+       Returns:
          HTML from the AJAX response (for testing purposes)
     */
     var
@@ -505,7 +505,7 @@ $(function(){
         if ( type == 'a' && href != '#' ){
           window.location.href = href;
         } else if ( type == 'button' ) {
-          $this.closest('form').submit();        
+          $this.closest('form').submit();
         }
 
         if ( $this.hasClass('move') ){
@@ -521,24 +521,24 @@ $(function(){
         return html;
       }
     });
-  
+
   }
 
 /* @end */
 
 /* @group direct tip actions */
 
-  astro.tipAction = function( event ){    
+  astro.tipAction = function( event ){
     /*
        Function: astro.tipAction
-       
+
        Complete a 'tip action' based on a link clicked by the user inside a tip div
-       
+
        Parameters:
          event - passed in from the click event
     */
 
-    var 
+    var
       $this  = $(event.target),
       $tip   = $this.closest('.tip'),
       url    = astro.root + $tip.attr('href'),
@@ -554,16 +554,16 @@ $(function(){
     $newtipaction_set.addClass('show');
 
     astro.sendTip( $this, data );
-  
+
     if ( data.action == 'add' && $this.data('clicked') != true && ( astro.states.twitter_tip || astro.states.facebook_tip ) ){
       $this.data('clicked', true)
       astro.social('I just pledged to complete the tip "' + $hd.text() + '". Read more: ', 'tip', url);
     }
-    
+
     return false;
 
   }
-  
+
   $('span[data-tipAction]').live('click', astro.tipAction);
 
   $('span[data-tipAction]').live('mouseover', function(){
@@ -581,28 +581,28 @@ $(function(){
   astro.modifyTip = function( $this ){
     /*
        Function: astro.modifyTip
-       
-       Modify a tip based on data- attributes from the target element 
-       
+
+       Modify a tip based on data- attributes from the target element
+
        Parameters:
-         $this - the DOM object of the clicked element         
+         $this - the DOM object of the clicked element
     */
-    var 
+    var
       data   = {
         action : $this.attr('data-tipModify'),
         slug   : $this.attr('data-tipToModify')
       };
-    
+
     astro.sendTip( $this, data );
-  
+
   }
 
   astro.modifyTip.fromLinkOrButton = function(event){
     /*
        Function: astro.modifyTip.fromLinkOrButton
-       
+
        Modify a tip when a simple element is clicked
-       
+
        Parameters:
          event - passed in from the click event
     */
@@ -614,36 +614,36 @@ $(function(){
     astro.modifyTip( $( event.target ) );
 
   }
-  
+
   $('a[data-tipModify], input[data-tipModify], button[data-tipModify]')
     .live('click', astro.modifyTip.fromLinkOrButton );
-  
-  
+
+
   astro.modifyTip.fromSelect = function(){
     /*
        Function: astro.modifyTip.fromSelect
-       
+
        Modify a tip when a select element is used
     */
     var
       $this   = $(this),
       $parent = $this.parent();
-    
+
     if ( ! $parent.data('change-is-bound') ) {
 
       $parent.data('change-is-bound', true);
-    
+
       $parent.bind('change', function( event ){
         astro.modifyTip( $(event.target).find('option:selected') );
       });
-    
+
     }
-    
+
   }
 
   $('option[data-tipModify]').each( astro.modifyTip.fromSelect );
 
-/* 
+/*
   Title: screen.js
   Purpose - Misc. functions that run on every page; global live-bound methods
   Author - Doug Avery, Viget Labs
@@ -651,13 +651,13 @@ $(function(){
 
 /* Group: jQuery plugins */
 
-  $.fn.relate = function(){ 
+  $.fn.relate = function(){
     /*
-       Function: $.fn.relate   
-       
-       Makes an element position:relative, if necessary    
-       
-       Returns: 
+       Function: $.fn.relate
+
+       Makes an element position:relative, if necessary
+
+       Returns:
          Original object
     */
     return this.each( function(){
@@ -668,34 +668,34 @@ $(function(){
   $.fn.ajaxState = function(set){
     /*
        Function: $.fn.ajaxState
-       
+
        Triggers a simple effect while waiting for an ajax response
-       
-       Returns: 
+
+       Returns:
          Original object
     */
     $(this).each( function(){
       if( set == false ) {
-        return $(this).fadeTo(500,1);     
+        return $(this).fadeTo(500,1);
       } else {
-        return $(this).fadeTo(500,.5);     
+        return $(this).fadeTo(500,.5);
       }
     });
   };
 
-  $.fn.zzTop = function(levels){ 
+  $.fn.zzTop = function(levels){
     /*
        Function: $.fn.zzTop
-       
+
        Move an element up in the z-index stack
-       
-       Scope: 
+
+       Scope:
          Only runs on single DOM object
-       
-       Parameters: 
+
+       Parameters:
          levels - How many levels to ascend while changing z-index
-       
-       Returns: 
+
+       Returns:
          Original object
     */
     levels--;
@@ -705,34 +705,34 @@ $(function(){
     return this;
   };
 
-  $.fn.actsAsLink = function(){ 
+  $.fn.actsAsLink = function(){
     /*
        Function: $.fn.actsAsLink
-       
+
        Use "data-link" as the url of an item, and send users to a new page on click
-       
-       Returns: 
+
+       Returns:
          Original object
     */
     return $(this).click( function(){
-      window.location = $(this).attr( 'data-link' );  
+      window.location = $(this).attr( 'data-link' );
     });
   };
 
-  $.fn.actsAsLinkList = function(){ 
+  $.fn.actsAsLinkList = function(){
     /*
        Function: $.fn.actsAsLinkList
-       
+
        Adds click handlers to option elements
     */
     return this.each(function(){
-     
+
       if ( astro.optionsHaveClicks === false ) {
 
         var $this = $(this);
 
         $this.bind('change', function(){
-          
+
           var val = $this.val(),
             $option = $this.find('option[value=' + val + ']');
 
@@ -749,18 +749,18 @@ $(function(){
   $.fn.toggleText = function(attr){
     /*
        Function: $.fn.toggleText
-       
+
        On click, toggle text between the tag's text and the value of an attribute
-       
+
        Parameters:
          attr - which attribute to draw the new text from
-       
-       Returns: 
+
+       Returns:
          Original object
     */
     return $(this).each( function(){
       var $t = $(this),
-          e  = ( $t.is( 'input[type=radio]' ) ) ? 'change' : 'click', 
+          e  = ( $t.is( 'input[type=radio]' ) ) ? 'change' : 'click',
           o  = $t.text(),
           n  = $t.attr(attr) || o;
       $(this).bind(e, function(){
@@ -771,21 +771,21 @@ $(function(){
 
   $.fn.toggleTarget = function(mode){
     /*
-    
+
        Function: $.fn.toggleTarget
        Flip an element on or off using fn.toggler
-       
-       Parameters: 
+
+       Parameters:
          mode - 'siblings' denotes that a target's siblings are also toggled
-         
-       See also: 
+
+       See also:
          <$.fn.toggleFromData>
          <$.fn.toggler>
-         
-       Returns: 
+
+       Returns:
          Original object
-         
-    */    
+
+    */
     return $(this).each( function(){
       var eventType = this.nodeName.toLowerCase() === 'select' ? 'change' : 'click';
       $(this).bind( eventType, function(){
@@ -797,22 +797,22 @@ $(function(){
   $.fn.toggleFromData = function(mode){
     /*
        Function: $.fn.toggleFromData
-       
+
        Toggles an element based on its data- attributes
-       
-       Parameters: 
+
+       Parameters:
          mode - 'siblings' denotes that a target's siblings are also toggled
-       
-       See also: 
+
+       See also:
          <$.fn.toggleTarget>
          <$.fn.toggler>
-         
-       Returns: 
+
+       Returns:
          Original object
-    */    
+    */
     var $t = $(this),
         t  = $t.attr( 'data-toggleTarget' ) || $t.attr( 'href' ),
-        showOnly = ( $t.attr( 'data-showOnly' ) == 'true' ); 
+        showOnly = ( $t.attr( 'data-showOnly' ) == 'true' );
 
     $target = $(t);
 
@@ -822,26 +822,26 @@ $(function(){
     $( $t.attr( 'data-toggleOn' )  + ':hidden' ).not($target).fadeIn().trigger( 'appear' );
     $( $t.attr( 'data-toggleOff' ) + ':visible' ).not($target).fadeOut();
 
-    return ( ! this.tagName == 'A' );  
-  
+    return ( ! this.tagName == 'A' );
+
   };
 
   $.fn.toggler = function(mode, showOnly, force){
     /*
        Function: $.fn.toggler
-       
+
        Flips an element on and off, hiding siblings if mode is specified
-       
-       Parameters: 
+
+       Parameters:
          mode - 'siblings' denotes that a target's siblings are also toggled
          showOnly - if set to true, toggler will never hide the target
          force - if set to true, forces the target to toggle, even if siblings are hidden
-         
-       See also: 
+
+       See also:
          <$.fn.toggleTarget>
          <$.fn.toggleFromData>
-         
-       Returns: 
+
+       Returns:
          Original object
     */
     return $(this).each( function(){
@@ -873,24 +873,24 @@ $(function(){
         if( ! showOnly )
           $t.hide();
       }
-  
+
     });
   };
 
   $.fn.tabbed = function(content,hereClass){
     /*
        Function: $.fn.tabbed
-       
+
        Turn two lists into tabs
-       
-       Parameters: 
+
+       Parameters:
          content - selector for the "content" parts of a tab structure
          hereClass - the class to apply to tabes
-         
-       Returns: 
+
+       Returns:
          Original object
-         
-    */    
+
+    */
     var here = (hereClass == '' ) ? 'here' : hereClass;
     return $(this).each( function(){
       var $tabs = $(this),
@@ -906,26 +906,26 @@ $(function(){
             $(t).fadeIn( 'fast' );
           });
         }
-        return false; 
-      }); 
+        return false;
+      });
     });
   };
 
   $.fn.superBind = function( fn){
     /*
        Function: $.fn.superBind
-       
+
        Binds fn effectively to both links and selects
-       
-       Parameters: 
+
+       Parameters:
          fn - Function to trigger on click/change/etc
-         
-       See also: 
+
+       See also:
          <$.fn.multiSwitch>
-         
-       Returns: 
+
+       Returns:
          Original object
-    */    
+    */
     return $(this).each( function(){
       var $t = $(this);
       if ( $t.is( 'select' ) ) {
@@ -953,26 +953,26 @@ $(function(){
   };
 
   $.fn.getOpts = function(){
-    
+
     /*
        Function: $.fn.tabbed
-       
+
        Turn a series of "data" attributes into a usable object
-       
-       See also: 
+
+       See also:
          <$.fn.drawLineGraph>
-       
-       Returns: 
+
+       Returns:
          Object with key/value pairs for all found data
-    */    
-  
+    */
+
     var nodes = [], values = [], returnData = {};
-  
+
     $.each( this[0].attributes, function(i){
       nodes.push(this.nodeName);
-      values.push(this.nodeValue); 
+      values.push(this.nodeValue);
     });
-              
+
     $.each( nodes, function(i){
       var val;
       if ( this.indexOf( 'data-' ) != -1){
@@ -984,12 +984,12 @@ $(function(){
         } else {
           val = astro.toPrimitive( values[i] );
         }
-        returnData[ nodes[i].substring(5) ] = val;    
+        returnData[ nodes[i].substring(5) ] = val;
       }
     });
-  
+
     return returnData;
-  
+
   };
 
   $.fn.showTooltipDescription = function(options){
@@ -1003,7 +1003,8 @@ $(function(){
           addClass : ''
         },
         config = $.extend(defaults, options),
-        $overlayelement = $('<div class="tooltip-overlay ' + config.addClass + '">' + config.descriptionhtml + '<span class="tooltiparrowwrapper"><span class="tooltiparrow"></span></span></div>'),
+        //$overlayelement = $('<div class="tooltip-overlay ' + config.addClass + '">' + config.descriptionhtml + '<span class="tooltiparrowwrapper"><span class="tooltiparrow"></span></span></div>'),
+        $overlayelement = $('<div class="tooltip-overlay ' + config.addClass + '">' + config.descriptionhtml + '</div>'),
         $container = $(this).closest('.module'),
         $overlay,
         intentTimeout,
@@ -1031,15 +1032,14 @@ $(function(){
         $('.tooltip-overlay').remove();
 
         clearTimeout(intentTimeout);
-
-        var width = ( $this.outerWidth() > 400 ) ? 400 : $this.outerWidth(),  
+        var width = ( $this.outerWidth() > 400 ) ? 400 : $this.outerWidth(),
           rightpositioning = $this.offset().left + width + 25,
-          leftpositioning = $this.offset().left - 290, 
-          top = $this.offset().top - ( ( 130 - $this.outerHeight()) / 2), 
+          leftpositioning = $this.offset().left - 290,
+          top = (($this.offset().top) + ( $this.outerHeight() / 2)),
           isCloseToLeftSide = ( $this.offset().left - 250 ) > $container.offset().left,
           positioning = ( isCloseToLeftSide ) ? leftpositioning : rightpositioning;
 
-        top = (config.top) ? config.top() : top,
+       // top = (config.top) ? config.top() : top,
         positioning = (config.left) ? config.left() : positioning;
         isCloseToLeftSide = (config.isCloseToLeftSide) ? config.isCloseToLeftSide() : isCloseToLeftSide;
 
@@ -1047,26 +1047,25 @@ $(function(){
           'top' : top,
           'left' : positioning
         }).appendTo('body').hover(mouseInTimer, mouseOutTimer);
-
+				$overlay.css({top: top - ($('.tooltip-overlay').outerHeight()/2)})
         if(isCloseToLeftSide){
           $overlay.addClass('leftside');
         } else {
           $overlay.removeClass('leftside');
         }
-
       }, mouseOutTimer);
-    
+
     });
 
   };
 
   $.fn.colorAlert = function( text, callback, duration, width, height, windowClass ){
-  
+
     /*
        Function: $.fn.colorAlert
-       
+
        Brief 'loading' overlay
-       
+
        Parameters:
          text - Text in the colorbox
          callback - Callback to fire when box disappears
@@ -1074,13 +1073,13 @@ $(function(){
          width - Width of colorbox
          height - Height of colorbox
          windowClass - Class to apply to the colorbox
-    */    
-  
+    */
+
     var text        = text || $(this).attr( 'data-loadText' ),
         windowClass = (windowClass) ? windowClass : '',
         height      = (height) ? height : 60,
         width       = (width) ? width : 420;
-  
+
     $.fn.colorbox({
       'html' : '<p class="large ' + windowClass + '"><strong>' + text + '</strong></p>',
       'transition'    : 'none',
@@ -1092,25 +1091,25 @@ $(function(){
         $( '#cboxClose' ).hide();
       }
     });
-  
+
     astro.wait( function(){
      $.fn.colorbox.close();
-     callback && callback();       
+     callback && callback();
     }, duration );
-  
+
   };
 
-  $.fn.getLocalData = function(){    
+  $.fn.getLocalData = function(){
     /*
        Function: $.fn.getLocalData
-       
+
        Retrieve image data from the local storage
-       
-       Returns: 
+
+       Returns:
          Original object
-    */        
+    */
     return this.each( function(){
-    
+
       var $img      = $(this),
           storageId = $img.attr( 'data-fileId' ),
           alt       = $img.attr( 'data-fileAlt' ),
@@ -1118,36 +1117,36 @@ $(function(){
           src       = ( src ) ? src : alt;
 
       $img.attr( 'src', src );
-    
+
     });
-      
+
   };
 
 /* End */
 
 /* Group: Helper Functions */
-  
+
   astro.postFakeFB = function() {
     /*
       Function: astro.postFakeFB
       Post a fake message to the Facebook comment list
-      
+
       Parameters:
         none
     */
-    
+
     $('.fb-comments-submit button').click(function(e) {
-      
+
       var $this = $(this),
         $parent = $this.closest('.fb-post-comment'),
         $comment = $parent.find('textarea'),
         $avatar = $parent.find('img').attr('src'),
         $post = '<div class="fb-comment cf"><img src="' + $avatar + '" height="50" width="50" /><a href="#" class="fb-comment-name">Bob Smith</a><div class="fb-comment-text">' + $comment.val() + '</div><p class="fb-comment-tools"><a href="#">Like</a> <sup>.</sup> <a href="#">Comment</a> <sup>.</sup> Just now</p></div>';
-      
+
       console.log($avatar);
       $comment.val('');
       $parent.next().prepend($post);
-      
+
     });
   };
 
@@ -1155,7 +1154,7 @@ $(function(){
     /*
       Function: astro.social
       Post a message to Facebook or Twitter
-      
+
       Parameters:
         message - The message to send
         type - 'tip' or 'goal', affects formatting in the handler
@@ -1163,13 +1162,13 @@ $(function(){
         callback - Fires when pos is successful
     */
     $.fn.colorAlert( 'Sending...', null, 10000, 200, 55, 'ajaxLoading' );
-  
+
     var data = {};
 
     data.message = message;
     data.type    = type;
     data.link    = link;
-              
+
     $.ajax({
       type:       'post',
       url:        astro.root + 'index.php?social',
@@ -1185,7 +1184,7 @@ $(function(){
         $.fn.colorAlert( 'Sorry, an error has occurred', null, 1500, 360, 85, 'socialWindow' );
       }
     });
-  
+
   };
 
 /* End */
@@ -1198,13 +1197,13 @@ $(function(){
       /*
         Function: astro.showColorbox
 
-        Display a modal box with custom width/height. 
+        Display a modal box with custom width/height.
         Uses the link's href attribute to select the content to be boxed
 
-        Depends: 
+        Depends:
           jquery.colorbox.js
 
-        Parameters: 
+        Parameters:
           event - passed in from the click event
       */
       event.preventDefault();
@@ -1233,7 +1232,7 @@ $(function(){
 
         Hide any open colorbox overlay
 
-        Depends: 
+        Depends:
           jquery.colorbox.js
       */
 
@@ -1245,7 +1244,7 @@ $(function(){
     $( 'a.colorbox-close' ).live( 'click', astro.hideColorbox);
 
   /* End */
-  
+
   /* Group: Graphs */
 
     astro.showGraphs = function( event ) {
@@ -1254,7 +1253,7 @@ $(function(){
 
         Show and animate graph bars
 
-        Parameters: 
+        Parameters:
           event - passed in from the 'appear' event
       */
       $( event.target ).find( '.graph-mask' ).each( function(i){
@@ -1267,7 +1266,7 @@ $(function(){
             };
         $(this).data( "style", $(this).attr("style") )
           .fadeTo( (i*100), 1)
-          .animate(settings, 700);          
+          .animate(settings, 700);
       });
     }
 
@@ -1277,7 +1276,7 @@ $(function(){
 
         Hide graphs, reseting bar positions for re-animation later
 
-        Parameters: 
+        Parameters:
           event - passed in from the 'hide' event
       */
       var $this = $( event.target );
@@ -1289,9 +1288,9 @@ $(function(){
     $( '.graph' ).live( 'appear', astro.showGraphs);
 
     $( '.graph' ).live( 'hide', astro.hideGraphs);
-    
+
   /* End */
-  
+
   /* Group: Misc. Link Methods */
 
     astro.preventDefault = function(event){
@@ -1300,7 +1299,7 @@ $(function(){
 
         Stop links to # from scrolling up
 
-        Parameters: 
+        Parameters:
           event - passed in from the click event
       */
       event.preventDefault();
@@ -1313,14 +1312,14 @@ $(function(){
         Instant fake feedback; on click, check the links's text
         against the textChange constant and replace the text if necessary
 
-        Parameters: 
+        Parameters:
           event - passed in from the click event
       */
       var $this = $( event.target );
 
       if(! $this.hasClass( 'noChange' ) ){
         for (t in astro.text_before_and_afters) {
-          if ( $this.text().toLowerCase()  == t.toLowerCase() ){ 
+          if ( $this.text().toLowerCase()  == t.toLowerCase() ){
             $this
               .html(astro.text_before_and_afters[t])
               .addClass( 'textChanged' );
@@ -1332,9 +1331,9 @@ $(function(){
     $( 'a[href=#]' ).live( 'click', astro.preventDefault);
 
     $( 'a' ).live( 'click', astro.textChange);
-      
+
   /* End */
-  
+
 /* End */
 
 /* Group: Content */
@@ -1346,17 +1345,17 @@ $(function(){
 
       The baseline function to run on document.ready, responsible for running methods off the DOM
 
-      See also: 
+      See also:
         <astro.content>
         <astro.content_init>
     */
-    
+
     // fix for event binding with older jQuery (http://stackoverflow.com/questions/7825448/webkit-issues-with-event-layerx-and-event-layery)
     $.event.props = $.event.props.join('|').replace('layerX|layerY|', '').split('|');
-    
+
     // .tabs and .tab-content: Using hrefs to select tabs
     $( '.tabs', scope ).live( 'appear', function(){
-      $( '.tabs' ).tabbed( '.tab-content','here' );    
+      $( '.tabs' ).tabbed( '.tab-content','here' );
     }).tabbed( '.tab-content','here' );;
 
     // Remove alerts
@@ -1393,9 +1392,9 @@ $(function(){
             'top'     : $t.parent().offset().top + $t.parent().outerHeight() + 10,
             'left'    : $t.parent().offset().left,
             'opacity' : '.01',
-            'display' : 'block' }) 
+            'display' : 'block' })
           .fadeTo(500, 1);
-        }, function(){ 
+        }, function(){
           $newTip.animate({
             'opacity' : 0
           }, function(){
@@ -1442,7 +1441,7 @@ $(function(){
       var $this = $(this);
       if(!$this.data('styled')){
         $this.uniform({
-          selectClass: "select-parent " + $this.attr( 'class' ), 
+          selectClass: "select-parent " + $this.attr( 'class' ),
           focusClass: "select-parent-focus"
         }).hover( function(){
           $this.parent().addClass( 'hover' );
@@ -1456,15 +1455,15 @@ $(function(){
     $( 'select.highlighted' )
       .each( styleSelects )
       .bind( 'appear' , styleSelects );
-    
+
     $('input:not(:submit,:reset), textarea').uniform();
 
     // colorbox load/spinner
     $( '.colorAlert', scope ).click( function(){
 
-      $(this).colorAlert( 
-        $(this).attr( 'data-loadText' ), 
-        null, 
+      $(this).colorAlert(
+        $(this).attr( 'data-loadText' ),
+        null,
         1500,
         $(this).attr( 'data-alertWidth' ),
         $(this).attr( 'data-alertHeight' ),
@@ -1483,13 +1482,13 @@ $(function(){
           .html( '---' )
           .bind( 'show', function(){
             $this.fadeTo(250, 0, function(){
-              $this.html(text).fadeTo(250, 1); 
+              $this.html(text).fadeTo(250, 1);
             });
           });
       });
       $(this).colorAlert( $(this).html(), function(){
         $toHide.trigger( 'show' );
-      }, 1500, 320, 55, 'ajaxLoading' );    
+      }, 1500, 320, 55, 'ajaxLoading' );
     });
 
     // toggle ctrl-key state
@@ -1501,7 +1500,7 @@ $(function(){
                       }
       },
       'keyup'    :  function(e){
-                      if (e.keyCode == 17) {                      
+                      if (e.keyCode == 17) {
                         window.ctrl = false;
                       }
       }
@@ -1514,7 +1513,7 @@ $(function(){
           allClasses = $this.attr( 'data-toggleAllClasses' );
       if ( ! $this.hasClass( allClasses ) ) {
         $( '.' + allClasses).removeClass( allClasses );
-        $this.addClass( allClasses );      
+        $this.addClass( allClasses );
       }
     });
 
@@ -1538,7 +1537,7 @@ $(function(){
       e.preventDefault();
       $(this).find( '.colorbox-close' ).trigger( 'click' );
     });
-        
+
     $( '.actsAsLinkList', scope ).actsAsLinkList();
 
     $( 'a.tip', scope ).showTooltipDescription();
@@ -1551,14 +1550,14 @@ $(function(){
 
       window.location = $(this).attr('data-href');
       return false;
-    
+
     });
-    
+
     // fake FB comments
     astro.postFakeFB();
 
   }
-  
+
 /*
  * Based on Swipe 1.0 by Brad Birdsall, Prime
  * Modified by Justin Secor
@@ -1638,12 +1637,12 @@ slidePanel.prototype = {
     style.MozTransform = style.webkitTransform = 'translate3d(-'+ (state * 220) +'px, 0px,0)';
 
   },
-  
+
   stop: function() {
     this.delay = 0;
     clearTimeout(this.interval);
   },
-  
+
   resume: function() {
     this.delay = this.options.auto || 0;
     this.begin();
@@ -1659,7 +1658,7 @@ slidePanel.prototype = {
   },
 
   onTouchStart: function(e) {
-    
+
     this.start = {
 
       // get touch coordinates for delta calculations in onTouchMove
@@ -1673,13 +1672,13 @@ slidePanel.prototype = {
 
     // used for testing first onTouchMove event
     this.isScrolling = undefined;
-    
+
     // reset deltaX
     this.deltaX = 0;
 
     // set transition time to 0 for 1-to-1 touch movement
     this.element.style.MozTransitionDuration = this.element.style.webkitTransitionDuration = 0;
-    
+
     e.stopPropagation();
   },
 
@@ -1695,7 +1694,7 @@ slidePanel.prototype = {
     // if user is not trying to scroll vertically
     if (!this.isScrolling && e.touches.length >= 2 ) {
 
-      // prevent native scrolling 
+      // prevent native scrolling
       e.preventDefault();
 
       // is the menu showing already?
@@ -1706,7 +1705,7 @@ slidePanel.prototype = {
         this.deltaX = Math.max(this.deltaX-220, -220);
         this.deltaX = Math.min(this.deltaX, 0);
       }
-      
+
       // translate immediately 1-to-1
       this.element.style.MozTransform = this.element.style.webkitTransform = 'translate3d(' + this.deltaX + 'px,0,0)';
 
@@ -1724,7 +1723,7 @@ slidePanel.prototype = {
     if (!this.isScrolling && this.deltaX !== 0) {
 
       // determine if slide attempt triggers next/prev slide
-      var isValidSlide = 
+      var isValidSlide =
             Number(new Date()) - this.start.time < 250      // if slide duration is less than 250ms
             && Math.abs(this.deltaX) > 20                   // and if slide amt is greater than 20px
             || Math.abs(this.deltaX) > 110;        // or if slide amt is greater than half the width
@@ -1732,7 +1731,7 @@ slidePanel.prototype = {
       this.pullOut(this.index, isValidSlide ? 1 : 0, this.speed );
 
     }
-    
+
     e.stopPropagation();
   }
 
