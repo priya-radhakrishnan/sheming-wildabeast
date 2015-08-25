@@ -1285,7 +1285,7 @@ body,
 #widget-container-opower {
   overflow-x: hidden;
   overflow-y: scroll;
-  font-size: 62.5%;
+/*   font-size: 62.5%; */
   line-height: 1.45;
   position: relative;
   z-index: 0;
