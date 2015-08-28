@@ -747,9 +747,8 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 		                        #widget-container-opower .neighbor-com-mess {
 																display:inline-block;
                       					float:right;
-                        				padding: 12px 30px 15px;
-																border: #ddd 1px solid;
-																margin:10px 2px 0 0;
+                        				padding: 0px 2px 15px 30px;
+																margin:0;
 																position: relative;
 														}
 														#widget-container-opower .neighbor-com-mess p {
@@ -758,9 +757,11 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 														 color: #666;
 														}
 														#widget-container-opower .neighbor-com-mess p.neighbor-com-you:before {
+/*
 														  content: "> ";
 														  position: absolute;
 														  left:12px;
+*/
 														}
 														#widget-container-opower .neighbor-compare-graph .graph {
 														    border-bottom: none;
@@ -818,11 +819,37 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 														    left: 0;
 														    right: 480px;
 														}
+
+
+														#widget-container-opower .neighbor-com-mess .icon {
+														    background: transparent url("UtilityCo - Bill Comparison_files/images/AstroIconSprite.png") no-repeat;
+														    margin: 0 auto;
+														}
+														#widget-container-opower .neighbor-com-mess .icon-size-4 {
+														    height: 20px;
+														    width: 20px;
+														    margin-top: -3px;
+																float: right;
+														}
+														#widget-container-opower .neighbor-com-mess .icon-right-4.icon-size-4 {
+																position: absolute;
+																left:10px;
+																float: none;
+														}
+														#widget-container-opower .neighbor-com-mess .icon-smiley-great-4 {
+														    background-position: -300px -7000px;
+														}
+														#widget-container-opower .neighbor-com-mess .icon-fade-smiley-good-4 {
+														    background-position: -300px -600px;
+														}
+														#widget-container-opower .neighbor-com-mess .icon-right-4 {
+														    background-position: -300px -1200px;
+														}
 											  	</style>
 
 
 	                        	<h2 class="pagelevel">How you’re doing: Aug 1 – 31</h2>
-														<p class="sub-pagelevel">You used more electricity than your neighbors</p>
+														<p class="sub-pagelevel">You used less electricity than your neighbors</p>
                             <div>
                                 <div class="multiSwitchMe" data-switchset="utility_switch">
                                     <div class="graph electricity clearfix" >
@@ -873,8 +900,12 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 
 	                                  	<div class="neighbor-com-mess">
-	                                  		<p class="neighbor-com-you"><b>Great</b> <span>:D</span></p>
-	                                  		<p style="color:#ddd;">Good <span>:-)</span></p>
+	                                  		<p class="neighbor-com-you"><b>Great</b>
+		                                  		<span class="icon icon-right-4 icon-size-4"></span>
+		                                  		<span class="icon icon-smiley-great-4 icon-size-4"></span>
+		                                  		<span class="icon icon-smiley-great-4 icon-size-4"></span>
+		                                  	</p>
+	                                  		<p style="color:#ddd;">Good <span class="icon icon-fade-smiley-good-4 icon-size-4"></span></p>
 	                                  		<p style="color:#ddd;">More than average</p>
 	                                  	</div>
 
