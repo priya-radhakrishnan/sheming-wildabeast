@@ -1,0 +1,10 @@
+<div class="mini-pie-graph" ng-if="graphtype=='pie'" ng-style="rotateSlice({{ graphdata[0] }},0.5)">
+    <div class="slice-container">
+        <div class="slice" ng-style="rotateSlice({{ graphdata[0] }})"></div>
+    </div>
+</div>
+<ul class="bar-graph mini-bar-graph small-block-grid-{{ graphdata.length }}" ng-if="graphtype=='bar'" ng-style="graphstyle">
+    <li ng-repeat="bar in graphdata track by $index" class="bar" ng-class="{'bar-highest': isHighestBar(bar)}">
+        <div class="bar-fill" ng-class="{'highlight': shouldHighlight($index)}" style="height: {{ bar }}%" ng-style="barstyle"></div>
+    </li>
+</ul>

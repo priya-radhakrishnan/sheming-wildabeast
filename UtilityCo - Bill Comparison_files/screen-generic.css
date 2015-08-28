@@ -597,6 +597,7 @@ float:          none; }
   font-weight: normal;
   line-height: 1.3;
   color: #222;
+  font-family: Arial, sans-serif;
 }
 #widget-container-opower h1 {
   font-size: 18px;
@@ -798,7 +799,7 @@ float:          none; }
 #widget-container-opower code, tt{font:1em 'andale mono', 'lucida console', monospace;line-height:1.5}
 #widget-container-opower pre.code {
   font-size: 10px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 #widget-container-opower blockquote {
   padding-left: 20px;
@@ -1244,7 +1245,7 @@ float:          none; }
     text-decoration: none;
     padding: 12px 40px;
     float: right;
-    margin: 10px 0px;
+    margin: 20px 0px;
     background-color: #107cb2;
 }
 #widget-container-opower .btn.opower-btn:hover,
@@ -1258,7 +1259,7 @@ float:          none; }
     transform: translateY(-4px);
     background-color: #63a9cc;
     box-shadow: 0 4px 0 0 #0f75a9;
-    color: #3bb2ed;
+    color: #fff;
 }
 #widget-container-opower .btn.opower-btn:focus,
 #colorbox .btn.opower-btn:focus  {
@@ -2153,10 +2154,24 @@ body,
 	float: none;
 }
 #widget-container-opower h2.pagelevel {
+	  font-size: 24px;
+    font-weight: bold;
+    color: #1D1D1D;
+    line-height: 1.4;
+    margin: 0 0 20px;
+/*
   font-size: 20px;
   color: #888;
   margin: 0 0 15px;
+*/
 }
+#widget-container-opower .sub-pagelevel {
+	margin: -15px 0 20px;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #1D1D1D;
+}
+
 #widget-container-opower h2.pagelevel.darker {
   color: #666666;
 }

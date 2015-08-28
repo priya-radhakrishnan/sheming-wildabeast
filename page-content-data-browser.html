@@ -679,46 +679,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
                     <span id="DeltaPlaceHolderMain">
 
-	<div class="welcome welcome-links">
 
-		<div class="welcome-image">
-			<div id="ctl00_PlaceHolderMain_ctl01_label" style="display:none">Page Image</div><div id="ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichImageField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl01_label"><div class="ms-rtestate-field">&nbsp;</div></div>
-		</div>
-		<div class="welcome-content">
-			<div id="ctl00_PlaceHolderMain_ctl02_label" style="display:none">Page Content</div><div id="ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl02_label"></div>
-		</div>
-		<div class="col-50 clearer">
-			<div class="left-column-links">
-				<div id="ctl00_PlaceHolderMain_ctl03__ControlWrapper_SummaryLinkFieldControl" style="display:inline"><div id="slwp_ctl00_PlaceHolderMain_ctl03_ctl00" class="slm-layout-main slwpmarker" xmlns:pcm="urn:PageContentManager"><!--empty--></div></div>
-			</div>
-		</div>
-		<div class="col-50">
-			<div class="right-column-links">
-				<div id="ctl00_PlaceHolderMain_ctl04__ControlWrapper_SummaryLinkFieldControl" style="display:inline"><div id="slwp_ctl00_PlaceHolderMain_ctl04_ctl00" class="slm-layout-main slwpmarker" xmlns:pcm="urn:PageContentManager"><!--empty--></div></div>
-			</div>
-		</div>
-		<div class="clearer">
-			<div class="links-top-zone">
-				<menu class="ms-hide">
-	<ie:menuitem id="MSOMenu_Help" iconsrc="/_layouts/15/images/HelpIcon.gif" onmenuclick="MSOWebPartPage_SetNewWindowLocation(MenuWebPart.getAttribute(&#39;helpLink&#39;), MenuWebPart.getAttribute(&#39;helpMode&#39;))" text="Help" type="option" style="display:none">
-
-	</ie:menuitem>
-</menu>
-			</div>
-		</div>
-		<div class="ms-table ms-fullWidth">
-		    <div class="tableCol-50">
-			    <div class="left-column-area">
-
-			    </div>
-		    </div>
-		    <div class="tableCol-50">
-			    <div class="right-column-area">
-
-			    </div>
-		    </div>
-		</div>
-	</div>
 <div style="display:none" id="hidZone"></div>
                     </span>
 
@@ -738,35 +699,197 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 									<div id="wrapper">
 
-                    <div class="col module" style="position:relative;">
+                    <div class="row module" style="position:relative;">
 
 
-	                    <p>databrowser</p>
+
+
+
+
+	                    <div id="home-energy-analyses-q">
+												<style>
+													#home-energy-analyses-q {
+														position: relative;
+														width:100%;
+														padding-bottom:77%;
+													}
+													#home-energy-analyses-q iframe {
+														position: absolute;
+														width:100%;
+														height: 100%;
+													}
+											  </style>
+
+
+												<iframe scrolling="no" src="http://databrowser/"></iframe><!-- http://www.consensuswork.com/opower/ci/exelon-f/databrowser/    http://databrowser/    http://www.consensuswork.com/opower/exelon/databrowser/ -->
+											</div>
+
+
+
+
+
+
+
+
 											<div class="hr tall"></div>
 
 
 
 
-                        <h2 class="pagelevel">How you’re doing: May 1 – 31</h2>
 
-                        <div id="dashboard-usage">
-                            <div class="header noborder">
-                                <h2>You used more electricity than your neighbors</h2>
-                            </div>
 
+
+
+                        <div id="dashboard-usage" style="padding:0 4%;">
+
+
+	                        <style>
+		                        #widget-container-opower .neighbor-com-mess {
+																display:inline-block;
+                      					float:right;
+                        				padding: 12px 30px 15px;
+																border: #ddd 1px solid;
+																margin:10px 2px 0 0;
+																position: relative;
+														}
+														#widget-container-opower .neighbor-com-mess p {
+														 line-height: 1;
+														 margin: 12px 0 6px 0;
+														 color: #666;
+														}
+														#widget-container-opower .neighbor-com-mess p.neighbor-com-you:before {
+														  content: "> ";
+														  position: absolute;
+														  left:12px;
+														}
+														#widget-container-opower .neighbor-compare-graph .graph {
+														    border-bottom: none;
+														    height: auto;
+														    margin-bottom: -10px;
+														}
+														#widget-container-opower .neighbor-compare-graph .graph .bar {
+														    float: none;
+														    height: 70px;
+														    width: 100%;
+														    position: relative;
+														}
+														#widget-container-opower .neighbor-compare-graph .graph .neighborusage {
+														    color: #fff;
+														    display: block;
+														    height: 50px;
+														    font-size: 14px;
+														    font-weight: normal;
+														    margin: 0 24px 0 0;
+														    padding: 10px;
+														    position: absolute;
+														    bottom: 0;
+														    left: 100px;
+														    right: 0;
+														    line-height: 3.5;
+														    border-left: 1px solid #ddd;
+														    text-align: right;
+														    -webkit-transition: height 0.6s;
+														    -moz-transition: height 0.6s;
+														    -ms-transition: height 0.6s;
+														    -o-transition: height 0.6s;
+														    transition: height 0.6s;
+														    z-index: 1;
+														}
+														#widget-container-opower .neighbor-compare-graph .graph .neighborusage div {
+														    display: block;
+														    position: absolute;
+														    margin: 10px 0;
+														    top: 0px;
+														    left: 0;
+														    right: 0;
+														    bottom: 0;
+														    z-index: -1;
+														}
+														#widget-container-opower .neighbor-compare-graph .graph .graphFooter {
+														    color: #666;
+														    font-size: 16px;
+														    text-align: left;
+														    position: relative;
+														    display: table-cell;
+														    vertical-align: middle;
+														    width: 100px;
+														    bottom: -5px;
+														    height: 60px;
+														    left: 0;
+														    right: 480px;
+														}
+											  	</style>
+
+
+	                        	<h2 class="pagelevel">How you’re doing: Aug 1 – 31</h2>
+														<p class="sub-pagelevel">You used more electricity than your neighbors</p>
                             <div>
                                 <div class="multiSwitchMe" data-switchset="utility_switch">
-                                    <div class="graph electricity ">
-	                                  <span class="graph-mask graph-mask-horiz" style="top: 10px; left: 50px; width: 352px; opacity: 1;"></span>
-																		<span class="graph-mask graph-mask-horiz" style="top: 50px; left: 50px; width: 432px; opacity: 1;"></span>
-																		<span class="graph-mask graph-mask-horiz" style="top: 90px; left: 50px; width: 502px; opacity: 1;"></span>
-	                                  <img src="assets/electricity-big.jpg"></div>
+                                    <div class="graph electricity clearfix" >
+
+
+
+
+	                                  	<div class="neighbor-com-graph-cont" style="display:inline-block;width:75%;">
+
+		                                  	<div class="section neighbor-compare-graph" id="neighbor-compare-graph">
+											                        <div class="graph">
+											                            <div class="bar">
+											                                <div class="neighborusage" data-neighborusage="77">
+											                                    77kWh
+											                                    <div style="background-color:#107CB2;"></div>
+											                                </div>
+											                                <div class="graphFooter">
+											                                    You
+											                                </div>
+											                            </div>
+
+											                            <div class="bar">
+											                                <div class="neighborusage" data-neighborusage="120">
+											                                    120kWh
+											                                    <div style="background-color:#8DC63F;"></div>
+											                                </div>
+											                                <div class="graphFooter">
+																												Efficient Neighbors
+											                                </div>
+											                            </div>
+
+											                            <div class="bar">
+											                                <div class="neighborusage" data-neighborusage="211">
+											                                    211kWh
+											                                    <div style="background-color:#666666;"></div>
+											                                </div>
+											                                <div class="graphFooter">
+											                                    All Neighbors
+											                                </div>
+											                            </div>
+											                        </div>
+		                                  	</div>
+
+	                                  	</div>
+
+
+
+
+
+	                                  	<div class="neighbor-com-mess">
+	                                  		<p class="neighbor-com-you"><b>Great</b> <span>:D</span></p>
+	                                  		<p style="color:#ddd;">Good <span>:-)</span></p>
+	                                  		<p style="color:#ddd;">More than average</p>
+	                                  	</div>
+
+
+
+	                                  </div>
                                 </div>
+
+
                             </div><a href="http://www.consensuswork.com/astro/myenergyuse/" class="btn opower-btn" style="text-align: center;">Explore my usage</a>
 
-                            <p style="margin: 10px 0 0"><a href="#neighbors" class="colorbox" data-width="700">Who are my neighbors?</a> &nbsp;&nbsp;| &nbsp; Based on a 30000ft² home. <a href="#changeSize" class="colorbox" data-width="500" data-height="135">change?</a></p>
+                            <p style="margin: 20px 0 0"><a href="#neighbors" class="colorbox" data-width="700">Who are my neighbors?</a></p>
                         </div>
 
+<!--
                         <div class="hr tall"></div>
 
                         <h2 class="pagelevel">Focus on cooling this summer</h2>
@@ -824,6 +947,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                                 </div></a> <a href="http://www.consensuswork.com/astro/myenergyuse/whatusesmost/" class="btn opower-btn" style="margin: 10px 0 0 10px;">Get expert cooling advice</a>
                             </div>
                         </div>
+-->
                     </div>
 
 
@@ -878,6 +1002,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 	            </div>
             </div><!-- <div id="neighbors"> -->
 
+<!--
             <div id="changeSize"  class="billCompareModal">
               <div>
                 <div class="dialog-head">
@@ -890,15 +1015,21 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                     </form>
 								</div>
               </div>
-            </div><!-- <div id="changeSize"> -->
+            </div>
+--><!-- <div id="changeSize"> -->
 
 
-        </div><script>
+        </div>
+
+<!--
+        <script>
 								var avg_temp    = 75,
                 avg_temp    = parseInt(avg_temp)+70,
                 linkColor = '#0099cc',
                 safari = false;
         </script>
+-->
+
     </div>
 
 
@@ -907,12 +1038,13 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 <!--     <script type="text/javascript" src="UtilityCo - Bill Comparison_files/jquery.js"></script> -->
     <script type="text/javascript" src="UtilityCo - Bill Comparison_files/core.js"></script>
 		<script type="text/javascript" src="UtilityCo - Bill Comparison_files/jquery.colorbox.js"></script>
+		<script type="text/javascript" src="UtilityCo - Bill Comparison_files/neighbor-compare-graph.js"></script>
 
 
 <script type="text/javascript" src="UtilityCo - Bill Comparison_files/jquery.uniform.js"></script>
-<script type="text/javascript" src="UtilityCo - Bill Comparison_files/ajaxRefresh.js"></script>
-<script type="text/javascript" src="UtilityCo - Bill Comparison_files/dashboard.js"></script>
-<script type="text/javascript" src="UtilityCo - Bill Comparison_files/finalize.js"></script>
+<!-- <script type="text/javascript" src="UtilityCo - Bill Comparison_files/ajaxRefresh.js"></script> -->
+<!-- <script type="text/javascript" src="UtilityCo - Bill Comparison_files/dashboard.js"></script> -->
+<!-- <script type="text/javascript" src="UtilityCo - Bill Comparison_files/finalize.js"></script> -->
 
 
 

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" ng-app="app" ng-controller="ceVisionController">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Brilliant Energy</title>
+        <script src="js/vendor/angular.min.js"></script>
+        <script src="js/vendor/angular-ui-router.min.js"></script>
+        <script src="js/vendor/angular-animate.min.js"></script>
+        <script src="js/vendor/d3.min.js"></script>
+        <script src="js/vendor/mm-foundation-tpls.min.js"></script>
+        <script src="js/vendor/angular-charts.min.js"></script>
+        <script src="js/vendor/slider.js"></script>
+        <script src="js/vendor/angular-count-to.min.js"></script>
+
+        <link rel="stylesheet" href="styles/app.css" />
+        <link rel="stylesheet" href="styles/overrule-styles.css" />
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+    <body op-scroll scroll-position="scroll" ng-class="{'scrolled': scroll > 50}">
+        <div ng-include="'img/icons/icons.svg'"></div>
+        <div class="page-container">
+            <div class="header">
+                <div class="logo" ng-style="scrollScale(scroll)">
+                    <a href="">
+                    <svg viewBox="0 0 201 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                        <g id="brilliant-logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                            <g id="Imported-Layers" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+                                <path d="M162.525,31.936 L181.138,-0.304 L199.752,31.936 L162.525,31.936" id="Fill-1" fill="#BE1E2D" sketch:type="MSShapeGroup"></path>
+                                <path d="M162.875,10.444 L150.466,31.936 L162.525,31.936 L168.904,20.887 L162.875,10.444" id="Fill-2" fill="#C6E29F" sketch:type="MSShapeGroup"></path>
+                                <path d="M168.904,20.887 L162.525,31.936 L175.285,31.936 L168.904,20.887" id="Fill-3" fill="#A57236" sketch:type="MSShapeGroup"></path>
+                                <path d="M187.693,31.936 L169.08,64.177 L150.466,31.936 L187.693,31.936" id="Fill-4" fill="#F15A29" sketch:type="MSShapeGroup"></path>
+                                <path d="M199.752,31.936 L187.693,31.936 L181.313,42.988 L187.339,53.429 L199.752,31.936" id="Fill-5" fill="#8DD8F7" sketch:type="MSShapeGroup"></path>
+                                <path d="M199.752,31.936 L175.285,31.936 L199.752,31.936" id="Fill-6" fill="#6C688D" sketch:type="MSShapeGroup"></path>
+                                <path d="M187.693,31.936 L174.933,31.936 L181.313,42.988 L187.693,31.936" id="Fill-7" fill="#86868B" sketch:type="MSShapeGroup"></path>
+                                <g class="brilliant">
+                                    <path d="M8.328,29.456 L-0.248,29.456 L-0.248,8.259 L7.999,8.259 C11.929,8.259 14.4,10.491 14.4,14.065 C14.4,16.356 12.972,17.993 11.541,18.56 C13.177,19.216 14.728,20.792 14.728,23.472 C14.728,27.372 12.076,29.456 8.328,29.456 L8.328,29.456 Z M7.73,11.148 L2.966,11.148 L2.966,17.22 L7.73,17.22 C9.785,17.22 11.183,16.148 11.183,14.183 C11.183,12.22 9.785,11.148 7.73,11.148 L7.73,11.148 Z M8.031,20.106 L2.966,20.106 L2.966,26.569 L8.031,26.569 C10.261,26.569 11.509,25.198 11.509,23.323 C11.509,21.448 10.261,20.106 8.031,20.106 L8.031,20.106 Z" id="Fill-8" fill="#8DC63F" sketch:type="MSShapeGroup"></path>
+                                    <path d="M30.894,29.456 L26.427,20.524 L22.41,20.524 L22.41,29.456 L19.191,29.456 L19.191,8.259 L27.408,8.259 C31.429,8.259 33.988,10.851 33.988,14.45 C33.988,17.487 32.146,19.423 29.759,20.079 L34.644,29.456 L30.894,29.456 L30.894,29.456 Z M27.173,11.148 L22.41,11.148 L22.41,17.784 L27.173,17.784 C29.314,17.784 30.773,16.565 30.773,14.483 C30.773,12.398 29.314,11.148 27.173,11.148 L27.173,11.148 Z" id="Fill-9" fill="#8DC63F" sketch:type="MSShapeGroup"></path>
+                                    <path d="M38.396,8.259 L41.609,8.259 L41.609,29.456 L38.396,29.456 L38.396,8.259 Z" id="Fill-10" fill="#8DC63F" sketch:type="MSShapeGroup"></path>
+                                    <path d="M46.851,29.456 L46.851,8.259 L50.064,8.259 L50.064,26.569 L60.277,26.569 L60.277,29.456 L46.851,29.456" id="Fill-11" fill="#8DC63F" sketch:type="MSShapeGroup"></path>
+                                    <path d="M63.642,29.456 L63.642,8.259 L66.855,8.259 L66.855,26.569 L77.068,26.569 L77.068,29.456 L63.642,29.456" id="Fill-12" fill="#8DC63F" sketch:type="MSShapeGroup"></path>
+                                    <path d="M80.429,8.259 L83.648,8.259 L83.648,29.456 L80.429,29.456 L80.429,8.259 Z" id="Fill-13" fill="#8DC63F" sketch:type="MSShapeGroup"></path>
+                                    <path d="M101.066,29.456 L99.603,25.198 L91.24,25.198 L89.779,29.456 L86.357,29.456 L94.125,8.259 L96.718,8.259 L104.486,29.456 L101.066,29.456 L101.066,29.456 Z M95.498,13.052 L92.191,22.46 L98.71,22.46 L95.498,13.052 L95.498,13.052 Z" id="Fill-14" fill="#8DC63F" sketch:type="MSShapeGroup"></path>
+                                    <path d="M120.209,29.456 L110.412,14.542 L110.412,29.456 L107.197,29.456 L107.197,8.259 L110.144,8.259 L119.939,23.144 L119.939,8.259 L123.154,8.259 L123.154,29.456 L120.209,29.456" id="Fill-15" fill="#8DC63F" sketch:type="MSShapeGroup"></path>
+                                    <path d="M135.568,11.148 L135.568,29.456 L132.355,29.456 L132.355,11.148 L126.519,11.148 L126.519,8.259 L141.404,8.259 L141.404,11.148 L135.568,11.148" id="Fill-16" fill="#8DC63F" sketch:type="MSShapeGroup"></path>
+                                </g>
+                                <g class="energy">
+                                    <path d="M63.619,48.931 L63.619,34.89 L72.869,34.89 L72.869,37.335 L66.361,37.335 L66.361,40.63 L71.902,40.63 L71.902,43.073 L66.361,43.073 L66.361,46.485 L72.869,46.485 L72.869,48.931 L63.619,48.931" id="Fill-17" fill="#1BB2ED" sketch:type="MSShapeGroup"></path>
+                                    <path d="M83.656,48.931 L78.093,40.313 L78.093,48.931 L75.353,48.931 L75.353,34.89 L77.8,34.89 L83.357,43.487 L83.357,34.89 L86.097,34.89 L86.097,48.931 L83.656,48.931" id="Fill-18" fill="#1BB2ED" sketch:type="MSShapeGroup"></path>
+                                    <path d="M89.177,48.931 L89.177,34.89 L98.425,34.89 L98.425,37.335 L91.918,37.335 L91.918,40.63 L97.459,40.63 L97.459,43.073 L91.918,43.073 L91.918,46.485 L98.425,46.485 L98.425,48.931 L89.177,48.931" id="Fill-19" fill="#1BB2ED" sketch:type="MSShapeGroup"></path>
+                                    <path d="M108.363,48.931 L105.623,43.331 L103.652,43.331 L103.652,48.931 L100.91,48.931 L100.91,34.89 L106.412,34.89 C109.269,34.89 110.964,36.843 110.964,39.19 C110.964,41.161 109.765,42.384 108.404,42.878 L111.537,48.931 L108.363,48.931 L108.363,48.931 Z M106.234,37.335 L103.652,37.335 L103.652,41.042 L106.234,41.042 C107.437,41.042 108.226,40.274 108.226,39.19 C108.226,38.104 107.437,37.335 106.234,37.335 L106.234,37.335 Z" id="Fill-20" fill="#1BB2ED" sketch:type="MSShapeGroup"></path>
+                                    <path d="M122.265,47.45 C121.138,48.616 119.8,49.05 118.3,49.05 C116.763,49.05 115.501,48.497 114.513,47.511 C113.093,46.091 113.136,44.337 113.136,41.909 C113.136,39.485 113.093,37.729 114.513,36.31 C115.501,35.323 116.724,34.773 118.3,34.773 C121.556,34.773 123.212,36.901 123.587,39.269 L120.824,39.269 C120.509,37.946 119.705,37.218 118.3,37.218 C117.55,37.218 116.941,37.513 116.548,37.966 C116.015,38.558 115.876,39.208 115.876,41.909 C115.876,44.612 116.015,45.282 116.548,45.874 C116.941,46.329 117.55,46.605 118.3,46.605 C119.13,46.605 119.8,46.308 120.255,45.815 C120.709,45.302 120.886,44.671 120.886,43.94 L120.886,43.409 L118.3,43.409 L118.3,41.122 L123.609,41.122 L123.609,43.173 C123.609,45.204 123.248,46.427 122.265,47.45" id="Fill-21" fill="#1BB2ED" sketch:type="MSShapeGroup"></path>
+                                    <path d="M131.355,43.173 L131.355,48.931 L128.632,48.931 L128.632,43.173 L124.414,34.89 L127.392,34.89 L130.013,40.55 L132.599,34.89 L135.574,34.89 L131.355,43.173" id="Fill-22" fill="#1BB2ED" sketch:type="MSShapeGroup"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    </a>
+                </div>
+                <div class="mobile-nav-toggle" ng-class="{'active': mobileNav === true}" ng-click="toggleMobileNav()"></div>
+                <ul class="utility-nav">
+                    <li>
+                        You're logged in as <a href="">Ryan Devenish</a>.
+                    </li>
+                    <li>
+                        <a href="">
+                            Logout
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Contact us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Help
+                        </a>
+                    </li>
+                </ul>
+                <ul class="primary-nav" ng-class="{'open': mobileNav}">
+                    <li ng-repeat="menuItem in menuItems" ng-if="menuItem.menu && !menuItem.parent">
+                        <a href="" ng-class="{'on' : $state.includes(menuItem.name)}">
+                            <span>{{menuItem.label}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main">
+                <div ui-view></div>
+            </div>
+            <div class="footer">
+                <ul>
+                    <li>
+                        <a href="">
+                            About Brilliant Energy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Terms of Use
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Help
+                        </a>
+                    </li>
+                </ul>
+                <p class="opower-tag">
+                    Runs on Opower. &copy; 2014 Opower. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+        <script src="app/app.js"></script>
+<!--         <script src="//localhost:35729/livereload.js"></script> --><!--remove this later-->
+    </body>
+</html>

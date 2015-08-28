@@ -1,0 +1,177 @@
+<div class="row-data bill-summary-bits">
+    <div class="small-12 columns">      
+        <h1 class="heading-page">Your current bill</h1>
+        <div class="row collapse">
+            <div class="summary-bits small-4 large-4 columns">
+                <span>Due on</span>
+                <strong>August 15, 2014</strong>
+            </div>
+            <div class="summary-bits small-4 large-3 columns">
+                <span>Total Due</span>
+                <strong class="amount-due">$241.41</strong>
+            </div>
+            <div class="summary-bits small-4 large-3 columns">
+                <span>Recent Payment</span>
+                <strong class="amount-due">$131.41</strong>
+            </div>
+            <div class="small-12 large-2 columns">
+                <a href="" class="button primary fill-space">Pay now</a>
+            </div> 
+        </div> 
+    </div>
+</div>
+<div class="row-break bill-details">
+    <div class="small-12 large-12 columns">
+        <ul class="list-expandable" ng-class="{'expanded': showDetails}">
+            <li>
+                <a class="expand-list" ng-class="{'expanded': showDetails}" ng-click="toggleDetails()">
+                    <span class="list-top-level">
+                        Electricity use
+                        <span class="right">$135.12</span>
+                    </span>
+                    <svg class="icon icon-expand" viewBox="0 0 80 80" alt="Expand list">
+                        <use xlink:href="#caret"></use>
+                    </svg>
+                </a>
+                <ul class="list-expandable" ng-show="showDetails"> 
+                    <li> 
+                        <div class="small-8 medium-4 columns v-center">
+                            Weekend Usage <span class="has-tooltip"><span class="geomicon geomicon-help"></span><span class="tooltip tooltip-wide">Your electricity costs based on your baseline <a href="">tier 1</a> allowance.</span></span><br>Tier 1
+                        </div>
+                        <div class="hide-for-small-only medium-6 columns">
+                            <div class="bar" ng-class="{'bar-weekend':showDetails}"></div>
+                        </div>
+                        <div class="small-4 medium-2 columns amount">
+                            $124.12
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="small-8 medium-4 columns v-center">
+                            Weekday Usage <span class="geomicon-help"></span><br>Tier 1
+                        </div>
+                        <div class="hide-for-small-only medium-6 columns">
+                            <div class="bar" ng-class="{'bar-weekday':showDetails}"></div>
+                        </div>
+                        <div class="small-4 medium-2 columns amount">
+                            $104.49
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="small-8 medium-4 columns">
+                            Generation <span class="geomicon-help"></span>
+                        </div>
+                        <div class="hide-for-small-only medium-6 columns">
+                            <div class="bar" ng-class="{'bar-generation':showDetails}"></div>
+                        </div>
+                        <div class="small-4 medium-2 columns amount">
+                            $24.12
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="small-8 medium-4 columns">
+                            Distribution <span class="geomicon-help"></span>
+                        </div>
+                        <div class="hide-for-small-only medium-6 columns">
+                            <div class="bar" ng-class="{'bar-distribution':showDetails}"></div>
+                        </div>
+                        <div class="small-4 medium-2 columns amount">
+                            $21.99
+                        </div>
+                    </li>                                                               
+
+                </ul>
+            </li>
+            <li>
+                <a class="expand-list">
+                    <span class="list-top-level">
+                        Natural gas use
+                        <span class="right">$345.12</span>
+                    </span>
+                    <svg class="icon icon-expand" viewBox="0 0 80 80" alt="Expand list">
+                        <use xlink:href="#caret"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="expand-list">
+                    <span class="list-top-level">
+                        Previous Balance
+                        <span class="right">$45.12</span>
+                    </span>
+                    <svg class="icon icon-expand" viewBox="0 0 80 80" alt="Expand list">
+                        <use xlink:href="#caret"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="expand-list">
+                    <span class="list-top-level">
+                        Taxes and fees
+                        <span class="right">$15.99</span>
+                    </span>
+                    <svg class="icon icon-expand" viewBox="0 0 80 80" alt="Expand list">
+                        <use xlink:href="#caret"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <div class="list-footer"><span>Total</span><span>$523.45</span></div>
+    </div>
+</div>
+<div class="row-data bill-energy-costs">
+    <div class="small-12 columns">
+        <h1 class="heading-page">Energy use this billing period</h1>
+        <div class="graph-container" ng-controller="billUsageGraphConroller">
+            <div class="y-axis y-axis-{{ yPoints.length }}">
+                <div class="y-axis-point graph-label" ng-repeat="point in yPoints">
+                    ${{ point.value }}
+                </div>
+                <div class="y-axis-point graph-label">
+                    $0
+                </div>
+            </div>
+            <div class="x-axis">
+                <div class="x-axis-start graph-label">
+                    {{ xStart }}
+                </div>
+                <div class="x-axis-end graph-label">
+                    {{ xEnd }}
+                </div>
+            </div>
+            <div 
+                op-bar-graph 
+                class="graph-wrapper bar-graph-wrapper pre-animation" 
+                graphdata="graphData" 
+                highest="fiveHighest" 
+                graphheight="'short'"
+                ng-class="{'show-weekends': activeFilter==='weekends', 'show-highest': activeFilter==='highest'}">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row-break bill-insights" ng-controller="insightCardsController">
+    <div class="small-12 large-3 columns bill-insight" ng-repeat="insightCard in insightCards" ng-click="setCurrentInsight($index); open()">
+        <svg class="icon secondary icon-{{ insightCard.icon }}" viewBox="0 0 80 80">
+            <use xlink:href="{{ '#'+insightCard.icon }}"></use>
+        </svg>
+        <h3 class="insight-heading">{{ insightCard.insight }}</h3>
+        <div class="insight-name">{{ insightCard.name }}</div>
+    </div>
+</div>
+<div class="row-data bill-analysis">
+    <div class="small-12 columns">      
+        <h1 class="heading-page">Bill analysis</h1>
+        <div class="bill-analysis-graph-container">
+            <div id="insightCardsLauncher" ng-controller="insightCardsController">
+                <object width="900" height="450" data="img/bill-analysis.swf"></object>
+            </div>            
+        </div>
+    </div>
+</div>
+<div class="row-break page-recommendation">
+    <div class="small-12 columns">      
+        <h1 class="heading-page">Personalized Recommendation</h1>
+        <div op-tip format="detailed" tip="energy_assistance"></div>
+    </div>
+</div>
+

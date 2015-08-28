@@ -1,0 +1,11 @@
+<ul class="bar-graph has-tips" ng-class="{'short-bar-graph': graphheight === 'short'}">
+    <li ng-repeat="bar in graphdata track by $index" class="bar" style="width: {{ 100/graphdata.length }}%" ng-class="{'bar-highest': isHighestBar(highest,bar.value), 'bar-weekend': bar.weekend === true}">
+        <div class="bar-fill" style="height: {{ bar.value }}%"></div>
+        <div class="tooltip" style="bottom: {{ bar.value }}%">
+            <div class="tooltip-text">
+                {{ bar.day }}
+                <strong>$35.33</strong>
+            </div>
+        </div>
+    </li>
+</ul>

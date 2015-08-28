@@ -1,0 +1,35 @@
+<div class="insight-cards" ng-controller="insightCardsController">
+
+    <div class="modal-body">
+        <div class="insight-card" ng-include="getCurrentInsight()" ng-class="insightSwitchDirection"></div>
+    </div>
+
+    <a href="" class="close-modal contains-icon modal-control" ng-click="cancel()">
+        <svg class="icon" viewBox="0 0 80 80" alt="Close this window">
+            <use xlink:href="#close"></use>
+        </svg>
+    </a>
+    <a href="" class="navigation-arrow navigation-arrow-prev contains-icon modal-control" ng-click="cycleInsight('back')">
+        <svg class="icon" viewBox="0 0 80 80" alt="Previous insight">
+            <use xlink:href="#left-arrow"></use>
+        </svg>
+    </a>
+    <a href="" class="navigation-arrow navigation-arrow-next contains-icon modal-control" ng-click="cycleInsight('next')">
+        <svg class="icon" viewBox="0 0 80 80" alt="Next insight">
+            <use xlink:href="#right-arrow"></use>
+        </svg>
+    </a>
+    <!--
+    <div class="insight-card-controls">
+        <h3>What contributed to your bill:</h3>
+        <div class="insight-card-buttons">
+            <div class="insight-card-button" ng-repeat="insightCard in insightCards">
+                <svg class="icon" viewBox="0 0 80 80" alt="Next insight">
+                    <use ng-attr-xlink:href="{{ insightCard.icon }}" xlink:href=""></use>
+                </svg>
+                <a ng-click="goToInsight(insightCard)">{{ insightCard.name }}</a>
+            </div>
+        </div>
+    </div>
+    -->
+</div>

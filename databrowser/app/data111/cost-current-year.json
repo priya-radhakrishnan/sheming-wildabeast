@@ -1,0 +1,156 @@
+{
+    "series": [
+        {
+            "name": "costs",
+            "data": [
+                {
+                    "y": 72.63,
+                    "date": "Jan 21 - Feb 19, 2014",
+                    "name": "Feb 19",
+                    "link": "cost-february2",
+                    "temp": "42",
+                    "insight": {
+                        "disposition" : "positive",
+                        "message" : "You spent about the same as previous year."
+                    }
+                },
+                {
+                    "y": 32.09,
+                    "date": "Feb 20 - Mar 20, 2014",
+                    "name": "Mar 20",
+                    "link": "cost-march",
+                    "temp": "51",
+                    "insight": {
+                        "disposition" : "positive",
+                        "message" : "$9 less than previous year."
+                    }
+                },
+                {
+                    "y": 35.41,
+                    "date": "Mar 21 - Apr 22, 2014",
+                    "name": "Apr 22",
+                    "link": "cost-april",
+                    "temp": "60",
+                    "insight": {
+                        "disposition" : "positive",
+                        "message" : "You spent about the same as previous year."
+                    }
+                },
+                {
+                    "y": 26.34,
+                    "date": "Apr 23 - May 20, 2014",
+                    "name": "May 20",
+                    "link": "cost-may",
+                    "temp": "75",
+                    "insight": {
+                        "disposition" : "positive",
+                        "message" : "You spent about the same as previous year."
+                    }
+                },
+                {
+                    "y": 46.12,
+                    "date": "May 21 - Jun 19, 2014",
+                    "name": "Jun 19",
+                    "link": "cost-june",
+                    "temp": "93",
+                    "insight": {
+                        "disposition" : "negative",
+                        "message" : "$5 more than last year. Weather was not a factor."
+                    }
+                },
+                {
+                    "y": 95.08,
+                    "date": "Jun 20 - Jul 20, 2014",
+                    "name": "Jul 20",
+                    "link": "cost-july",
+                    "temp": "94",
+                    "insight": {
+                        "disposition" : "negative",
+                        "message" : "Cooling cost you $12 compared to $10 the previous year."
+                    }
+                },
+                {
+                    "y": 98.01,
+                    "date": "Jul 21 - Aug 20, 2014",
+                    "name": "Aug 20",
+                    "link": "cost-august",
+                    "temp": "98",
+                    "insight": {
+                        "disposition" : "positive",
+                        "message" : "You spent about the same as previous year."
+                    }
+                },
+                {
+                    "y": 60.91,
+                    "date": "Aug 21 - Sep 20, 2014",
+                    "name": "Sep 20",
+                    "link": "cost-september",
+                    "temp": "86",
+                    "insight": {
+                        "disposition" : "positive",
+                        "message" : "$3 less than previous year."
+                    }
+                },
+                {
+                    "y": 25.83,
+                    "date": "Sep 21 - Oct 20, 2014",
+                    "name": "Oct 20",
+                    "link": "cost-october",
+                    "temp": "72",
+                    "insight": {
+                        "disposition" : "positive",
+                        "message" : "$8 less than previous year."
+                    }
+                },
+                {
+                    "y": 36.34,
+                    "date": "Oct 21 - Nov 20, 2014",
+                    "name": "Nov 20",
+                    "link": "cost-november",
+                    "temp": "47",
+                    "insight": {
+                        "disposition" : "positive",
+                        "message" : "You spent about the same as previous year."
+                    }
+                },
+                {
+                    "y": 50.08,
+                    "date": "Nov 21 - Dec 19, 2014",
+                    "name": "Dec 19",
+                    "link": "cost-december",
+                    "temp": "43",
+                    "insight": {
+                        "disposition" : "positive",
+                        "message" : "$5 less than previous year."
+                    }
+                },
+                {
+                    "y": 55.79,
+                    "date": "Dec 20, 2014 - Jan 20, 2015",
+                    "name": "Jan 20",
+                    "link": "cost-january",
+                    "temp": "40",
+                    "insight": {
+                        "disposition" : "negative",
+                        "message" : "Heating cost you $6 more than last year."
+                    }
+                },
+                {
+                    "y": 92.63,
+                    "date": "Jan 21 - Feb 19, 2015",
+                    "name": "Feb 19",
+                    "link": "cost-february",
+                    "temp": "33",
+                    "insight": {
+                        "disposition" : "negative",
+                        "message" : "Heating cost you $20 more than last year."
+                    }
+                }
+            ]
+        },
+        {
+            "name": "weather",
+            "data": [42, 56, 62, 64, 88, 92, 93, 76, 74, 46, 45, 32, 29]
+        }
+    ]
+}

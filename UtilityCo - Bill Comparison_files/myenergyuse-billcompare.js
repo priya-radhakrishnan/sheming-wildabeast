@@ -17,7 +17,7 @@ $(document).ready(function(){
         // get the proper heights of the bars, motherfucker!
 
         var billArray = [];
-            
+
         $billCompare.find('.billAmount').each(function(){
             var val = $(this).attr('data-billAmount');
             billArray.push(val);
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
         var x = Math.max.apply(Math,billArray), // highest value
             y = 300 / x;  // multiplier to apply to lower value
-        
+
         setTimeout(function(){
             $billCompare.find('.billAmount').each(function(){
                 var val = $(this).attr('data-billAmount');
@@ -40,28 +40,4 @@ $(document).ready(function(){
     }
 
     animateGraph();
-
-    // toggling the graph for dual fuel
-/*
-    $billCompare.find('select').on('change',function(){
-
-
-        var activeOption =  $(this).find(':selected').attr('value'); // selected option
-
-        // show the spinner, animate after 1s
-
-        if (!$billCompare.find('#billCompare-'+activeOption).hasClass('active')) {
-            $spinner.show();
-            setTimeout(function(){
-                $billCompare.find('.billCompareMain.active').removeClass('active');
-                $billCompare.find('#billCompare-'+activeOption).addClass('active');
-                animateGraph();
-                $spinner.hide();
-            },1000)
-        }
-            
-
-    })
-*/
-
 });

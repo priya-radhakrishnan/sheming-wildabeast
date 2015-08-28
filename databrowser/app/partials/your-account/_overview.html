@@ -1,0 +1,95 @@
+<div class="row-data account-info">
+    <div class="small-12 columns">
+        <div class="row collapse">
+            <div class="small-4 columns">Ryan Devenish</div>
+            <div class="small-4 columns">555 Cedar Lanest, San Francisco, CA 94151</div>
+            <div class="small-4 columns account-number">Acct # 55-2456496237</div>
+        </div>
+        <a href="">Manage account details</a>
+    </div>
+</div>
+<div class="row-break current-bill">
+    <div class="small-12 columns">
+        <div class="row collapse current-balance">
+            <div class="medium-10 columns">
+                <h2>Your current balance is $523.45</h2>
+            </div>
+            <div class="medium-2 columns">
+                <a href="" class="button primary fill-space">Pay now</a>
+            </div>
+        </div>
+        <div class="row collapse">
+            <div class="small-12 large-4 columns">
+                <h3 class="heading-subsection">Account options</h3>
+                <ul>
+                    <li><a href="">View Recurring Payments</a></li>
+                    <li><a href="">Manage Payment Accounts</a></li>
+                    <li><a href="">Billing and Payment Activity</a></li>
+                </ul>
+            </div>
+            <div class="small-12 large-4 columns">
+                <h3 class="heading-subsection">Ways to save</h3>
+                <ul>
+                    <li><a href="">Sign up for SmartRate</a></li>
+                    <li><a href="">Energy checkup</a></li>
+                    <li><a href="">Explore rebates</a></li>
+                </ul>
+            </div>
+            <div class="small-12 large-4 columns">
+                <h3 class="heading-subsection">Help me pay</h3>
+                <ul>
+                    <li><a href="">Balanced Payment Plan</a></li>
+                    <li><a href="">Make Payment Arrangement</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> 
+<div class="row-data recent-bill">
+    <div class="small-12 columns">
+        <h1 class="heading-page">Your recent bill</h1>
+        <div class="row collapse">
+            <div class="medium-8 medium-push-4 columns" ng-controller="recentBillGraphController">
+                <div class="recent-bill-graph-container">
+                    <div op-mini-graph graphtype="graphType" graphdata="graphData" graphstyle="graphStyle" class="recent-bill-graph"></div>
+                    <div class="recent-bill-legend">
+                        <div class="recent-bill-item energy-use">
+                            <div class="title">Your Energy Use</div>                                             
+                            <div class="amount">$241.52</div>
+                        </div>
+                        <div class="recent-bill-item taxes-fees">
+                            <div class="title">Taxes & Fees</div>                        
+                            <div class="amount">$10.42</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="medium-4 medium-pull-8 columns">
+                <h2>Your energy use accounts for 87% of your bill</h2>
+                <a href="#/your-account/current-bill" class="button primary fill-space">View Current Bill</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row-break historical-cost">
+    <div class="small-12 columns">
+        <h1 class="heading-page">Historical season cost</h1>
+        <div class="row collapse">
+            <div class="medium-8 medium-push-4 columns" ng-controller="historicalSeasonGraphController">
+                <div op-mini-graph graphtype="graphType" graphdata="graphData" graphstyle="graphStyle" barstyle="barStyle" highlight="highlightIndex"></div>
+                <ul class="bar-graph-x-axis small-block-grid-4">
+                    <li>Spring</li>
+                    <li>Summer</li>
+                    <li class="highlight">Fall</li>
+                    <li>Winter</li>
+                </ul>
+            </div>            
+            <div class="medium-4 medium-pull-8 columns">
+                <h2>You typically spend 35% more in the fall</h2>
+                <a href="" class="button primary fill-space">View Billing History</a>
+            </div>
+        </div>
+    </div>
+</div>
+

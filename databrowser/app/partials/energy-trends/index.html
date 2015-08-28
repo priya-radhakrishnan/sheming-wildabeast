@@ -1,0 +1,23 @@
+<div>
+    <div class="subnav-wrapper">
+        <ul class="subnav">
+            <li ng-repeat="menuItem in menuItems" 
+                ng-if="menuItem.menu && menuItem.parent === 'energyTrends'" 
+                ng-class="{'active' : $state.includes(menuItem.name)}">
+                <a class="{{menuItem.name}}">
+                    {{menuItem.label}}
+                </a>
+                <ul class="subnav" ng-if="menuItem.subNav">
+                    <li ng-repeat="subnavItem in menuItem.subNav" 
+                        ng-init="subnavItem = $state.get(subnavItem)"
+                        ng-class="{'active' : $state.includes(subnavItem.name)}">
+                        <a class="{{subnavItem.name}}">{{subnavItem.label}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="primary-content-wrapper">
+        <div ui-view></div>
+    </div>
+</div>

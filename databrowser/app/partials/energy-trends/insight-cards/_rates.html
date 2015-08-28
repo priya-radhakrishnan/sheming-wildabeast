@@ -1,0 +1,31 @@
+
+<h2 class="primary-insight">
+    This month you entered 4 tiers. 
+</h2>
+
+<div class="rates-graph" ng-controller="ratesGraphController">
+    <div class="rates-graph-bars">
+        <div class="rates-graph-bar" ng-repeat="ratesGraphBar in ratesGraphBars">
+            <div class="rates-graph-bar-section" style="height: {{ratesGraphBar.total_value}}%;">
+                <div class="subsection section-tier-4" ng-if="ratesGraphBar.tier_4_value" style="height: {{ratesGraphBar.tier_4_value}}%;"></div>
+                <div class="subsection section-tier-3" ng-if="ratesGraphBar.tier_3_value" style="height: {{ratesGraphBar.tier_3_value}}%;"></div>
+                <div class="subsection section-tier-2" ng-if="ratesGraphBar.tier_2_value" style="height: {{ratesGraphBar.tier_2_value}}%;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="rates-graph-legend">
+        <div class="rates-graph-keys">
+            <div class="rates-graph-key section-tier-4">Tier 4</div>
+            <div class="rates-graph-key section-tier-3">Tier 3</div>
+            <div class="rates-graph-key section-tier-2">Tier 2</div>
+            <div class="rates-graph-key section-tier-1">Tier 1</div>
+        </div>
+    </div>
+</div>
+
+<div class="insight-subtext">
+    <svg class="inline icon" viewBox="0 0 80 80" alt="Next insight">
+        <use xlink:href="#info"></use>
+    </svg>
+    On average you enter 3 tiers.
+</div>

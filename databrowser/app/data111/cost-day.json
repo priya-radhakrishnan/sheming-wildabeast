@@ -1,0 +1,153 @@
+{
+    "series": [
+        {
+            "name": "costs",
+            "data": [
+                {
+                    "y": 0.01,
+                    "date": "12:00am - 12:59am",
+                    "name": "12am",
+                    "temp": "15"
+                },
+                {
+                    "y": 0.02,
+                    "date": "1:00am - 1:59am",
+                    "name": null,
+                    "temp": "16"
+                },
+                {
+                    "y": 0.01,
+                    "date": "2:00am - 2:59am",
+                    "name": null,
+                    "temp": "16"
+                },
+                {
+                    "y": 0.02,
+                    "date": "3:00am - 3:59am",
+                    "name": null,
+                    "temp": "17"
+                },
+                {
+                    "y": 0.01,
+                    "date": "4:00am - 4:59am",
+                    "name": null,
+                    "temp": "18"
+                },
+                {
+                    "y": 0.02,
+                    "date": "5:00am - 5:59am",
+                    "name": null,
+                    "temp": "19"
+                },
+                {
+                    "y": 0.05,
+                    "date": "6:00am - 6:59am",
+                    "name": "6am",
+                    "temp": "22"
+                },
+                {
+                    "y": 0.06,
+                    "date": "7:00am - 7:59am",
+                    "name": null,
+                    "temp": "24"
+                },
+                {
+                    "y": 0.09,
+                    "date": "8:00am - 8:59am",
+                    "name": null,
+                    "temp": "24"
+                },
+                {
+                    "y": 0.40,
+                    "date": "9:00am - 9:59am",
+                    "name": null,
+                    "temp": "26"
+                },
+                {
+                    "y": 0.51,
+                    "date": "10:00am - 10:59am",
+                    "name": null,
+                    "temp": "30"
+                },
+                {
+                    "y": 0.08,
+                    "date": "11:00am - 11:59am",
+                    "name": null,
+                    "temp": "32"
+                },
+                {
+                    "y": 0.02,
+                    "date": "12:00pm - 12:59pm",
+                    "name": "Noon",
+                    "temp": "35"
+                },
+                {
+                    "y": 0.01,
+                    "date": "1:00pm - 1:59pm",
+                    "name": null,
+                    "temp": "37"
+                },
+                {
+                    "y": 0.02,
+                    "date": "2:00pm - 2:59pm",
+                    "name": null,
+                    "temp": "36"
+                },
+                {
+                    "y": 0.25,
+                    "date": "3:00pm - 3:59pm",
+                    "name": null,
+                    "temp": "25"
+                },
+                {
+                    "y": 0.67,
+                    "date": "4:00pm - 4:59pm",
+                    "name": null,
+                    "temp": "20"
+                },
+                {
+                    "y": 0.51,
+                    "date": "5:00pm - 5:59pm",
+                    "name": null,
+                    "temp": "20"
+                },
+                {
+                    "y": 1.06,
+                    "date": "6:00pm - 6:59pm",
+                    "name": "6pm",
+                    "temp": "20"
+                },
+                {
+                    "y": 1.71,
+                    "date": "7:00pm - 7:59pm",
+                    "name": null,
+                    "temp": "19"
+                },
+                {
+                    "y": 1.58,
+                    "date": "8:00pm - 8:59pm",
+                    "name": null,
+                    "temp": "19"
+                },
+                {
+                    "y": 0.76,
+                    "date": "9:00pm - 9:59pm",
+                    "name": null,
+                    "temp": "17"
+                },
+                {
+                    "y": 0.25,
+                    "date": "10:00pm - 10:59pm",
+                    "name": null,
+                    "temp": "14"
+                },
+                {
+                    "y": 0.13,
+                    "date": "11:00pm - 11:59pm",
+                    "name": "11pm",
+                    "temp": "13"
+                }
+            ]
+        }
+    ]
+}

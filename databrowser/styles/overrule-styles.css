@@ -1,0 +1,44 @@
+.header {
+	display: none;
+}
+.footer {
+	display: none;
+}
+.sidebar {
+	display: none;
+}
+.subnav {
+	display: none;
+}
+.audit-header {
+	display: none;
+}
+.how-this-works {
+    padding-bottom: 0px;
+    border-bottom:none;
+}
+.main {
+	border: none;
+}
+
+
+
+
+.graph-container {
+    margin: 0;
+}
+.row-data, .row-break {
+    padding: 20px 0;
+}
+
+
+.row-data {
+    background-color: #fff;
+}
+body {
+    background-color: #fff;
+}
+
+.primary-content-wrapper {
+	padding: 0 3%;
+}

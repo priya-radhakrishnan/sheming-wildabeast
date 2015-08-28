@@ -1,0 +1,99 @@
+<div class="primary-content" ng-controller="byCategoryController">
+    <div ng-class="{'lockout': !userHasTakenAudit()}">
+        <div class="page-header">
+            <h2 class="page-subheading">Electricity breakdown by category</h2>
+            <div class="page-selector-container">
+                <div class="custom-select">
+                    <select>
+                        <option>Last bill period</option>
+                        <option>This year</option>
+                        <option>Last year</option>
+                    </select>
+                    <svg class="icon" viewBox="0 0 80 80">
+                        <use xlink:href="#caret"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <ul class="button-group chart-button-group">
+            <li>
+                <button class="button secondary" ng-click="updateActiveChart('pie')" ng-class="{'active':getActiveChart()==='pie'}">
+                    <span class="geomicon geomicon-pie-chart"></span>
+                </button>
+            </li>
+            <li>
+                <button class="button secondary" ng-click="updateActiveChart('list')" ng-class="{'active':getActiveChart()==='list'}">
+                    <span class="geomicon geomicon-view-list-alt"></span>
+                </button>
+            </li>
+        </ul>
+        <div ng-include="getChartURL()"></div>
+        <div class="pie-ways-to-save">
+            <div ng-show="preAudit">
+                <h2 class="page-subheading">Ways to save on {{activeData.label}}</h2>
+                <div class="ways-to-save-row">
+                    <div class="ways-to-save-guide">
+                        <div class="guide-image">
+                            <div class="geomicon-file"><div class="geomicon-inside geomicon-snowflake"></div></div>
+                        </div>
+                        <div class="guide-lead-in">A guide for high cooling users:</div>
+                        <div class="guide-title">Efficiently cooling your home</div>
+                        <div class="guide-savings">Save up to $350/year</div>
+                    </div>
+                    <div class="ways-to-save-action">
+                        <div class="action-lead-in">Get a recommended savings plan</div>
+                        <a href="" class="button primary" ng-click="loadPostAuditData()">
+                            Tell us how you use energy
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div ng-hide="preAudit">
+                <h2 class="page-subheading">Ways to save on {{activeData.label}}</h2>        
+                <div class="recommendations-row">
+                    <div class="recommendations-guide">
+                        <h3 class="recommendations-title">We've found 4 recommended ways for you to save!</h3>
+                    </div>
+                    <div class="recommendations-savings show-for-medium-up">
+                        <h2 class="savings-title">SAVE UP TO</h2>
+                        <div class="ticker">
+                            <ul>
+                                <li><span class="tick">$</span></li>
+                                <li><span class="tick">6</span></li>
+                                <li><span class="tick">2</span></li>
+                                <li><span class="tick">9</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="button accept">See my savings plan</a>
+                <div class="show-for-small-only savings-amount">Save up to <b>$629</b></div>                                      
+            </div>
+        </div>
+    </div>
+    <div class="reveal-modal medium lockout-modal in" ng-if="!userHasTakenAudit()">
+        <div class="modal-body">
+            <h2 class="heading-display-small">How much are you spending?</h2>
+            <ul class="audit-preview-list">
+                <li>
+                    <div ng-include="'img/tips/washer.svg'"></div>
+                    Appliances
+                </li>
+                <li>
+                    <div ng-include="'img/tips/lighting.svg'"></div>
+                    Lighting
+                </li>
+                <li>
+                    <div ng-include="'img/tips/cooling.svg'"></div>
+                    Cooling
+                </li>
+                <li>
+                    <div ng-include="'img/tips/hotwater.svg'"></div>
+                    Hot water
+                </li>
+            </ul>
+            <p>To receive your complete energy breakdown, take 3 minutes to answer questions about your home to categorize your energy spending.</p>
+            <a href="#/ways-to-save" class="button primary">Start now</a>
+        </div>
+    </div>
+</div>

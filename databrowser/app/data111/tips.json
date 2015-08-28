@@ -1,0 +1,14 @@
+{
+    "thermostat": {
+        "title": "Save $30 this month by turning your thermostat down 2° F.",
+        "illustration": "img/tips/thermostat.svg",
+        "short_body": "",
+        "long_body": ""
+    },
+    "energy_assistance": {
+        "title": "You may be eligible for free energy saving services.",
+        "illustration": "img/tips/bulb.svg",
+        "short_body": "Our Energy Assistance Program provides income-qualified renters and homeowners with easy and free solutions to manage their energy use. Save on your next bill and learn whether you’re eligible today.",
+        "long_body": ""
+    }
+}

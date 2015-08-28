@@ -1,0 +1,31 @@
+<div class="has-sidebar" ng-controller="billPresentmentController">
+    <div class="sidebar-wrapper">
+        <ul class="sidebar">
+            <li ng-repeat="menuItem in menuItems" 
+                ng-if="menuItem.menu && menuItem.parent === 'yourAccount'" 
+                ng-class="{'active' : $state.includes(menuItem.name)}">
+                <a ui-sref="{{menuItem.name}}" class="{{menuItem.name}}">{{menuItem.label}}</a>
+                <ul class="subnav" ng-if="menuItem.subNav">
+                    <li ng-repeat="subnavItem in menuItem.subNav" 
+                        ng-init="subnavItem = $state.get(subnavItem)"
+                        ng-class="{'active' : $state.includes(subnavItem.name)}">
+                        <a ui-sref="{{subnavItem.name}}" class="{{subnavItem.name}}">{{subnavItem.label}}</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- fake the rest of the nav -->
+            <li>
+                <a href="">Bill History</a>
+            </li>
+            <li>
+                <a href="">Payment Plans</a>
+            </li>
+            <li>
+                <a href="">Paperless Billing</a>
+            </li>
+        </ul>
+    </div>
+    <div class="primary-content-wrapper">
+        <div ui-view></div>
+    </div>
+</div>

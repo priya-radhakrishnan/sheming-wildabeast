@@ -1,0 +1,39 @@
+<table class="table-breakdown">
+    <thead>
+        <tr>
+            <th class="category">Category</th>
+            <th class="percentage">Percentage</th>
+            <th class="cost-or-use">
+                <div ng-show="showCost">Costs / <a ng-click="showCost = false" href="">Use</a></div>
+                <div ng-show="!showCost"><a ng-click="showCost = true" href="">Costs</a> / Use</div>
+            </th>
+            <th class="approximation"></th>
+            <th class="cost-graph"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- data that is categorized --> 
+        <tr ng-repeat="data in listData.categorized | orderBy:['-value']" ng-mouseover="changeActive(data)">
+            <td>{{$index+1}}. {{data.label | capitalize }} <span ng-if="data.subtext" class="subtext">{{data.subtext}}</span></td>
+            <td>{{data.percent}}%</td>
+            <td>{{data.approximation ? '~' : ''}}{{showCost ? (data.value | currency) : ( data.kwh + ' kWh')}}</td>
+            <td><span ng-if="!data.approximation" class="geomicon geomicon-circle-check"></span></td>            
+            <td><div class="table-bar"><span ng-style="setBarStyle(data)"></span></div></td>
+        </tr>
+        <!-- uncategorized needs a bit of special logic -->         
+        <tr ng-if="listData.uncategorized" ng-mouseover="changeActive(listData.uncategorized)"> 
+            <td>{{listData.uncategorized.label | capitalize }} <span class="subtext">(i.e. appliances, electronics, lighting, etc)</span><br><a href="#/ways-to-save">Fill out your home profile to expand further</a></td>
+            <td>{{listData.uncategorized.percent}}%</td>
+            <td>{{listData.uncategorized.approximation ? '~' : ''}}{{showCost ? (listData.uncategorized.value | currency) : ( listData.uncategorized.kwh + ' kWh')}}</td>
+            <td></td>            
+            <td><div class="table-bar"><span ng-style="setBarStyle(listData.uncategorized)"></span></div></td>
+        </tr>
+        <tr class="table-summary">
+            <td>Total</td>
+            <td></td>
+            <td>{{showCost ? (listData.total_value | currency) : ( listData.total_kwh + ' kWh')}}</td>
+            <td></td>
+            <td></td>          
+        </tr>
+    </tbody>
+</table>
