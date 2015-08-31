@@ -6,7 +6,7 @@ var app = require('../app'),
 
 require('../../js/vendor/highcharts/js/modules/drilldown.js');
 
-app.directive('opUsageNeighborsChart', function() {
+app.directive('mkrSolarChart', function() {
     return {
         restrict: 'A',
         scope: {
@@ -55,8 +55,7 @@ app.directive('opUsageNeighborsChart', function() {
                             chart = this.chart,
                             highestPointY = Math.min(
                                 chart.series[0].points[i].plotY,
-                                chart.series[1].points[i].plotY,
-                                chart.series[2].points[i].plotY
+                                chart.series[1].points[i].plotY
                             );
                         return {
                             x : point.plotX - boxWidth/4,
@@ -77,7 +76,10 @@ app.directive('opUsageNeighborsChart', function() {
                     }
                 },
                 xAxis: {
-                    type: 'category'
+                    type: 'category',
+                    labels: {
+                        step: $scope.chartDetails.steps
+                    }
                 },
                 yAxis:  [
                     {

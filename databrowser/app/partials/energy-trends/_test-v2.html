@@ -2,21 +2,122 @@
     <div class="small-12 columns">
         <div class="graph-container has-controls" ng-controller="overTimeGraphController">
 
+
+<!-- heading -->
             <h2 class="heading-page">Your Energy History</h2>
             <p class="page-subheading">Explore your use to see when you used the most.</p>
 
+
+
+
+<!-- chart and energy type menus -->
             <div class="chart-controls">
+
+
                 <ul class="chart-control-units">
-                    <li><a ng-click="changeChart('cost-current-year'); changeChartCategory('costs');" ng-class="{'active': activeCategory == 'costs'}">Costs</a></li>
-                    <li><a ng-click="changeChart('usage-current-year'); changeChartCategory('usage');" ng-class="{'active': activeCategory == 'usage'}">Energy Use</a></li>
+                    <li>
+                    	<a ng-click="changeChart('cost-current-year'); changeChartCategory('costs');" ng-class="{'active': activeCategory == 'costs'}">
+	                    	Costs
+	                    </a>
+                    </li>
+
+                    <li>
+                    	<a ng-click="changeChart('usage-current-year'); changeChartCategory('usage');" ng-class="{'active': activeCategory == 'usage'}">
+	                    	Energy Use
+	                    </a>
+                    </li>
                 </ul>
+
+
                 <ul class="chart-control-fuel">
-                    <li><a class="active">Electricity</a></li>
-<!--                     <li><a>Combined</a></li> -->
+                    <li>
+                    	<a ng-click="changeChart('cost-current-year'); changeChartCategory('costs');"
+	                    	ng-class="{'active': activeCategory === 'costs' || activeCategory === 'usage'}">Electricity</a>
+                    </li>
+
+                    <li>
+                    	<a ng-click="changeChart('mkr-data-solar'); changeChartCategory('mkrSolar');" ng-class="{'active': activeCategory === 'mkrSolar'}">Solar</a>
+                    </li>
                 </ul>
+
+
             </div>
+
+
+
+
+
+
+
+
             <div class="row graph-data">
 
+
+
+
+<!-- 	YEAR SOLAR PRODUCTION USE	 -->
+								<div ng-if="activeChart == 'mkr-data-solar'" ng-controller="mkrSolarController">
+
+                    <div class="date-controls">
+                        <div class="quiet-dropdown" ng-class="{'open': quietDropdownIsOpen}">
+                            <div class="quiet-dropdown-label" ng-click="quietDropdownOpen();">
+                                Year View
+                                <svg class="icon caret" viewBox="0 0 80 80">
+                                    <use xlink:href="#caret"></use>
+                                </svg>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#" class="active" ng-click="quietDropdownClose();">
+                                        Year View
+                                        <svg class="icon" viewBox="0 0 80 80">
+                                            <use xlink:href="#check"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li><a href="#" ng-click="goBack('mkrSolar-february'); quietDropdownClose();">Month View</a></li>
+                                <li><a href="#" ng-click="goBack('mkrSolar-day'); quietDropdownClose();">Day View</a></li>
+                            </ul>
+                        </div>
+                        <div class="date-picker">
+                            <a class="arrow-navigation arrow-left">
+                                <svg class="icon" viewBox="0 0 80 80">
+                                    <use xlink:href="#caret"></use>
+                                </svg>
+                            </a>
+                            <span class="date-range">Jan 21, 2014 - Feb 19, 2015</span>
+                            <a class="arrow-navigation arrow-right disabled">
+                                <svg class="icon" viewBox="0 0 80 80">
+                                    <use xlink:href="#caret"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="chart-inner"
+                         mkr-solar-chart
+                         chart-data="mkrSolar"
+                         chart-details="{
+                                toolTipLinkText: 'View each day',
+                                steps: 1,
+                                max: 3000,
+                                interval: 500,
+                                decimals: 0
+                            }"
+                         change-parent-chart="changeChartFromWithin(chart)">
+                     </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+<!-- YEAR COSTS -->
                 <div ng-if="activeChart == 'cost-current-year'" ng-controller="costYearController">
                     <div class="date-controls">
                         <div class="quiet-dropdown" ng-class="{'open': quietDropdownIsOpen}">
@@ -67,6 +168,11 @@
                      </div>
                 </div>
 
+
+
+
+
+<!-- YEAR USAGE -->
                 <div ng-if="activeChart == 'usage-current-year'" ng-controller="usageYearController">
                     <div class="date-controls">
                         <div class="quiet-dropdown" ng-class="{'open': quietDropdownIsOpen}">
@@ -117,7 +223,16 @@
                      </div>
                 </div>
 
+
+
+
+
+
+
                 <div ng-repeat="month in months track by $index">
+
+
+<!-- MONTH COST -->
                     <div ng-if="activeChart == 'cost-'+month.slug" ng-controller="costMonthController">
                         <div class="date-controls">
                             <div class="quiet-dropdown" ng-class="{'open': quietDropdownIsOpen}">
@@ -170,6 +285,13 @@
                              change-parent-chart="changeChartFromWithin(chart)">
                          </div>
                     </div>
+
+
+
+
+
+
+<!-- MONTH USAGE -->
                     <div ng-if="activeChart == 'usage-'+month.slug" ng-controller="usageMonthController">
                         <div class="date-controls">
                             <div class="quiet-dropdown" ng-class="{'open': quietDropdownIsOpen}">
@@ -208,7 +330,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div op-usage-chart
+                        <div class="chart-inner"
+	                        	 op-usage-chart
                              chart-data="usageFebruary"
                              chart-details="{
                                     toolTipLinkText: 'View each hour',
@@ -220,8 +343,132 @@
                              change-parent-chart="changeChartFromWithin(chart)">
                          </div>
                     </div>
+
+
+<!--SOLAR  MONTH USAGE -->
+                    <div ng-if="activeChart == 'mkrSolar-'+month.slug" ng-controller="mkrSolarMonthController">
+                        <div class="date-controls">
+                            <div class="quiet-dropdown" ng-class="{'open': quietDropdownIsOpen}">
+                                <div class="quiet-dropdown-label" ng-click="quietDropdownOpen();">
+                                    Month View
+                                    <svg class="icon caret" viewBox="0 0 80 80">
+                                        <use xlink:href="#caret"></use>
+                                    </svg>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="#" ng-click="goBack('mkr-data-solar'); quietDropdownClose();">Year View</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" ng-click="quietDropdownClose();" class="active">
+                                            Month View
+                                            <svg class="icon" viewBox="0 0 80 80">
+                                                <use xlink:href="#check"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li><a href="#" ng-click="goBack('mkrSolar-day'); quietDropdownClose();">Day View</a></li>
+                                </ul>
+                            </div>
+                            <div class="date-picker">
+                                <a class="arrow-navigation arrow-left" ng-click="changeChart(monthTraverse($index, 'mkrSolar', 'back'))" ng-class="{'disabled': $index == 0}">
+                                    <svg class="icon" viewBox="0 0 80 80">
+                                        <use xlink:href="#caret"></use>
+                                    </svg>
+                                </a>
+                                <span class="date-range">{{ month.date }}</span>
+                                <a class="arrow-navigation arrow-right" ng-click="changeChart(monthTraverse($index, 'mkrSolar', 'forwards'))" ng-class="{'disabled': $index == 12}">
+                                    <svg class="icon" viewBox="0 0 80 80">
+                                        <use xlink:href="#caret"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div mkr-solar-chart
+                             chart-data="mkrSolarMonth"
+                             chart-details="{
+                                    toolTipLinkText: 'View each hour',
+                                    steps: 7,
+                                    max: 120,
+                                    interval: 30,
+                                    decimals: 0
+                                }"
+                             change-parent-chart="changeChartFromWithin(chart)">
+                         </div>
+                    </div>
+
+
+
                 </div>
 
+
+
+
+
+
+
+
+
+<!--SOLAR DAY USAGE -->
+								<div ng-if="activeChart == 'mkrSolar-day'" ng-controller="mkrSolarDayController">
+                    <div class="date-controls">
+                        <div class="quiet-dropdown" ng-class="{'open': quietDropdownIsOpen}">
+                            <div class="quiet-dropdown-label" ng-click="quietDropdownOpen();">
+                                Day View
+                                <svg class="icon caret" viewBox="0 0 80 80">
+                                    <use xlink:href="#caret"></use>
+                                </svg>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#" ng-click="goBack('mkr-data-solar'); quietDropdownClose();">Year View</a>
+                                </li>
+                                <li>
+                                    <a href="#" ng-click="goBack('mkrSolar-february'); quietDropdownClose();">
+                                        Month View
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" ng-click="quietDropdownClose();" class="active">
+                                        Day View
+                                        <svg class="icon" viewBox="0 0 80 80">
+                                            <use xlink:href="#check"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="date-picker">
+                            <a class="arrow-navigation arrow-left">
+                                <svg class="icon" viewBox="0 0 80 80">
+                                    <use xlink:href="#caret"></use>
+                                </svg>
+                            </a>
+                            <span class="date-range">Thursday, February 19</span>
+                            <a class="arrow-navigation arrow-right disabled">
+                                <svg class="icon" viewBox="0 0 80 80">
+                                    <use xlink:href="#caret"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="chart-inner"
+                         mkr-solar-chart
+                         chart-data="mkrSolarDay"
+                         chart-details="{
+                                steps: 6,
+                                max: 10,
+                                interval: 2,
+                                decimals: 0,
+                                drilldown: false
+                            }"
+                         change-parent-chart="changeChartFromWithin(chart)">
+                     </div>
+                </div>
+
+
+
+<!-- DAY USAGE -->
                 <div ng-if="activeChart == 'usage-day'" ng-controller="usageDayController">
                     <div class="date-controls">
                         <div class="quiet-dropdown" ng-class="{'open': quietDropdownIsOpen}">
@@ -278,6 +525,13 @@
                      </div>
                 </div>
 
+
+
+
+
+
+
+<!-- DAY COSTS -->
                 <div ng-if="activeChart == 'cost-day'" ng-controller="costDayController">
                     <div class="date-controls">
                         <div class="quiet-dropdown" ng-class="{'open': quietDropdownIsOpen}">
@@ -334,6 +588,11 @@
                          change-parent-chart="changeChartFromWithin(chart)">
                      </div>
                 </div>
+
+
+
+
+
 
             </div>
         </div>
