@@ -2826,6 +2826,21 @@
 		var chartData = require('../data/mkr-data-solar-day.json');
 		app.controller('mkrSolarDayController', ['$scope', function($scope) {
 			$scope.mkrSolarDay = chartData;
+
+			var energyUsage = 0;
+ 			for(var i=0; i < (chartData.series[0].data.length-1); i++) {
+ 				energyUsage += chartData.series[0].data[i].y;
+ 			}
+
+ 			var solarGen = 0;
+ 			for(var i=0; i < (chartData.series[1].data.length-1); i++) {
+ 				solarGen += chartData.series[1].data[i].y;
+ 			}
+
+ 			$scope.energyExport = ((solarGen - energyUsage) > 0 ) ? Math.round(solarGen-energyUsage) : 0;;
+ 			$scope.energyDrawn = ((energyUsage - solarGen) > 0 ) ? Math.round(energyUsage-solarGen) : 0;
+ 			$scope.energyProdSolar = (energyUsage < solarGen) ? '100' : Math.round( solarGen / (energyUsage/100) );
+
 		}]);
 	}, {
 		"../app": 1,
@@ -2840,6 +2855,21 @@
 		var chartData = require('../data/solar-months/mkr-data-solar-february.json');
 		app.controller('mkrSolarMonthController', ['$scope', function($scope) {
 			$scope.mkrSolarMonth = chartData;
+
+			var energyUsage = 0;
+ 			for(var i=0; i < (chartData.series[0].data.length-1); i++) {
+ 				energyUsage += chartData.series[0].data[i].y;
+ 			}
+
+ 			var solarGen = 0;
+ 			for(var i=0; i < (chartData.series[1].data.length-1); i++) {
+ 				solarGen += chartData.series[1].data[i].y;
+ 			}
+
+ 			$scope.energyExport = ((solarGen - energyUsage) > 0 ) ? Math.round(solarGen-energyUsage) : 0;;
+ 			$scope.energyDrawn = ((energyUsage - solarGen) > 0 ) ? Math.round(energyUsage-solarGen) : 0;
+ 			$scope.energyProdSolar = (energyUsage < solarGen) ? '100' : Math.round( solarGen / (energyUsage/100) );
+
 		}]);
 	}, {
 		"../app": 1,
@@ -2852,18 +2882,31 @@
 		'use strict';
 		var app = require('../app');
 		var chartData = require('../data/mkr-data-solar.json');
-		app.controller('mkrSolarController', ['$scope', '$http', function($scope, $http) {
-			/*
-$http.get('app/data/mkr-data-solar.json').success(function(chartDatas){
-					$scope.mkrSolar = chartDatas;
-			});
-*/
+		app.controller('mkrSolarController', ['$scope', function($scope) {
  			$scope.mkrSolar = chartData;
+
+ 			var energyUsage = 0;
+ 			for(var i=0; i < (chartData.series[0].data.length-1); i++) {
+ 				energyUsage += chartData.series[0].data[i].y;
+ 			}
+
+ 			var solarGen = 0;
+ 			for(var i=0; i < (chartData.series[1].data.length-1); i++) {
+ 				solarGen += chartData.series[1].data[i].y;
+ 			}
+
+ 			$scope.energyExport = ((solarGen - energyUsage) > 0 ) ? Math.round(solarGen-energyUsage) : 0;;
+ 			$scope.energyDrawn = ((energyUsage - solarGen) > 0 ) ? Math.round(energyUsage-solarGen) : 0;
+ 			$scope.energyProdSolar = (energyUsage < solarGen) ? '100' : Math.round( solarGen / (energyUsage/100) );
 		}]);
 	}, {
 		"../app": 1,
 		"../data/mkr-data-solar.json": 32
 	}],
+
+	//this is equal to 18:
+	//SOLAR CHART DIRECTIVE
+
 
 	//this is equal to 18:
 	//SOLAR CHART DIRECTIVE
@@ -2927,13 +2970,47 @@ $http.get('app/data/mkr-data-solar.json').success(function(chartDatas){
 									y: this.chart.series[0].points[$scope.activePointIndex].plotY - boxHeight - 10
 								};
 							},
+
 							formatter: function() {
 								$scope.activePointIndex = this.points[0].series.data.indexOf(this.points[0].point);
+
+								//var insight = this.points[0].series.chart.series[0].data[$scope.activePointIndex].insight;
+								//var insightIcon = (insight && insight.disposition == 'positive') ? 'smiley-great' : (insight && insight.disposition == 'neutral') ? 'smiley-good' : 'circle-warn';
+
+								//grab the usage values
+								var energy_use = this.points[1].point.y;
+								var solar_gen = this.points[0].point.y;
+
+								//calculate the percentage of energy that came form solar
+								var usage_energy_from_solar = (energy_use < solar_gen) ? '100' : Math.round( solar_gen / (energy_use/100) );
+
+								//calculate the difference between energy use and generated
+								//set the appropriate message
+								if(energy_use > solar_gen) {
+									var usage_diff = Math.round( ( energy_use - solar_gen ) ) + ' kWh';
+									var usage_diff_info = 'Drawn form grid';
+									var usage_diff_icon = 'circle-warn';
+								} else if(energy_use < solar_gen) {
+									var usage_diff = Math.abs( Math.round( ( energy_use - solar_gen ) ) ) + ' kWh';
+									var usage_diff_info = 'Exported to grid';
+									var usage_diff_icon = 'smiley-good';
+								} else { //equal
+									var usage_diff = 0 + 'kWh';
+									var usage_diff_info = 'Exported to grid';
+									var usage_diff_icon = 'smiley-good';
+								}
+
+								//object to build the strings for different sections of the tool tip
 								var toolTipInfo = {
-									YOU_USAGE: this.points[0].point.y + ' kWh',
+//s
+									HEADER: '<div class="tooltip-header"><svg class="icon" viewBox="0 0 80 80"><use xlink:href="#' + usage_diff_icon + '"></use></svg>' + 'Your solar panels produced '+ usage_energy_from_solar +'% of you energy use</div>',
+//e
+									USAGE_DIFF: usage_diff_info + ' ' + usage_diff,
 									tooltipLink: ($scope.chartDetails.toolTipLinkText) ? '<div class="tooltip-link"><a>' + $scope.chartDetails.toolTipLinkText + '</a></div>' : null
 								};
-								var tooltip = _.template('<div class="tooltip-series-row"><div class="tooltip-center"><%= YOU_USAGE %></div></div><%= tooltipLink %>', toolTipInfo);
+
+								//collect all the variables and build the tooltip
+								var tooltip = _.template('<%= HEADER %><div class="tooltip-series-row"><div class="tooltip-center"><%= USAGE_DIFF %></div></div><%= tooltipLink %>', toolTipInfo);
 								return tooltip;
 							}
 						},
@@ -2972,7 +3049,7 @@ $http.get('app/data/mkr-data-solar.json').success(function(chartDatas){
 							marker: {
 								enabled: false,
 								fillColor: '#FFA100',
-								lineColor: 'rgba(0,0,0,0)',
+								lineColor: 'rgba(0,0,0,0.3)',
 								lineWidth: 0,
 								radius: 4,
 								symbol: 'circle'
@@ -2984,9 +3061,11 @@ $http.get('app/data/mkr-data-solar.json').success(function(chartDatas){
 									lineWidthPlus: 0
 								}
 							},
-							showInLegend: true
+							showInLegend: true,
+							legendIndex: 0,
+							zIndex: 1
 						}, {
-							name: "Enegy Use",
+							name: "Energy Use",
 							data: $scope.chartData.series[0].data,
 							color: '#107cb2',
 							cursor: 'pointer',
@@ -2995,7 +3074,7 @@ $http.get('app/data/mkr-data-solar.json').success(function(chartDatas){
 							marker: {
 								enabled: false,
 								fillColor: '#107cb2',
-								lineColor: 'rgba(0,0,0,0)',
+								lineColor: 'rgba(0,0,0,0.3)',
 								lineWidth: 0,
 								radius: 4,
 								symbol: 'circle'
@@ -3007,23 +3086,36 @@ $http.get('app/data/mkr-data-solar.json').success(function(chartDatas){
 									lineWidthPlus: 0
 								}
 							},
-							showInLegend: true
-						}/*
-, {
-							name: 'Solar Production',
-							data: $scope.chartData.series[1].data,
-							color: '#FFA100',
+							showInLegend: true,
 							legendIndex: 1,
-							fillColor: 'rgba(0,0,0,0)'
-						}, {
-							name: "Enegy Use",
+							zIndex: 2
+						},{
+							name: "Energy Use",
+							data: $scope.chartData.series[1].data,
+							color: 'rgba(255, 163, 0, 0.5)',
+							lineColor: 'rgba(255, 163, 0, 0.5)',
+							lineWidth: 2,
+							showInLegend: false,
+							states: {
+								hover: {
+									enabled: false
+								}
+							},
+							zIndex: 0
+						},{
+							name: "Energy Use",
 							data: $scope.chartData.series[0].data,
-							color: '#107cb2',
-							legendIndex: 0,
-							lineWidth: 4,
-							fillColor: 'rgba(0,0,0,0)'
-						}
-*/]
+							color: 'rgba(16, 125, 179, 0.5)',
+							lineColor: 'rgba(16, 125, 179, 0.5)',
+							lineWidth: 2,
+							showInLegend: false,
+							states: {
+								hover: {
+									enabled: false
+								}
+							},
+							zIndex: 0
+						}]
 					});
 				}
 			};
@@ -3038,7 +3130,6 @@ $http.get('app/data/mkr-data-solar.json').success(function(chartDatas){
 
 
 
-
 	//SOLAR YEAR DATA
 	32: [function(require, module, exports) {
 		module.exports = {
@@ -3049,131 +3140,79 @@ $http.get('app/data/mkr-data-solar.json').success(function(chartDatas){
 					"date": "Jan 21 - Feb 19, 2014",
 					"name": "Feb 19",
 					"link": "mkrSolar-february2",
-					"slug": "february2",
-					"insight": {
-						"disposition": "neutral",
-						"message": "8% less than all neighbors."
-					}
+					"slug": "february2"
 				}, {
 					"y": 2190.09,
 					"date": "Feb 20 - Mar 20, 2014",
 					"name": "Mar 20",
 					"link": "mkrSolar-march",
-					"slug": "march",
-					"insight": {
-						"disposition": "neutral",
-						"message": "19% less than all neighbors."
-					}
+					"slug": "march"
 				}, {
 					"y": 2100.41,
 					"date": "Mar 21 - Apr 22, 2014",
 					"name": "Apr 22",
 					"link": "mkrSolar-april",
-					"slug": "april",
-					"insight": {
-						"disposition": "neutral",
-						"message": "2% less than all neighbors."
-					}
+					"slug": "april"
 				}, {
 					"y": 2000.34,
 					"date": "Apr 23 - May 20, 2014",
 					"name": "May 20",
 					"link": "mkrSolar-may",
-					"slug": "may",
-					"insight": {
-						"disposition": "neutral",
-						"message": "11% less than all neighbors."
-					}
+					"slug": "may"
 				}, {
 					"y": 1906.12,
 					"date": "May 21 - Jun 19, 2014",
 					"name": "Jun 19",
 					"link": "mkrSolar-june",
-					"slug": "june",
-					"insight": {
-						"disposition": "neutral",
-						"message": "10% less than all neighbors."
-					}
+					"slug": "june"
 				}, {
 					"y": 1995.08,
 					"date": "Jun 20 - Jul 20, 2014",
 					"name": "Jul 20",
 					"link": "mkrSolar-july",
-					"slug": "july",
-					"insight": {
-						"disposition": "negative",
-						"message": "16% more than all neighbors."
-					}
+					"slug": "july"
 				}, {
 					"y": 1998.01,
 					"date": "Jul 21 - Aug 20, 2014",
 					"name": "Aug 20",
 					"link": "mkrSolar-august",
-					"slug": "august",
-					"insight": {
-						"disposition": "negative",
-						"message": "9% more than all neighbors."
-					}
+					"slug": "august"
 				}, {
 					"y": 2260.91,
 					"date": "Aug 21 - Sep 20, 2014",
 					"name": "Sep 20",
 					"link": "mkrSolar-september",
-					"slug": "september",
-					"insight": {
-						"disposition": "neutral",
-						"message": "8% less than all neighbors."
-					}
+					"slug": "september"
 				}, {
 					"y": 2116.30,
 					"date": "Sep 21 - Oct 20, 2014",
 					"name": "Oct 20",
 					"link": "mkrSolar-october",
-					"slug": "october",
-					"insight": {
-						"disposition": "positive",
-						"message": "13% less than efficient neighbors."
-					}
+					"slug": "october"
 				}, {
 					"y": 2036.34,
 					"date": "Oct 21 - Nov 20, 2014",
 					"name": "Nov 20",
 					"link": "mkrSolar-november",
-					"slug": "november",
-					"insight": {
-						"disposition": "neutral",
-						"message": "14% less than all neighbors."
-					}
+					"slug": "november"
 				}, {
 					"y": 1950.08,
 					"date": "Nov 21 - Dec 19, 2014",
 					"name": "Dec 19",
 					"link": "mkrSolar-december",
-					"slug": "december",
-					"insight": {
-						"disposition": "neutral",
-						"message": "10% less than all neighbors."
-					}
+					"slug": "december"
 				}, {
 					"y": 2100.79,
 					"date": "Dec 20, 2014 - Jan 20, 2015",
 					"name": "Jan 20",
 					"link": "mkrSolar-january",
-					"slug": "january",
-					"insight": {
-						"disposition": "neutral",
-						"message": "12% less than all neighbors."
-					}
+					"slug": "january"
 				}, {
 					"y": 2001.63,
 					"date": "Jan 21 - Feb 19, 2015",
 					"name": "Feb 19",
 					"link": "mkrSolar-february",
-					"slug": "february",
-					"insight": {
-						"disposition": "negative",
-						"message": "20% more than all neighbors."
-					}
+					"slug": "february"
 				}]
 			}, {
 				"name": "solar-gen",

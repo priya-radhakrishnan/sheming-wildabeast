@@ -42,3 +42,54 @@ body {
 .primary-content-wrapper {
 	padding: 0 3%;
 }
+
+
+
+.highcharts-tooltip > span .tooltip-series-row {
+    margin: 0 10px 10px;
+}
+
+
+/* extra styles for the solar view
+	added to the databrowser */
+.solar-notification {
+	background-color: #f5f5f5;
+	padding: 20px 30px 5px;
+	border-radius: 5px
+}
+.solar-notification h2 {
+
+}
+.solar-notification p {
+
+}
+.solar-notification a {
+
+}
+.solar-notification .x-out {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  display: block;
+  height: 25px;
+  width: 25px;
+  background-image: url(images/icons/close-btn.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: aqua;
+  z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
