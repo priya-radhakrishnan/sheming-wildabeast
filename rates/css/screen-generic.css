@@ -2006,7 +2006,7 @@ body {
 }
 
 .moduleInner-header-arrow {
-  background: url(../../resources/images/structure/bg-moduleInner-arrow.png) 0 0;
+  background: url(../images/bg-moduleInner-arrow.png) 0 0;
   bottom: -32px;
   display: block;
   height: 32px;
@@ -4669,7 +4669,7 @@ table.pricing thead td {
 }
 
 .wizard-saved {
-  background: url(../../resources/images/structure/bg-wizard-saved.png);
+  background: url(../images/bg-wizard-saved.png);
   font-size: 14px;
   height: 72px;
   padding: 13px 10px 0;
@@ -4677,7 +4677,7 @@ table.pricing thead td {
 }
 
 .wizard-recommend {
-  background: url(../../resources/images/structure/bg-wizard-recommend.png);
+  background: url(../images/bg-wizard-recommend.png);
 }
 
 .wizard-plan.front {
@@ -7796,3 +7796,17 @@ margin-left: 1em;
 }
 
 
+
+#content {
+	padding: 0;
+}
+#mast, #content, #footer {
+    margin: 0 auto;
+    width: 100%
+}
+
+
+.moduleInner-header-arrow {
+    background: url(../images/bg-moduleInner-arrow.png) 0 0;
+    left: 305px;
+}
