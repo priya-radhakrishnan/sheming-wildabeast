@@ -7,7 +7,7 @@ $(document).ready(function(){
         transStyle2 = "-webkit-transition: opacity 0.4s;-moz-transition: opacity 0.4s;-ms-transition: opacity 0.4s;-o-transition: opacity 0.4s;transition: opacity 0.4s;",
         transStyle1 = "-webkit-transition: width 0.6s;-moz-transition: width 0.6s;-ms-transition: width 0.6s;-o-transition: width 0.6s;transition: width 0.6s;";
 
-    animateGraph = function(){
+    animateGraph = function(speed){
 
         // reset the bar heights
 
@@ -34,10 +34,10 @@ $(document).ready(function(){
                 $(this).attr('style',transStyle1).css('width',(val*x));
             //$neighborCompareGraph.find('h4').addClass('active');
             })
-        },2000);
+        },speed);
 
 
     }
 
-    animateGraph();
+    animateGraph(1600);
 });
