@@ -768,7 +768,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 <!-- 											<div class="hr tall"></div> -->
 
 
-                        <div id="dashboard-usage" style="padding:0 2%;">
+                        <div id="dashboard-usage" style="padding:0 1%;">
 
 
 	                        <style>
@@ -780,9 +780,9 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 																position: relative;
 														}
 														#widget-container-opower .neighbor-com-mess p {
-														 line-height: 1;
-														 margin: 12px 0 6px 0;
-														 color: #666;
+																line-height: 1;
+																margin: 12px 0 6px 0;
+																color: #666;
 														}
 														#widget-container-opower .neighbor-com-mess p.neighbor-com-you:before {
 /*
@@ -791,32 +791,36 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 														  left:12px;
 */
 														}
+														#widget-container-opower .neighbor-compare-graph {
+															height: 250px;
+														}
 														#widget-container-opower .neighbor-compare-graph .graph {
 														    border-bottom: none;
-														    height: auto;
-														    margin-bottom: -10px;
+												        height: 100%;
+/* 														    margin-bottom: -10px; */
 														}
 														#widget-container-opower .neighbor-compare-graph .graph .bar {
-														    float: none;
-														    height: 70px;
-														    width: 100%;
+										            float: left;
+														    width: 33%;
+														    height: 100%;
 														    position: relative;
 														}
 														#widget-container-opower .neighbor-compare-graph .graph .neighborusage {
-														    color: #fff;
+										            color: #fff;
 														    display: block;
-														    height: 50px;
+														    /* height: 200px; */
+														    /* width: 40px; */
 														    font-size: 14px;
 														    font-weight: normal;
-														    margin: 0 24px 0 0;
-														    padding: 10px;
+														    margin: 0px;
+														    padding: 0px;
 														    position: absolute;
-														    bottom: 0;
-														    left: 100px;
+														    bottom: 60px;
+														    left: 0px;
 														    right: 0;
 														    line-height: 3.5;
-														    border-left: 1px solid #ddd;
-														    text-align: right;
+														    border-bottom: 1px solid #ddd;
+														    text-align: center;
 														    -webkit-transition: height 0.6s;
 														    -moz-transition: height 0.6s;
 														    -ms-transition: height 0.6s;
@@ -827,7 +831,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 														#widget-container-opower .neighbor-compare-graph .graph .neighborusage div {
 														    display: block;
 														    position: absolute;
-														    margin: 10px 0;
+														    margin: 0px 15px;
 														    top: 0px;
 														    left: 0;
 														    right: 0;
@@ -835,18 +839,23 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 														    z-index: -1;
 														}
 														#widget-container-opower .neighbor-compare-graph .graph .graphFooter {
-														    color: #666;
+										            color: #666;
 														    font-size: 16px;
-														    text-align: left;
-														    position: relative;
-														    display: table-cell;
-														    vertical-align: middle;
-														    width: 100px;
-														    bottom: -5px;
-														    height: 60px;
-														    left: 0;
-														    right: 480px;
+														    text-align: center;
+														    position: absolute;
+														    width: 130px;
+														    height: 50px;
+														    bottom: 0px;
 														}
+														#widget-container-opower .neighbor-com-content-cont h3 {
+										            font-weight: bold;
+														}
+														#widget-container-opower .saving-graph-ctrls {
+															position: relative;
+															width: 85%;
+															margin: 0 auto;
+														}
+
 
 
 														#widget-container-opower .neighbor-com-mess .icon {
@@ -887,19 +896,19 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 	                        	<h2 class="pagelevel">Your energy saving day results</h2>
 														<p class="sub-pagelevel">Aug. 18</p>
                             <div>
-                                <div class="multiSwitchMe" data-switchset="utility_switch">
                                     <div class="graph electricity clearfix" >
 
 
 
 
-	                                  	<div class="neighbor-com-graph-cont" style="display:inline-block;width:96%;">
+	                                  	<div class="neighbor-com-graph-cont" style="display:inline-block;width:62%;">
 
 		                                  	<div class="section neighbor-compare-graph" id="neighbor-compare-graph">
 											                        <div class="graph">
+
 											                            <div class="bar">
 											                                <div class="neighborusage saving-you" data-neighborusage="50">
-											                                    <span>$50</span>
+											                                    <span>$</span><span>50</span>
 											                                    <div style="background-color:#107CB2;"></div>
 											                                </div>
 											                                <div class="graphFooter">
@@ -909,38 +918,47 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 											                            <div class="bar">
 											                                <div class="neighborusage saving-avg" data-neighborusage="30">
-											                                    <span>$30</span>
+											                                    <span>$</span><span>30</span>
 											                                    <div style="background-color:#8DC63F;"></div>
 											                                </div>
 											                                <div class="graphFooter">
-																												Avg. Saving Homes
+																												Avg. Saving Homes*
 											                                </div>
 											                            </div>
 
 											                            <div class="bar">
 											                                <div class="neighborusage saving-high" data-neighborusage="200">
-											                                    <span>$200</span>
+											                                    <span>$</span><span>200</span>
 											                                    <div style="background-color:#666666;"></div>
 											                                </div>
 											                                <div class="graphFooter">
-											                                    High-Saving Homes
+											                                    High-Saving Homes**
 											                                </div>
 											                            </div>
+
 											                        </div>
 		                                  	</div>
 
 	                                  	</div>
 
+	                                  	<div class="neighbor-com-content-cont" style="display:inline-block;width:34%;float: right;">
+		                                  	<div>
+																					<h3></h3>
+																					<p></p>
+		                                  	</div>
+	                                  	</div>
 
-	                                  </div>
                                 </div>
 
 
-                            </div><a href="#" class="btn opower-btn" style="text-align: center;">0</a>
-                            <a href="#" class="btn opower-btn" style="text-align: center;">1</a>
-                            <a href="#" class="btn opower-btn" style="text-align: center;">2</a>
+                            </div>
+                            <div class="saving-graph-ctrls">
+		                            <a href="#" class="btn opower-btn action-btn active" style="text-align: center;">$300<br><span>Jul 16</span></a>
+		                            <a href="#" class="btn opower-btn action-btn" style="text-align: center;">$100<br><span>Aug 1</span></a>
+		                            <a href="#" class="btn opower-btn action-btn" style="text-align: center;">$200<br><span>Aug 18</span></a>
+                            </div>
 
-                            <p style="margin: 20px 0 0"><a href="#neighbors" class="colorbox" data-width="700">Who are my neighbors?</a></p>
+<!--                             <p style="margin: 20px 0 0"><a href="#neighbors" class="colorbox" data-width="700">Who are my neighbors?</a></p> -->
                         </div>
 
 
@@ -950,30 +968,28 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 								<script type="text/javascript">
 								$(document).ready(function(){
 
-							    var $neighborCompareGraph = $('.neighbor-compare-graph'),
+							    var $neighborCompareGraph = $('#dashboard-usage'),
 
 						    		savingYou								= $('#dashboard-usage .neighborusage.saving-you'),
 										savingAvg								= $('#dashboard-usage .neighborusage.saving-avg'),
 										savingHigh							= $('#dashboard-usage .neighborusage.saving-high'),
 										savingDate							= $('#dashboard-usage .sub-pagelevel'),
-										//savingContent						=	$('#dashboard-usage .neighborusage'),
+										savingContent						=	$('#dashboard-usage .neighbor-com-content-cont'),
 
 										savingText							= $('#dashboard-usage .neighborusage span'),
-										savingYouText						= $('#dashboard-usage .neighborusage.saving-you span'),
-										savingAvgText						= $('#dashboard-usage .neighborusage.saving-avg span'),
-										savingHighText					= $('#dashboard-usage .neighborusage.saving-high span'),
+										savingYouText						= $('#dashboard-usage .neighborusage.saving-you span:last'),
+										savingAvgText						= $('#dashboard-usage .neighborusage.saving-avg span:last'),
+										savingHighText					= $('#dashboard-usage .neighborusage.saving-high span:last'),
 
 						        $spinner								= $('.spinner').eq(0),
 						        transNone 							= "-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none;",
-						        transStyle2 						= "-webkit-transition: opacity 0.4s;-moz-transition: opacity 0.4s;-ms-transition: opacity 0.4s;-o-transition: opacity 0.4s;transition: opacity 0.4s;",
-						        transStyle1 						= "-webkit-transition: width 0.6s;-moz-transition: width 0.6s;-ms-transition: width 0.6s;-o-transition: width 0.6s;transition: width 0.6s;";
+						        transStyle2 						= "-webkit-transition: opacity 0.2s;-moz-transition: opacity 0.2s;-ms-transition: opacity 0.2s;-o-transition: opacity 0.2s;transition: opacity 0.2s;",
+						        transStyle1 						= "-webkit-transition: height 0.6s;-moz-transition: height 0.6s;-ms-transition: height 0.6s;-o-transition: height 0.6s;transition: height 0.6s;",
 
-
-
-							    animateSavingGraph = function(speed){
+										animateSavingGraph = function(speed){
 
 							        // reset the bar heights
-							        $neighborCompareGraph.find('.neighborusage').attr('style',transStyle1).css('width',60);
+							        $neighborCompareGraph.find('.neighborusage').attr('style',transStyle1).css('height',60);
 							        //$neighborCompareGraph.find('h4').attr('style',transNone).removeClass('active');
 
 							        // get the proper heights of the bars from the data attribute, motherfucker!
@@ -984,77 +1000,111 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 							        });
 
 							        // but wait, that higher value needs to consume the entire available area. MATH TIME, BITCHES
-							        var y = Math.max.apply(Math,billArray), // highest value
-							            x = ($(".bar").innerWidth() - $(".graphFooter").innerWidth() ) / y;  // multiplier to apply to lower value
+							        var x = Math.max.apply(Math,billArray), // highest value
+							            y = ($(".bar").innerHeight() - ($(".graphFooter").innerHeight() + 10)) / x;  // multiplier to apply to lower value
 
 											//animation delay
 							        setTimeout(function(){
 								        	//animate the graph bars
 							            $neighborCompareGraph.find('.neighborusage').each(function(){
 							                var val = $(this).attr('data-neighborusage');
-							                $(this).attr('style',transStyle1).css('width',(val*x));
+							                $(this).attr('style',transStyle1).css('height',(val*y));
 							            //$neighborCompareGraph.find('h4').addClass('active');
 							            });
 							            savingText.attr('style',transStyle2).css('opacity',1);
+							            savingContent.find('div').attr('style',transStyle2).css('opacity',1);
 							        },speed);
 
-							    }
-							    animateSavingGraph(1600);
+										},
+
+										getSavingsData = function(speed, btnIndex) {
+											/*
+												ANIMATE the text box OPACITY to 0
+												ANIMATE the value's OPACITY to 0
+											*/
+											savingText.attr('style',transStyle2).css('opacity',0);
+											savingContent.find('div').attr('style',transStyle2).css('opacity',0);
 
 
+											/*
+													set the right text for the the graph
+											*/
+											function savingContentVal() {
+													if(savingYouVal < savingHighVal) {
+														savingContentHeadingVal = 'You earned $' + (savingHighVal - savingYouVal) + ' less than high-saving homes.';
+														savingContentParVal = "Earn more money on upcoming Saving Days by reducing your energy use. See the tips that high-saving homes are using to save energy at <a href='#'>ways to save</a>.";
+													} else if(savingYouVal > savingHighVal) {
+														savingContentHeadingVal = 'You earned more than high-saving homes.';
+														savingContentParVal = 'You have earned $' + savingYouVal + ' so far this summer for reducing your energy use on Energy Savings Days. Nice work!';
+													} else if(savingYouVal == 0){
+														savingContentHeadingVal = 'You earned $' + (savingHighVal - savingYouVal) + ' less than high-saving homes.';
+														savingContentParVal = 'Earn money towards your bill by reducing your energy use on the next Energy Savings Day. Do this by turning up your thermostat by 3-4°F on the next Energy Savings Day.';
+													} else {
+														savingContentHeadingVal = 'You earned the same amount as high-saving homes.';
+														savingContentParVal = 'You have earned $' + savingYouVal + ' so far this summer for reducing your energy use on Energy Savings Days. Nice work!';
+													}
+											}
 
-									$('.opower-btn').click(function(){
+											/*
+													set the correct values
+											*/
+											switch ( btnIndex ) {
+												case 0 :
+													savingYouVal = 300;
+													savingAvgVal = 100;
+													savingHighVal = 110;
+													savingDateVal = 'July 16';
+													savingContentVal();
+													break;
+												case 1 :
+													savingYouVal = 100;
+													savingAvgVal = 90;
+													savingHighVal = 150;
+													savingDateVal = 'August 1';
+													savingContentVal();
+													break;
+												case 2 :
+													savingYouVal = 200;
+													savingAvgVal = 60;
+													savingHighVal = 200;
+													savingDateVal = 'August 18';
+													savingContentVal();
+													break;
+											}
+
+											/*
+													assign the correct values to the html
+											*/
+											savingYou.attr('data-neighborusage', savingYouVal);
+											savingAvg.attr('data-neighborusage', savingAvgVal);
+											savingHigh.attr('data-neighborusage', savingHighVal);
+											savingDate.text(savingDateVal);
+											savingYouText.text(savingYouVal);
+											savingAvgText.text(savingAvgVal);
+											savingHighText.text(savingHighVal);
+											savingContent.find('h3').text(savingContentHeadingVal);
+											savingContent.find('p').html(savingContentParVal);
+
+											/*
+													ANIMATE the text box OPACITY to 1
+													ANIMATE the value's OPACITY to 1
+													ANIMATE the graph
+											*/
+											animateSavingGraph(speed);
+										};
 
 										/*
-											onclick ANIMATE the text box OPACITY to 0
-															ANIMATE the value's OPACITY to 0
+												onclick/on doc ready; set and asign the correct values
+																							animate the values
 										*/
-										savingText.attr('style',transStyle2).css('opacity',0);
+										$('#dashboard-usage .opower-btn').click(function(){
+											$('#dashboard-usage .opower-btn').removeClass('active');
+											$(this).addClass('active');
+											getSavingsData(200, $('#dashboard-usage .opower-btn').index(this));
+										});
+										getSavingsData(1600, 0);
 
-										/*
-											onclick check what button is clicked
-															change all the elements to the correct value
-										*/
-										switch ( $('.opower-btn').index(this) ) {
-											case 0 :
-												savingYou.attr('data-neighborusage', 10);
-												savingAvg.attr('data-neighborusage', 100);
-												savingHigh.attr('data-neighborusage', 110);
-												savingDate.text('Jul 16');
-												savingYouText.text('$10');
-												savingAvgText.text('$100');
-												savingHighText.text('$110');
-												break;
-											case 1 :
-												savingYou.attr('data-neighborusage', 100);
-												savingAvg.attr('data-neighborusage', 90);
-												savingHigh.attr('data-neighborusage', 150);
-												savingDate.text('Aug 1');
-												savingYouText.text('$100');
-												savingAvgText.text('$90');
-												savingHighText.text('$150');
-												break;
-											case 2 :
-												savingYou.attr('data-neighborusage', 50);
-												savingAvg.attr('data-neighborusage', 30);
-												savingHigh.attr('data-neighborusage', 200);
-												savingDate.text('aug 18');
-												savingYouText.text('$50');
-												savingAvgText.text('$30');
-												savingHighText.text('$200');
-												break;
-										}
-
-										/*
-											onclick run the function that will
-															ANIMATE the text box OPACITY to 1
-															ANIMATE the value's OPACITY to 1
-															ANIMATE the graph
-										*/
-										animateSavingGraph(200);
-									});
-
-								});
+								});//end document.ready
 								</script>
 
 
@@ -1109,32 +1159,11 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 	            </div>
             </div><!-- <div id="neighbors"> -->
 
-<!--
-            <div id="changeSize"  class="billCompareModal">
-              <div>
-                <div class="dialog-head">
-                	<h4>Your home size (ft²):</h4>
-	              </div>
-								<div class="dialog-content">
-                    <form action="#" class="noSubmit">
-                        <input type="text" class="text left width-small homeInfo noOffset" value="30000" name="size" />
-                        <a style="margin-top:-4px" href="#" id="updateDashboardUsage" class="btn opower-btn">Update My Profile</a>
-                    </form>
-								</div>
-              </div>
-            </div>
---><!-- <div id="changeSize"> -->
-
-
         </div>
 
         <script>
 								var avg_temp    = 75,
                 avg_temp    = parseInt(avg_temp)+70;
-                /*
-linkColor = '#0099cc',
-                safari = false;
-*/
         </script>
 
     </div>
@@ -1142,14 +1171,8 @@ linkColor = '#0099cc',
 
 
 <!-- 		scripts -->
-
-		<script type="text/javascript" src="UtilityCo - Bill Comparison_files/neighbor-compare-graph.js"></script>
-
-
 <script type="text/javascript" src="UtilityCo - Bill Comparison_files/jquery.uniform.js"></script>
-<!-- <script type="text/javascript" src="UtilityCo - Bill Comparison_files/ajaxRefresh.js"></script> -->
-<!-- <script type="text/javascript" src="UtilityCo - Bill Comparison_files/dashboard.js"></script> -->
-<!-- <script type="text/javascript" src="UtilityCo - Bill Comparison_files/finalize.js"></script> -->
+
 
 
 </div>
