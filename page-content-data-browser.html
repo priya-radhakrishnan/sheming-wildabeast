@@ -71,7 +71,21 @@
     <!--[if lt IE 9]>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+
+
+
+
+
+
+
+
+
+
+
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+
+
+
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-custom.js"></script>
     <script type="text/javascript" src="js/initstrings.js"></script>
@@ -82,30 +96,7 @@
 
 
 
-    <script type="text/javascript">
-/*
 
-	    function getDocHeight(doc) {
-			    doc = doc || document;
-			    // stackoverflow.com/questions/1145850/
-			    var body = doc.body, html = doc.documentElement;
-			    var height = Math.max( body.scrollHeight, body.offsetHeight,
-			        html.clientHeight, html.scrollHeight, html.offsetHeight );
-			    return height;
-			}
-
-			function setIframeHeight(id) {
-			    var ifrm = document.getElementById(id);
-			    var doc = (ifrm.contentDocument) ? ifrm.contentDocument : ifrm.contentWindow.document;
-			    ifrm.style.visibility = 'hidden';
-			    ifrm.style.height = "10px"; // reset to minimal height ...
-			    // IE opt. for bing/msn needs a bit added or scrollbar appears
-			    ifrm.style.height = getDocHeight( doc ) + 4 + "px";
-					ifrm.style.visibility = 'visible';
-			}
-*/
-
-    </script>
 
 
 
@@ -726,6 +717,12 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 
 
+
+
+
+
+
+
 									<div id="wrapper">
 
                     <div class="row module" style="position:relative;">
@@ -739,13 +736,13 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 												<style>
 													#home-energy-analyses-q {
 														position: relative;
-														width:100%;
-														padding-bottom:77%;
+/* 														width:100%; */
+/* 														padding-bottom:77%; */
 													}
 													#home-energy-analyses-q iframe {
-														position: absolute;
+/* 														position: absolute; */
 														width:100%;
-														height: 100%;
+/* 														height: 100% */
 													}
 
 											  </style>
@@ -753,14 +750,10 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 
 
-												<iframe scrolling="no" src="http://databrowser/"></iframe><!-- http://www.consensuswork.com/opower/ci/exelon-f/databrowser/    http://databrowser/    http://www.consensuswork.com/opower/exelon/databrowser/ -->
+
+												<iframe id="widget-frame" src="http://databrowser/" style="margin:0; width:100%; height:150px; border:none; overflow:hidden;" scrolling="no" onload="AdjustIframeHeightOnLoad()"></iframe><!-- http://www.consensuswork.com/opower/ci/exelon-f/databrowser/    http://databrowser/    http://www.consensuswork.com/opower/exelon/databrowser/ -->
 											</div>
 
-
-
-												<script type="text/javascript">
-
-</script>
 
 
 
@@ -768,8 +761,15 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 											<div class="hr tall"></div>
 
 
+		<script type="text/javascript" src="iframeResizer.min.js"></script>
+		<script type="text/javascript">
+			iFrameResize({
+				heightCalculationMethod:'taggedElement',
+			});
+		</script>
 
-
+<!-- 		data-iframe-height -->
+<!-- 		<script src="iframeResizer.contentWindow.min.js"></script> -->
 
 
 
@@ -954,65 +954,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                             <p style="margin: 20px 0 0"><a href="#neighbors" class="colorbox" data-width="700">Who are my neighbors?</a></p>
                         </div>
 
-<!--
-                        <div class="hr tall"></div>
 
-                        <h2 class="pagelevel">Focus on cooling this summer</h2>
-
-                        <div class="row">
-                            <div class="col col9_5">
-                                <h2 class="hasIcon"><img class="icn" src="assets/icn-negative.png"> Last summer, you used <strong>52% more energy</strong> than neighbors.</h2>
-
-                                <div class="hr invisible"></div>
-
-                                <div class="spacer"></div>
-
-                                <div class="spacer"></div>
-
-                                <div class="text-center">
-                                    &nbsp;&nbsp;&nbsp;&nbsp; <img src="assets/insight-cooling.jpg" class="margin-bottom"><br>
-                                </div>
-                            </div>
-
-                            <div class="col col9_5 right">
-                                <a class="tip  tip-short   " id="tip-improve-insulation" href="http://www.consensuswork.com/astro/waystosave/tip/improve-insulation"><img src="assets/tip022_improve_insulation.jpg" class="thumb ">
-
-                                <h3 class="hd link">Improve insulation</h3>
-
-                                <p class="stats"><img class="icn-neighbors" src="assets/icn-small-neighbors.png"> <span class="tipcount">657</span> people do this</p>
-
-                                <div class="tooltipdescription">
-                                    <p>Why? Improving the insulation in your home can be the single most significant way to save energy. In a typical home, 45% of the heat loss is through walls, floors and the roof. ...</p>
-
-                                    <p class="">Save up to $75 per year</p>
-                                </div></a>
-
-
-
-                                <a class="tip  tip-short   " id="tip-install-fan" href="http://www.consensuswork.com/astro/waystosave/tip/install-fan"><img src="assets/tip017_install_ceiling_fan.jpg" class="thumb ">
-
-                                <h3 class="hd link">Install a Ceiling Fan</h3>
-
-                                <p class="stats"><img class="icn-neighbors" src="assets/icn-small-neighbors.png"> <span class="tipcount">568</span> people do this</p>
-
-                                <div class="tooltipdescription">
-                                    <p>Why? If you have high energy bills in the summer, you’re likely spending a lot on air conditioning. A ceiling fan creates a cooling breeze that allows you to raise the air ...</p>
-
-                                    <p class="">Save up to $80 per year</p>
-                                </div></a><a class="tip  tip-short   " id="tip-cool_in_zones_peak" href="http://www.consensuswork.com/astro/waystosave/tip/cool_in_zones_peak"><img src="assets/tip159_cool_in_zones_peak.jpg" class="thumb ">
-
-                                <h3 class="hd link">Cool your home in zones</h3>
-
-                                <p class="stats"><img class="icn-neighbors" src="assets/icn-small-neighbors.png"> <span class="tipcount">540</span> people do this</p>
-
-                                <div class="tooltipdescription">
-                                    <p>Zoning your central air conditioner keeps air conditioning flowing to rooms you occupy the most while preventing cool air from being wasted in unoccupied rooms. Overall electricity demand tends to ...</p>
-
-                                    <p class="">Save up to $25 per year</p>
-                                </div></a> <a href="http://www.consensuswork.com/astro/myenergyuse/whatusesmost/" class="btn opower-btn" style="margin: 10px 0 0 10px;">Get expert cooling advice</a>
-                            </div>
-                        </div>
--->
                     </div>
 
 
@@ -1067,40 +1009,20 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 	            </div>
             </div><!-- <div id="neighbors"> -->
 
-<!--
-            <div id="changeSize"  class="billCompareModal">
-              <div>
-                <div class="dialog-head">
-                	<h4>Your home size (ft²):</h4>
-	              </div>
-								<div class="dialog-content">
-                    <form action="#" class="noSubmit">
-                        <input type="text" class="text left width-small homeInfo noOffset" value="30000" name="size" />
-                        <a style="margin-top:-4px" href="#" id="updateDashboardUsage" class="btn opower-btn">Update My Profile</a>
-                    </form>
-								</div>
-              </div>
-            </div>
---><!-- <div id="changeSize"> -->
 
 
         </div>
 
-<!--
         <script>
 								var avg_temp    = 75,
                 avg_temp    = parseInt(avg_temp)+70,
-                linkColor = '#0099cc',
-                safari = false;
         </script>
--->
 
     </div>
 
 
 
 <!-- 		scripts -->
-<!--     <script type="text/javascript" src="UtilityCo - Bill Comparison_files/jquery.js"></script> -->
     <script type="text/javascript" src="UtilityCo - Bill Comparison_files/core.js"></script>
 		<script type="text/javascript" src="UtilityCo - Bill Comparison_files/jquery.colorbox.js"></script>
 		<script type="text/javascript" src="UtilityCo - Bill Comparison_files/neighbor-compare-graph.js"></script>
@@ -1155,10 +1077,6 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
         <!--/container-->
     </div>
     <!--/#main-->
-
-
-
-
 
 
 
@@ -1411,6 +1329,13 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 
 
+
+
     </form><span id="DeltaPlaceHolderUtilityContent"></span>
+
+
+
+
+
 </body>
 </html>

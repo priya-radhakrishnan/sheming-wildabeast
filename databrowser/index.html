@@ -19,7 +19,7 @@
     </head>
     <body op-scroll scroll-position="scroll" ng-class="{'scrolled': scroll > 50}">
         <div ng-include="'img/icons/icons.svg'"></div>
-        <div class="page-container">
+        <div data-iframe-height id="page-container" class="page-container">
             <div class="header">
                 <div class="logo" ng-style="scrollScale(scroll)">
                     <a href="">
@@ -124,17 +124,8 @@
         </div>
 
 
-				<script>
-/*
-			var iFrameResizer = {
-					messageCallback: function(message){
-						alert(message,parentIFrame.getId());
-					}
-				}
-*/
-		</script>
 
-<!--         <script type="text/javascript" src="js/iframeResizer.contentWindow.min.js"></script> -->
+				<script src="iframeResizer.contentWindow.min.js"></script>
         <script src="app/app.js"></script>
 <!--         <script src="//localhost:35729/livereload.js"></script> --><!--remove this later-->
     </body>
