@@ -184,7 +184,7 @@ body,
 #widget-container-opower input,
 #widget-container-opower .hd-sub,
 #widget-container-opower #nav-tabbed {
-  font-family: Arial, Verdana, Tahoma, Arial, sans-serif;
+  font-family: 'Open Sans', Arial, Verdana, Tahoma, Arial, sans-serif;
   font-weight: normal;
 }
 
@@ -228,8 +228,8 @@ body,
 #colorbox,
 #widget-container-opower .graphLabel,
 #widget-container-opower #clickableKey li {
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
 #widget-container-opower #profile-primary,
 #widget-container-opower .tabs a {
@@ -597,7 +597,7 @@ float:          none; }
   font-weight: normal;
   line-height: 1.3;
   color: #222;
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 #widget-container-opower h1 {
   font-size: 18px;
@@ -799,7 +799,7 @@ float:          none; }
 #widget-container-opower code, tt{font:1em 'andale mono', 'lucida console', monospace;line-height:1.5}
 #widget-container-opower pre.code {
   font-size: 10px;
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 #widget-container-opower blockquote {
   padding-left: 20px;
@@ -4094,7 +4094,7 @@ body,
 }
 #widget-container-opower .rebate-stats h4 {
 	color: #717173;
-	font-family: Arial, sans-serif;
+	font-family: 'Open Sans', Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: none;
@@ -5581,7 +5581,7 @@ body,
 
     }
     #widget-container-opower .friends-comments .add-comment label {
-    	font-family: arial, sans-serif;
+    	font-family: 'Open Sans', arial, sans-serif;
     	font-weight: 700;
     }
     #widget-container-opower .friends-comments .add-comment textarea {
@@ -6463,7 +6463,7 @@ opacity: 0.5;
 		border-color: #ccc;
 		color: #333;
 		display: inline-block;
-		font-family: 'Helvetica Neue', Arial, sans-serif;
+		font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 		font-weight: 700;
 		padding: 0 3px 0 19px;
 		text-shadow: rgba(255,255,255,0.496094) 0 1px 0;
@@ -6749,9 +6749,10 @@ opacity: 0.5;
 
 
 #widget-container-opower .billCompare h3 {
-  color: #888;
-  font-weight: bold;
-  font-size: 20px;
+    line-height: 1.3;
+    color: #222;
+    font-weight: bold;
+    position: relative;
 }
 
 #widget-container-opower .billCompare header {
@@ -6765,8 +6766,8 @@ opacity: 0.5;
   }
   #widget-container-opower .billCompare .graph {
     border-bottom:1px solid #ccc;
-    height: 360px;
-    margin-bottom: 60px;
+    height: 320px;
+    margin-bottom: 70px;
   }
     #widget-container-opower .billCompare .graph .bar {
       float: left;
@@ -6783,13 +6784,14 @@ opacity: 0.5;
       text-transform: none;
     }
     #widget-container-opower .billCompare .graph .billAmount {
-      color:#000;
+      color: #fff;
       display: block; height: 60px;
-      font-size: 30px;
-      font-weight: bold;
+      font-size: 14px;
+      line-height: 3.5;
       margin:0 24px;
       position: absolute; bottom:0; left:0; right:0;
       text-align: center;
+			z-index: 100;
       -webkit-transition: height 0.6s;
          -moz-transition: height 0.6s;
           -ms-transition: height 0.6s;
@@ -6797,8 +6799,14 @@ opacity: 0.5;
               transition: height 0.6s;
     }
       #widget-container-opower .billCompare .graph .billAmount div {
+/*         position: absolute; top:20px; left:0; right:0; bottom:0; */
         display: block;
-        position: absolute; top:46px; left:0; right:0; bottom:0;
+		    position: absolute;
+		    top: 0px;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    z-index: -1;
       }
     #widget-container-opower .billCompare .graph .graphFooter {
       color: #888;
@@ -6819,7 +6827,7 @@ opacity: 0.5;
       position: relative;
     }
   #widget-container-opower .billCompare .insight {
-    border-bottom:1px solid #ccc;
+/*     border-bottom:1px solid #ccc; */
     padding:20px 0 12px 40px;
   }
     #widget-container-opower .billCompare .insight:after {
@@ -6827,7 +6835,8 @@ opacity: 0.5;
       display: block;
       clear: both;
     }
-    #widget-container-opower .billCompare .insight h4 {
+/*
+    #widget-container-opower .billCompare .insight h3 {
       color: #000;
       font-size: 20px;
       font-weight: bold;
@@ -6836,7 +6845,8 @@ opacity: 0.5;
       position: relative;
       text-transform: none;
     }
-      #widget-container-opower .billCompare .insight h4 .icon {
+*/
+      #widget-container-opower .billCompare .insight h3 .icon {
         opacity: 0;
         -webkit-transition: opacity 0.4s;
            -moz-transition: opacity 0.4s;
@@ -6844,59 +6854,65 @@ opacity: 0.5;
              -o-transition: opacity 0.4s;
                 transition: opacity 0.4s;
       }
-        #widget-container-opower .billCompare .insight:nth-child(1) h4 .icon {
+        #widget-container-opower .billCompare .insight:nth-child(1) h3 .icon {
           -webkit-transition-delay:0.6s;
              -moz-transition-delay:0.6s;
               -ms-transition-delay:0.6s;
                -o-transition-delay:0.6s;
                   transition-delay:0.6s;
         }
-        #widget-container-opower .billCompare .insight:nth-child(2) h4 .icon {
+        #widget-container-opower .billCompare .insight:nth-child(2) h3 .icon {
           -webkit-transition-delay:0.8s;
              -moz-transition-delay:0.8s;
               -ms-transition-delay:0.8s;
                -o-transition-delay:0.8s;
                   transition-delay:0.8s;
         }
-        #widget-container-opower .billCompare .insight h4.active .icon  {
+        #widget-container-opower .billCompare .insight h3.active .icon  {
           opacity:1;
         }
-      #widget-container-opower .billCompare .insight h4 .icon:before {
+      #widget-container-opower .billCompare .insight h3 .icon:before {
         border:2px solid rgba(0,0,0,0.4);
         border-radius: 30px;
         content: " ";
-        display: block;
+        display: inline-block;
         padding:11px;
-        position: absolute; top:0; left:-44px;
+        position: absolute;
+        top:0px;
+        left: -37px;
       }
-      #widget-container-opower .billCompare .insight h4 .icon:after,
+      #widget-container-opower .billCompare .insight h3 .icon:after,
       #widget-container-opower .billCompare .icon.info:after {
         color: rgba(0,0,0,0.4);
         display: block;
         font-family: "Geomicons";
         font-size: 26px;
         line-height: 1em;
-        position: absolute; top:0; left:-44px;
+        position: absolute;
+        top: 0px;
+        left: -37px;
       }
-      #widget-container-opower .billCompare .insight h4 .icon.billMore:before {
+      #widget-container-opower .billCompare .insight h3 .icon.billMore:before {
         background-color: #ffbb11;
         }
-      #widget-container-opower .billCompare .insight h4 .icon.billLess:before {
+      #widget-container-opower .billCompare .insight h3 .icon.billLess:before {
         background-color: #99cc33;
         }
-      #widget-container-opower .billCompare .insight h4 .icon.billMore:after {
+      #widget-container-opower .billCompare .insight h3 .icon.billMore:after {
         content: "\e0e2";
         }
-      #widget-container-opower .billCompare .insight h4 .icon.billLess:after {
+      #widget-container-opower .billCompare .insight h3 .icon.billLess:after {
         content: "\e0e3";
         }
       #widget-container-opower .billCompare .billInfo .icon.info:after {
         color: #ccc;
         content: "\40";
         }
+/*
     #widget-container-opower .billCompare .insight p {
       line-height: 1.4;
     }
+*/
     #widget-container-opower .billCompare .insight .viewMore {
       padding:8px 12px;
       position: relative;
@@ -6915,7 +6931,7 @@ opacity: 0.5;
 
 
 .billCompareModal h4 {
-		font-family: arial;
+		font-family: 'Open Sans' ,arial;
 		font-weight: bold;
     font-size: 16px;
     color: #fff;
@@ -7485,7 +7501,7 @@ opacity: 0.5;
         box-shadow: none;
         color: #222;
         display: block;
-        font-family: helvetica,arial,sans-serif;
+        font-family: 'Open Sans', helvetica,arial,sans-serif;
         font-size: 14px;
         height: 80px; width:516px;
         margin:0 5px;

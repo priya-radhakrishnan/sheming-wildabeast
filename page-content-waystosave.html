@@ -496,7 +496,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 					</ul></li><li class="dynamic dynamic-children"><a class="dynamic dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">My Service</span></span></a><ul class="dynamic">
 						<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Start Stop Move</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Construction &amp; Remodeling</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Customer Choice</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Outdoor Lighting</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Manage Properties</span></span></a></li>
 					</ul></li><li class="dynamic dynamic-children"><a class="dynamic dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">My Profile</span></span></a><ul class="dynamic">
-						<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">My Account Profile</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">My Home Profile</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">My Reports &amp; Alerts</span></span></a></li>
+						<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">My Account Profile</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="page-content-my-home-profile.html"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">My Home Profile</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">My Reports &amp; Alerts</span></span></a></li>
 					</ul></li><li class="dynamic dynamic-children"><a class="dynamic dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Customer Support</span></span></a><ul class="dynamic">
 						<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Assistance Programs</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">FAQs</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Contact Us</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="#"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Damage and Theft</span></span></a></li>
 					</ul></li>
@@ -632,24 +632,29 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 		#home-energy-analyses-q {
 			position: relative;
 			width:100%;
-			padding-bottom:58%;
+/* 			padding-bottom:58%; */
 		}
 		#home-energy-analyses-q iframe {
-			position: absolute;
+/* 			position: absolute; */
 			width:100%;
-			height: 100%;
+/* 			height: 100%; */
 		}
   </style>
 
 
-  <iframe  id="iframe" seamless="seamless"  src="http://www.consensuswork.com/opower/exelon/waystosave/"></iframe><!-- http://www.consensuswork.com/opower/ci/exelon-g/waystosave/    http://waystosave/ -->
+  <iframe  id="iframe" seamless="seamless"  src="waystosave/index.html"></iframe><!-- http://www.consensuswork.com/opower/ci/exelon-g/waystosave/    http://waystosave/ -->
 
 
 
 </div>
 <!-- END HEA -->
 
-
+<script type="text/javascript" src="iframeResizer.min.js"></script>
+		<script type="text/javascript">
+			iFrameResize({
+				heightCalculationMethod:'taggedElement',
+			});
+		</script>
 
 
 

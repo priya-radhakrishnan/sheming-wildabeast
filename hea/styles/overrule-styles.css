@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic,700italic,700,300italic,300);
 .header {
 	display: none;
 }
@@ -11,9 +12,28 @@
 	display: none;
 }
 .how-this-works {
-    padding-bottom: 0px;
-    border-bottom:none;
+  padding-bottom: 0px;
+  border-bottom:none;
 }
 .main {
 	border: none;
+}
+.navigation-container {
+	display: none;
+}
+
+.row-data {
+    background-color: #fff;
+}
+body {
+    background-color: #fff;
+}
+
+.questions-container {
+    background-color: #fff;
+}
+
+
+* {
+	font-family: 'Open sans';
 }

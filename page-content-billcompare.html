@@ -59,11 +59,13 @@
 
 
 <!--             <link rel="canonical" href="Pay My Bill.html"> -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-custom.css">
     <link rel="stylesheet" type="text/css" href="css/corev15.css">
     <link rel="stylesheet" type="text/css" href="css/EX_Main_COMED_white.css">
     <link rel="stylesheet" type="text/css" href="css/skdslider.css">
+    <link rel="stylesheet" href="UtilityCo - Bill Comparison_files/screen-generic.css" type="text/css">
+		<link rel="stylesheet" href="UtilityCo - Bill Comparison_files/style.css" type="text/css">
 
 
 
@@ -698,9 +700,24 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 <!-- START INSERT INSERT -->
 <div id="widget-container-opower">
 
-
+<!--
+in the head
 <link rel="stylesheet" href="UtilityCo - Bill Comparison_files/screen-generic.css" type="text/css">
 <link rel="stylesheet" href="UtilityCo - Bill Comparison_files/style.css" type="text/css">
+-->
+
+<style>
+	#widget-container-opower .billCompare .graph .graphFooter {
+    color: #666;
+    font-size: 16px;
+    bottom: -70px;
+	}
+	#widget-container-opower .billCompare .graph .graphFooter div {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 5px;
+	}
+</style>
 
 
 <!-- popup box cerated by js. content on the bottom of this file -->
@@ -708,35 +725,33 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 <!-- content -->
     <div id="wrapper">
-        <div id="content">
-            <div class="row module">
-                <h2 class="moduleHeading">Compare my bills</h2>
-
+        <div id="content" style="padding-top: 0;">
+            <div class="row module" style="padding-top: 0;">
+								<h2 class="pagelevel">Compare my bills</h2>
                 <div class="section billCompare" id="billCompare">
-                    <div class="hr short"></div>
+<!--                     <div class="hr short"></div> -->
 <!-- graph bar column, left -->
                     <div class="col col11">
                         <div class="graph">
                             <div class="bar">
-                                <h4>Previous bill</h4>
-
                                 <div class="billAmount" data-billamount="42">
-                                    $42
+                                    <span>$42</span>
                                     <div style="background-color:#107CB2;"></div>
                                 </div>
                                 <div class="graphFooter">
-                                    <strong>Jul 3 – Aug 2, 2015</strong> 31 days
+	                                Previous bill
+	                                <div>Jul 3 – Aug 2, 2015<br>31 days</div>
                                 </div>
                             </div>
 
                             <div class="bar">
-                                <h4>Most recent bill</h4>
                                 <div class="billAmount" data-billamount="58">
-                                    $58
+                                    <span>$58</span>
                                     <div style="background-color:#107CB2;"></div>
                                 </div>
                                 <div class="graphFooter">
-                                    <strong>Aug 3 – Sep 2, 2015</strong> 31 days
+	                                	Most recent bill
+	                                <div>Aug 3 – Sep 2, 2015<br>31 days</div>
                                 </div>
                             </div>
                         </div>
@@ -744,12 +759,12 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 <!-- insights column, right -->
                     <div class="col col11">
                         <div class="insight">
-                            <h4 class="billMore active" style="-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none;"><span class="icon billMore"></span>More than previous bill</h4>
+                            <h3 class="billMore active" style="-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none;"><span class="icon billMore"></span>More than previous bill</h3>
                             <p>You spent <strong>$16 more</strong> than previous bill, likely due to a difference in weather.</p><a class="viewMore colorbox right" href="#modal_electricity_1" data-width="600">View details</a>
                         </div>
 
                         <div class="insight">
-                                <h4 class="billLess active" style="-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none;"><span class="icon billLess"></span>Less than last year</h4>
+                                <h3 class="billLess active" style="-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none;"><span class="icon billLess"></span>Less than last year</h3>
                             <p>You spent <strong>$4 less</strong> than the same time last year.</p><a class="viewMore colorbox right geomicon" href="#modal_electricity_2" data-width="600">View details</a>
                         </div>
 

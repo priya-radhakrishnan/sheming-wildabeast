@@ -250,8 +250,8 @@ body, textarea, input, .hd-sub, #nav-tabbed {
   -webkit-border-radius: 4px;
 }
 #colorbox, .graphLabel, #clickableKey li {
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
 #profile-primary, .tabs a {
   -moz-border-radius-topright: 4px;
@@ -774,7 +774,7 @@ pre, code{margin:1.5em 0;white-space:pre}
 pre, code, tt{font:1em 'andale mono', 'lucida console', monospace;line-height:1.5}
 pre.code {
   font-size: 10px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 blockquote {
   padding-left: 20px;
@@ -3856,7 +3856,7 @@ table.pricing thead td {
 }
 .rebate-stats h4 {
 	color: #717173;
-	font-family: Arial, sans-serif;
+	font-family: 'Open Sans', Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: none;
@@ -5338,7 +5338,7 @@ table.pricing thead td {
 
     }
     .friends-comments .add-comment label {
-    	font-family: arial, sans-serif;
+    	font-family: 'Open Sans', arial, sans-serif;
     	font-weight: 700;
     }
     .friends-comments .add-comment textarea {
@@ -6219,7 +6219,7 @@ h2 > .social li,
 		border-color: #ccc;
 		color: #333;
 		display: inline-block;
-		font-family: 'Helvetica Neue', Arial, sans-serif;
+		font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 		font-weight: 700;
 		padding: 0 3px 0 19px;
 		text-shadow: rgba(255,255,255,0.496094) 0 1px 0;
@@ -6687,7 +6687,7 @@ h2 > .social li,
 
 
   .myRatesModal h4 {
-      font-family: arial;
+      font-family: 'Open Sans' ,arial;
       font-weight: bold;
       font-size: 16px;
       color: #fff;
@@ -7186,7 +7186,7 @@ h2 > .social li,
 
 
 .twitter_share_window {
-  font-family: helvetica,arial,sans-serif;
+  font-family: 'Open Sans' ,helvetica,arial,sans-serif;
   margin:-20px;
   }
   .twitter_share_window .twitter_share_header {
@@ -7242,7 +7242,7 @@ h2 > .social li,
         box-shadow: none;
         color: #222;
         display: block;
-        font-family: helvetica,arial,sans-serif;
+        font-family: 'Open Sans' ,helvetica,arial,sans-serif;
         font-size: 14px;
         height: 80px; width:516px;
         margin:0 5px;
