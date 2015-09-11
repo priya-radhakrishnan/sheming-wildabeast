@@ -69,11 +69,14 @@ body {
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
 }
+.solar-notification:hover .x-out {
+	display: block;
+}
 .solar-notification.ng-hide {
   opacity: 0;
 }
 .solar-notification .solar-mes {
-	padding: 0px 60px 0px 164px
+	padding: 0px 60px 0px 164px;
 }
 .solar-notification h2 {
 	font-size: 18px;
@@ -95,9 +98,11 @@ body {
   display: block;
   height: 25px;
   width: 25px;
-  background-color: aqua;
+  background-image: url('../img/icons/x-out.png');
+  background-size: contain;
   z-index: 10;
   cursor: pointer;
+  display:none;
 }
 .solar-notification .solar-mes-img {
   position: absolute;
@@ -106,7 +111,6 @@ body {
   display: block;
   height: 104px;
   width: 104;
-  background-color: aqua;
   z-index: 10;
 }
 
