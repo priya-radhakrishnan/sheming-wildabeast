@@ -2895,7 +2895,8 @@
  				solarGen += chartData.series[1].data[i].y;
  			}
 
- 			$scope.energyExport = ((solarGen - energyUsage) > 0 ) ? Math.round(solarGen-energyUsage) : 0;;
+ 			$scope.showYearMes = true;
+ 			$scope.energyExport = ((solarGen - energyUsage) > 0 ) ? Math.round(solarGen-energyUsage) : 0;
  			$scope.energyDrawn = ((energyUsage - solarGen) > 0 ) ? Math.round(energyUsage-solarGen) : 0;
  			$scope.energyProdSolar = (energyUsage < solarGen) ? '100' : Math.round( solarGen / (energyUsage/100) );
 		}]);

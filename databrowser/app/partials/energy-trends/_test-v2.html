@@ -55,13 +55,14 @@
 <!-- 	YEAR SOLAR PRODUCTION USE	 -->
 								<div ng-if="activeChart == 'mkr-data-solar'" ng-controller="mkrSolarController">
 
-<!--
-										<div class="solar-notification">
-											<span class="x-out"></span>
-				              <h2>View your solar production!</h2>
-				              <p>This page is part of a pilot to show you more information about the energy your solar installation generates and how that plays a role in your overall electricity usage. <a href="#">GOT IT</a></p>
+										<div class="solar-notification" ng-Show="showYearMes">
+											<span class="x-out" ng-click="showYearMes=false"></span>
+											<span class="solar-mes-img"><img src="#" alt="" width="104" height="104"></span>
+											<div class="solar-mes">
+					              <h2>View your solar production!</h2>
+					              <p>This page is part of a pilot to show you more information about the energy your solar installation generates and how that plays a role in your overall electricity usage. <a href="#">GOT IT</a></p>
+											</div>
 				            </div>
--->
 
                     <div class="date-controls">
                         <div class="quiet-dropdown" ng-class="{'open': quietDropdownIsOpen}">
@@ -98,7 +99,6 @@
                             </a>
                         </div>
 
-<!--
                         <div class="performance-summary">
 	                        	<ul>
 		                        	<li class="performance-left">
@@ -115,7 +115,6 @@
 		                        	</li>
 	                        	</ul>
                         </div>
--->
 
                     </div><!-- <div class="date-controls"> -->
 
@@ -412,21 +411,21 @@
                                 </a>
                             </div>
 
-                            <div>
-		                        	<ul>
-			                        	<li>
-			                        		<span>Energy produced by solar panels</span>
-			                        		<span>{{energyProdSolar}}%</span>
-			                        	</li>
-			                        	<li>
-			                        		<span>Energy exported to the grid</span>
-			                        		<span>{{energyExport}}kWh</span>
-			                        	</li>
-			                        	<li>
-			                        		<span>Energy drawn from the grid</span>
-			                        		<span>{{energyDrawn}}kWh</span>
-			                        	</li>
-		                        	</ul>
+                            <div class="performance-summary">
+	                        	<ul>
+		                        	<li class="performance-left">
+		                        		<span class="performance-text">Energy produced by solar panels</span>
+		                        		<span class="performance-num">{{energyProdSolar}}<span>%</span></span>
+		                        	</li>
+		                        	<li class="performance-middle">
+		                        		<span class="performance-text">Energy exported to the grid</span>
+		                        		<span class="performance-num">{{energyExport}}<span>kWh</span></span>
+		                        	</li>
+		                        	<li class="performance-right">
+		                        		<span class="performance-text">Energy drawn from the grid</span>
+		                        		<span class="performance-num">{{energyDrawn}}<span>kWh</span></span>
+		                        	</li>
+	                        	</ul>
 		                        </div>
 
                         </div>
@@ -498,19 +497,19 @@
                             </a>
                         </div>
 
-                        <div>
+                        <div class="performance-summary">
 	                        	<ul>
-		                        	<li>
-		                        		<span>Energy produced by solar panels</span>
-		                        		<span>{{energyProdSolar}}%</span>
+		                        	<li class="performance-left">
+		                        		<span class="performance-text">Energy produced by solar panels</span>
+		                        		<span class="performance-num">{{energyProdSolar}}<span>%</span></span>
 		                        	</li>
-		                        	<li>
-		                        		<span>Energy exported to the grid</span>
-		                        		<span>{{energyExport}}kWh</span>
+		                        	<li class="performance-middle">
+		                        		<span class="performance-text">Energy exported to the grid</span>
+		                        		<span class="performance-num">{{energyExport}}<span>kWh</span></span>
 		                        	</li>
-		                        	<li>
-		                        		<span>Energy drawn from the grid</span>
-		                        		<span>{{energyDrawn}}kWh</span>
+		                        	<li class="performance-right">
+		                        		<span class="performance-text">Energy drawn from the grid</span>
+		                        		<span class="performance-num">{{energyDrawn}}<span>kWh</span></span>
 		                        	</li>
 	                        	</ul>
                         </div>
