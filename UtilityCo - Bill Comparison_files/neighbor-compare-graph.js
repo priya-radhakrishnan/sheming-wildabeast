@@ -31,7 +31,7 @@ $(document).ready(function(){
         setTimeout(function(){
             $neighborCompareGraph.find('.neighborusage').each(function(){
                 var val = $(this).attr('data-neighborusage');
-                $(this).attr('style',transStyle1).css('width',(val*x));
+                $(this).attr('style',transStyle1).css('width',((val*x)-24));
             //$neighborCompareGraph.find('h4').addClass('active');
             })
         },speed);

@@ -597,7 +597,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 			<span>
 				<a title="Home" class="ms-sitemapdirectional" href="index.html">ExelonPOC</a>
 			</span>
-			<span> &gt; </span>
+			<span> / </span>
 			<span class="breadcrumbCurrent">MyAccount</span>
 		</span>
 	</div>
@@ -620,7 +620,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                 <div class="col-sm-9 EX_colborder">
 
                 	<h1 class="EX_tipskidstitle EX_title">
-						My Bill Overview
+						My Account
 					</h1>
 <!-- 					<div id="ctl00_PlaceHolderMain_ctl01_label" style="display:none">Page Content</div><div id="ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl01_label"><p>​​​​​</p></div> -->
 
@@ -691,6 +691,190 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 									<div id="wrapper">
 
+										<style>
+											#hea-pie-widget {
+										    padding-bottom: 10px;
+										    border-bottom: 1px solid #ddd;
+											}
+											#hea-pie-widget .hea-pie {
+												position: relative;
+												height: 220px;
+												background-size: contain;
+												background-repeat: no-repeat;
+										    background-position: center;
+										    margin: 0 3%;
+										    float: left;
+										    display: block;
+										    width: 47%;
+											}
+											#hea-pie-widget .hea-pie-legend {
+												position: relative;
+										    display: block;
+										    margin: 38px 0 0 0%;
+										    width: 47%;
+										    float: left;
+											}
+											#hea-pie-widget .hea-pie-legend ul li {
+												list-style-type: square;
+												font-size: 30px;
+										    line-height: 0;
+										    margin: 0 0 24px 0;
+											}
+											#hea-pie-widget .hea-pie-legend ul li span {
+								        color: #1d1d1d;
+								        font-size: 16px;
+										    vertical-align: bottom;
+										    width: 47%;
+										    display: inline-block;
+											}
+											#hea-pie-widget .hea-pie-legend ul li span:last-child {
+								        text-align: right;
+											}
+											#hea-pie-widget .hea-pie-foot {
+										    width: 67%;
+										    float: left;
+										    display: inline-block;
+										    padding: 22px 0;
+								        font-size: 16px;
+								        color: #1d1d1d;
+											}
+
+											#hea-pie-widget .hea-pie-off .hea-pie {
+												background-image: url('assets/hea-pie-bw.png');
+											}
+											#hea-pie-widget .hea-pie-on .hea-pie {
+												background-image: url('assets/hea-pie-color.png');
+											}
+
+											#hea-pie-widget .hea-pie-off .hea-pie-legend li span:last-child {
+												display:none;
+											}
+											#hea-pie-widget .hea-pie-on .hea-pie-legend li span:last-child {
+												display: inline-block;
+											}
+
+											#hea-pie-widget .hea-pie-off .hea-pie-legend .pie-blue {
+												color:#eee;
+											}
+											#hea-pie-widget .hea-pie-on .hea-pie-legend .pie-blue {
+												color:#445175;
+											}
+
+											#hea-pie-widget .hea-pie-off .hea-pie-legend .pie-red {
+												color:#eee;
+											}
+											#hea-pie-widget .hea-pie-on .hea-pie-legend .pie-red {
+												color:#c64063;
+											}
+
+											#hea-pie-widget .hea-pie-off .hea-pie-legend .pie-orange {
+												color:#eee;
+											}
+											#hea-pie-widget .hea-pie-on .hea-pie-legend .pie-orange {
+												color:#c4a02d;
+											}
+
+											#hea-pie-widget .hea-pie-off .hea-pie-legend .pie-yellow {
+												color:#eee;
+											}
+											#hea-pie-widget .hea-pie-on .hea-pie-legend .pie-yellow {
+												color:#dddd0a;
+											}
+
+											#hea-pie-widget .hea-pie-off .hea-pie-legend .pie-purple {
+												color:#eee;
+											}
+											#hea-pie-widget .hea-pie-on .hea-pie-legend .pie-purple {
+												color:#ad5daf;
+											}
+
+											#hea-pie-widget .hea-pie-off .hea-pie-legend .pie-green {
+												color:#eee;
+											}
+											#hea-pie-widget .hea-pie-on .hea-pie-legend .pie-green {
+												color:#4e8691;
+											}
+										</style>
+										<script>
+											var hea_obj = {};
+											hea_obj.change_hea = function() {
+												setTimeout(function(){
+														$(".hea-pie-cont").removeClass('hea-pie-off');
+														$(".hea-pie-cont").addClass('hea-pie-on');
+
+														$('.hea-pie-foot').html("Annual energy use: this is based on information you provided about your <a href='http://hea/' target='_blank'>home.</a>");
+
+														$('.hea-start-btn').html('Ways to save');
+														$('.hea-start-btn').attr('href','http://waystosave/');
+												}, 1000);
+											};
+
+											$(document).ready(function(){
+
+												$('.hea-start-btn').click( function() {
+													if($(".hea-pie-cont").hasClass("hea-pie-off")) {
+														hea_obj.change_hea();
+													}
+												});
+
+											});
+										</script>
+
+										<div id="hea-pie-widget">
+											<div class="row module" style="position:relative;">
+												<h2 class="pagelevel">Analyze your home energy use</h2>
+                        <div class="hea-pie-cont hea-pie-off">
+													<div class="hea-pie"></div>
+													<div class="hea-pie-legend">
+														<ul>
+															<li class="pie-blue">
+																<span>Cooling</span>
+																<span>40%</span>
+															</li>
+															<li class="pie-red">
+																<span>Heating</span>
+																<span>25%</span>
+															</li>
+															<li class="pie-orange">
+																<span>Hot Water</span>
+																<span>16%</span>
+															</li>
+															<li class="pie-yellow">
+																<span>Lighting</span>
+																<span>10%</span>
+															</li>
+															<li class="pie-purple">
+																<span>Appliances</span>
+																<span>5%</span>
+															</li>
+															<li class="pie-green">
+																<span>Electronics</span>
+																<span>4%</span>
+															</li>
+														</ul>
+													</div>
+
+													<div>
+														<span class="hea-pie-foot">Answer a few quick questions about your home and get a complete Home Energy Analysis</span>
+<!-- 																<a href="#"class="btn opower-btn hea-start-btn" style="text-align: center;">Start Now</a> -->
+														<a href="http://hea/" target="_blank" class="btn opower-btn hea-start-btn" style="text-align: center;">Start Now</a>
+													</div>
+                        </div>
+											</div>
+										</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 										neighbor compare -->
                     <div class="row module" style="position:relative;">
 
 
@@ -700,15 +884,16 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 	                        <style>
 		                        #widget-container-opower .neighbor-com-mess {
 																display:inline-block;
-                      					float:right;
-                        				padding: 0px 2px 15px 30px;
-																margin:0;
-																position: relative;
+	                    					float:right;
+	                  				    padding: 3px 9px 9px 18px;
+														    margin: 0;
+														    position: relative;
+														    border: 1px solid #ddd;
 														}
 														#widget-container-opower .neighbor-com-mess p {
-														 line-height: 1;
-														 margin: 12px 0 6px 0;
-														 color: #666;
+																line-height: 1;
+																margin: 12px 0 6px 0;
+																color: #666;
 														}
 														#widget-container-opower .neighbor-com-mess p.neighbor-com-you:before {
 /*
@@ -738,7 +923,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 														    padding: 10px;
 														    position: absolute;
 														    bottom: 0;
-														    left: 100px;
+														    left: 112px;
 														    right: 0;
 														    line-height: 3.5;
 														    border-left: 1px solid #ddd;
@@ -787,7 +972,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 														}
 														#widget-container-opower .neighbor-com-mess .icon-right-4.icon-size-4 {
 																position: absolute;
-																left:10px;
+																left:0px;
 																float: none;
 														}
 														#widget-container-opower .neighbor-com-mess .icon-smiley-great-4 {
@@ -869,7 +1054,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                                 </div>
 
 
-                            </div><a href="page-content-data-browser.html" class="btn opower-btn" style="text-align: center;">Explore my usage</a>
+                            </div><a href="page-content-data-browser.html" class="btn opower-btn" style="text-align: center;">Explore My Usage</a>
 
                             <p style="margin: 20px 0 0"><a href="#neighbors" class="colorbox" data-width="700">Who are my neighbors?</a></p>
                         </div>
