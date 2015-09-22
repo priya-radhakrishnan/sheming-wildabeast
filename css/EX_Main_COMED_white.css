@@ -217,7 +217,7 @@ button:hover {
   line-height: 29px;
 }
 .EX_toolslinks a {
-  background: url('../assets/separator.png') no-repeat left center;
+  background: url('../assets-comed-scrape/separator.png') no-repeat left center;
   padding: 0 15px;
   color: #ffffff !important;
 }
@@ -263,7 +263,7 @@ button:hover {
 }
 .searchbox #SearchBox .ms-srch-sb-border a,
 .searchbox #SearchBox .ms-srch-sb-borderFocused a {
-  background: url('../assets/search_icon.png') no-repeat center center;
+  background: url('../assets-comed-scrape/search_icon.png') no-repeat center center;
 }
 .searchbox #DeltaPlaceHolderSearchArea {
   float: left;
@@ -560,7 +560,7 @@ button:hover {
   position: relative;
 }
 .EX_kidsbg > .EX_kidsbgimg > h4 {
-  background: url('../assets/eductationimg-bg.png') repeat;
+  background: url('../assets-comed-scrape/eductationimg-bg.png') repeat;
   margin: 0;
   padding: 11px 0 12px 0;
   text-align: center;
@@ -833,7 +833,7 @@ body,
     color: #fff;
   }
   .EX_mobiletools ul li.active a {
-    background: url('../assets/mobile_close.png') no-repeat center 4px #dddddd !important;
+    background: url('../assets-comed-scrape/mobile_close.png') no-repeat center 4px #dddddd !important;
     color: #fff;
   }
   .EX_mobiletools ul li.login.active a {
@@ -896,7 +896,7 @@ body,
   }
   .EX_Topnav #topnavbar .EX_extralinks #DeltaPlaceHolderSearchAreaMobile .ms-srch-sb a {
     float: left;
-    background: url('../assets/search_icon.png') no-repeat center center;
+    background: url('../assets-comed-scrape/search_icon.png') no-repeat center center;
     position: absolute;
     right: 9px;
     top: 4px;
@@ -936,16 +936,16 @@ body,
     line-height: 20px;
   }
   .EX_Topnav #topnavbar li.static > .menu-item span.additional-background.dynamic-children {
-    background: url('../assets/EX_mobilemarkers.png') no-repeat right -3px;
+    background: url('../assets-comed-scrape/EX_mobilemarkers.png') no-repeat right -3px;
   }
   .EX_Topnav #topnavbar li.dynamic-children.shown > a {
     border-bottom: 0px !important;
   }
   .EX_Topnav #topnavbar li.dynamic-children.shown > a span.additional-background.dynamic-children {
-    background: url('../assets/EX_mobilemarkers.png') no-repeat right -20px;
+    background: url('../assets-comed-scrape/EX_mobilemarkers.png') no-repeat right -20px;
   }
   .EX_Topnav #topnavbar li.dynamic-children.shown ul li span.additional-background {
-    background: url('../assets/EX_mobilemarkers.png') no-repeat right -34px;
+    background: url('../assets-comed-scrape/EX_mobilemarkers.png') no-repeat right -34px;
     display: block;
   }
   .EX_Topnav #topnavbar ul.dynamic {
@@ -977,11 +977,11 @@ body,
     margin: 0px !important;
     box-shadow: none !important;
     padding: 0px !important;
-    background: url('../assets/hamburguer_icon_w.png') no-repeat scroll 4px 15px transparent !important;
+    background: url('../assets-comed-scrape/hamburguer_icon_w.png') no-repeat scroll 4px 15px transparent !important;
     background-size: 65% !important;
   }
   .EX_Topnav #topnavbar button.navbar-toggle.active {
-    background: url('../assets/mobile_close.png') no-repeat 13px 17px #dddddd !important;
+    background: url('../assets-comed-scrape/mobile_close.png') no-repeat 13px 17px #dddddd !important;
     background-size: 50% !important;
   }
 .EX_WideLayout.EX_AcctLayout .EX_accountBill .EX_billInfo {
@@ -1172,7 +1172,7 @@ body,
     width: 32%;
     margin-left: 2%;
     float: left;
-    background: url('../assets/form_bg.png') repeat;
+    background: url('../assets-comed-scrape/form_bg.png') repeat;
     -webkit-border-top-right-radius: 2px;
     -webkit-border-bottom-right-radius: 2px;
     -webkit-border-bottom-left-radius: 2px;
@@ -1575,7 +1575,7 @@ body,
     margin: 3px 0 0 25px;
   }
   #DeltaSiteLogo a {
-	  background: url("../assets/EX_logo_COMED_W.png");
+	  background: url("../assets-comed-scrape/EX_logo_COMED_W.png");
 	  height: 73px;
     width: 335px;
     max-height: none;
@@ -1643,7 +1643,7 @@ body,
     background-clip: padding-box;
   }
   .EX_NarrowLayout #main > .container .EX_loginbox {
-    background: url('../assets/form_bg.png') repeat;
+    background: url('../assets-comed-scrape/form_bg.png') repeat;
   }
   .EX_NarrowLayout #mainbody {
     width: 100%;
@@ -1741,7 +1741,7 @@ body,
   #topnavbar #DeltaTopNavigation ul.root ul.static > li > ul {
     border: 0px !important;
     border-bottom: 1px solid #cccccc !important;
-    background: url('../assets/menu_bg.png') repeat;
+    background: url('../assets-comed-scrape/menu_bg.png') repeat;
     width: 1071px !important;
     top: 50px !important;
   }
@@ -1970,7 +1970,7 @@ body,
     height: 75px;
     margin-right: 2px;
     float: left;
-    background: url('../assets/form_bg.png') repeat;
+    background: url('../assets-comed-scrape/form_bg.png') repeat;
     -webkit-border-top-right-radius: 2px;
     -webkit-border-bottom-right-radius: 2px;
     -webkit-border-bottom-left-radius: 2px;
@@ -2092,7 +2092,7 @@ body,
     width: 1060px;
     margin: 0;
     margin-left: 25px;
-    background: url('../assets/sidenavbg.png') repeat-y;
+    background: url('../assets-comed-scrape/sidenavbg.png') repeat-y;
     background-size: 270px;
     background-position-x: -3px;
     padding: 0px;
@@ -2470,7 +2470,7 @@ body,
   background: #cc0033;
 }
 #sideNavBox .ms-core-listMenu-verticalBox .dynamic-children.additional-background {
-  background: url('../assets/EX_mobilemarkers.png') no-repeat right -36px !important;
+  background: url('../assets-comed-scrape/EX_mobilemarkers.png') no-repeat right -36px !important;
   background-repeat: no-repeat;
   background-position: right center;
   display: block;
@@ -2593,7 +2593,7 @@ body,
   padding-top: 30px;
 }
 #main > .container > .row {
-  background: url('../assets/sidenavbg.png') repeat-y;
+  background: url('../assets-comed-scrape/sidenavbg.png') repeat-y;
   background-size: 310px;
 }
 .EX_NarrowLayout #main > .container > .row {

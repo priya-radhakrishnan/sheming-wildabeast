@@ -131,7 +131,7 @@ ul.s4-breadcrumb .s4-breadcrumb-arrowcont {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background: transparent url('../assets/glyphicons-halflings.png') no-repeat -262px -92px;
+    background: transparent url('../assets-comed-scrape/glyphicons-halflings.png') no-repeat -262px -92px;
 }
 ul.s4-breadcrumb .s4-breadcrumb-arrowcont img {
     display: none !important;
@@ -231,10 +231,10 @@ ul.s4-breadcrumb a.s4-breadcrumbCurrentNode {
 	padding: 15px;
 }
 #topnavbar .ms-core-listMenu-horizontalBox .dynamic-children.additional-background {
-    background-image: url("../assets/menu-down.gif");
+    background-image: url("../assets-comed-scrape/menu-down.gif");
 }
 #topnavbar .ms-core-listMenu-horizontalBox .dynamic .dynamic-children.additional-background {
-    background-image: url("../assets/menu-down.gif");
+    background-image: url("../assets-comed-scrape/menu-down.gif");
 }
 /*end top nav */
 
@@ -433,10 +433,10 @@ ul.three-up > li:nth-child(3n+1) {
 		padding: 9px 15px;
 	}
 	#topnavbar .ms-core-listMenu-horizontalBox .dynamic-children.additional-background {
-	    background-image: url("../assets/menu-down.gif");
+	    background-image: url("../assets-comed-scrape/menu-down.gif");
 	}
 	#topnavbar .ms-core-listMenu-horizontalBox .dynamic .dynamic-children.additional-background {
-		background-image: url("../assets/menu-right.gif");
+		background-image: url("../assets-comed-scrape/menu-right.gif");
 	}
 	/*3rd level +*/
 	#topnavbar .nav ul.dynamic > li.dynamic-children > ul {
