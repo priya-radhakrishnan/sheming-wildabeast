@@ -1,6 +1,6 @@
 // JS file
 // Date: 8/28/15
- 
+
 
 $( document ).ready(function() {
 
@@ -102,6 +102,11 @@ $( document ).ready(function() {
 		// Togles to do module on click
 
 		$('.todo-toggle').click(function(){
+			if ($(this).hasClass('active')) {
+				$(this).removeClass('active');
+			} else {
+				$(this).addClass('active');
+			}
 
 			$('.todo-module').toggle();
 
@@ -119,4 +124,3 @@ $( document ).ready(function() {
 		});
 
 });
-			 

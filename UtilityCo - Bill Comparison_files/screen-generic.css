@@ -8028,3 +8028,11 @@ margin-left: 1em;
 
 
 
+/* re do the comed navigation */
+#main > .container > .row {
+	background:none !important;
+}
+#sideNavBox {
+	background: #fff;
+	padding-top: 10px;
+}

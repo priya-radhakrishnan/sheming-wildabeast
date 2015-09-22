@@ -51,6 +51,7 @@ a:focus {
 	width: 100%;
 	height: auto;
 	float: right;
+  margin: 10px 0 0 0;
 }
 
 
@@ -96,7 +97,7 @@ a:focus {
 	float:left;
 }
 #tip-details .save-now {
-	margin:10px 25px 0 0px;
+	margin:10px 10px 0 0px;
 }
 #tip-details small-8 {
 	padding: 0px;
@@ -479,21 +480,44 @@ a:focus {
 .todo-wrapper {
 	float:right;
 }
-
-.todo-wrapper .todo-toggle {
-	font-size:13px;
-	display:block;
-	text-align:right;
-	margin:0 0 10px;
-	width:85%;
-	color:#666;
-	float:right;
+.todo-toggle {
+		font-family: 'Open Sans', "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+		font-weight: normal;
+    line-height: normal;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    display: block;
+/*     text-align: right; */
+/*     margin: 0 10px 10px 0; */
+    /* width: 85%; */
+    color: #107cb2;
+    float: right;
+    padding: 10px 27px 8px;
+    border: 2px solid #107cb2;
+    border-radius: 4px;
+    background-color: #fff;
+    z-index: 2;
+    transition: background-color 300ms ease-out;
+}
+.todo-toggle:focus {
+	color: #107cb2;
+}
+.todo-toggle:hover,
+.todo-toggle:active,
+.todo-toggle.active {
+	color: #fff;
+  background-color: #107cb2;
 }
 
-.todo-wrapper .todo-toggle i {
+
+.todo-toggle i {
 	float:right;
 	font-size:18px;
 	margin:1px 0 0 5px;
+}
+.todo-toggle.active i {
+	transform: rotate(180deg);
 }
 
 .todo-module {
@@ -504,9 +528,14 @@ a:focus {
 	position:absolute;
 	z-index:1;
 	right:0;
-	width: 320px;
+	top:88px;
+	width: 380px;
+	border-top:3px solid #107cb2;
+	border-radius: 4px;
+  z-index: 1;
 }
 
+/*
 .todo-module::before {
 	content:"";
 	border-left:10px solid transparent;
@@ -516,6 +545,7 @@ a:focus {
 	top:-12px;
 	right:10px;
 }
+*/
 
 .tabs-content {
 	margin:10px auto 0;
@@ -523,20 +553,28 @@ a:focus {
 
 .tabs-content .content {
 	background:#fff;
+	 padding: 10px 0 2px;
 }
 
 .print-option {
-	background:#fbf7cc;
-	padding:5px 15px;
 	margin:0;
 }
-
+.print-option img {
+	width: 43px;
+	height: auto;
+	margin-left: -3px;
+}
 .print-option h4 {
 	font-size:14px;
+	color: #666;
+	display: inline;
+}
+.print-option h4 a {
+	text-transform:uppercase;
 }
 
 .saved-tip {
-	padding:10px 15px;
+	padding:15px 15px 12px;
 	overflow:hidden;
 	cursor:pointer;
 	border-bottom:1px solid #e9e9e9;
@@ -551,20 +589,22 @@ a:focus {
 }
 
 .saved-tip .saved-tip-icon {
-	width:28px;
-	border-radius:30px;
+	width:40px;
+	border-radius:40px;
 	float:left;
 	margin:0 10px 0 0;
 }
 
 .saved-tip h5 {
 	color:#107CB2;
-	font-size:13px;
+	font-size:14px;
+  line-height: 2.3;
 	float:left;
 }
 
 .saved-tip .saved-tip-options {
 	float:right;
+  margin-top: 5px;
 }
 
 .saved-tip .saved-tip-options a {
@@ -668,7 +708,8 @@ a:focus {
 
 
 
-.tabs dd > a, .tabs .tab-title > a {
+.tabs dd > a,
+.tabs .tab-title > a {
 	text-align: center;
 	padding: 5px 5%;
 	outline: none;
@@ -676,7 +717,27 @@ a:focus {
 .tabs dd, .tabs .tab-title {
 	width: 50%;
 }
-
+.tabs dd > a,
+.tabs .tab-title > a {
+	border-radius: 0px;
+	border: none;
+	color: #666;
+	background-color: #ddd;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.tabs dd > a:hover,
+.tabs .tab-title > a:hover {
+	background-color: #ddd;
+}
+.tabs dd:first-child > a,
+.tabs .tab-title:first-child > a {
+	border-radius: 4px 0 0 4px;
+}
+.tabs dd:last-child > a,
+.tabs .tab-title:last-child > a {
+	border-radius: 0 4px 4px 0;
+}
 
 
 .breadcrumbs {
