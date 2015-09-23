@@ -4,18 +4,14 @@
 /* 	display: none; */
 }
 
-.header {
+.header,
+.footer,
+.sidebar,
+.audit-header,
+.navigation-container {
 	display: none;
 }
-.footer {
-	display: none;
-}
-.sidebar {
-	display: none;
-}
-.audit-header {
-	display: none;
-}
+
 .how-this-works {
   padding-bottom: 0px;
   border-bottom:none;
@@ -23,18 +19,11 @@
 .main {
 	border: none;
 }
-.navigation-container {
-	display: none;
-}
 
-.row-data {
-    background-color: #fff;
-}
-body {
-    background-color: #fff;
-}
-
-.questions-container {
+body,
+.row-data,
+.questions-container,
+.audit-container {
     background-color: #fff;
 }
 
