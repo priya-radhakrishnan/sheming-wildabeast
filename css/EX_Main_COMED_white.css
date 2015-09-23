@@ -2469,13 +2469,6 @@ body,
 #sideNavBox #zz14_RootAspMenu > .static > ul {
   background: #cc0033;
 }
-#sideNavBox .ms-core-listMenu-verticalBox .dynamic-children.additional-background {
-  background: url('../assets-comed-scrape/EX_mobilemarkers.png') no-repeat right -36px !important;
-  background-repeat: no-repeat;
-  background-position: right center;
-  display: block;
-}
-
 #sideNavBox .dynamic-children > .dynamic {
   background: #d1d1d1;
   border-color: #d1d1d1;
@@ -2816,3 +2809,122 @@ body,
   margin-top: 5px;
   margin-left: -16px;
 }
+
+
+
+
+
+/* breadcrumbs */
+.breadcrumb-row {
+	padding-bottom: 16px !important;
+	padding-top: 8px !important;
+}
+.breadcrumb {
+	background: #fff !important;
+	margin: 10px 0 0 0;
+  padding: 8px 15px 8px 20px;
+}
+.breadcrumb a.ms-sitemapdirectional, .breadcrumb .breadcrumbCurrent {
+  padding: 0 3px;
+}
+.breadcrumb a[title="Home"] {
+  padding: 0 3px 0px 0px;
+}
+
+
+.EX_WideLayout #mainbody {
+    /* padding-left: 30px; */
+    margin-left: -60px;
+}
+
+
+/* re do the comed navigation */
+/* topnav */
+#topnavbar #DeltaTopNavigation ul.root ul.static > li .ms-core-listMenu-selected {
+  font-weight: 600;
+  color: #cc0033;
+  background-color: #eee;
+}
+#topnavbar #DeltaTopNavigation ul.root ul.static > li:hover > a, #topnavbar #DeltaTopNavigation ul.root ul.static > li:active > a {
+    border-top: 2px solid #eee !important;
+}
+
+/* sidenav */
+#main > .container > .row {
+	background:none !important;
+}
+/*general*/
+#sideNav-cont {
+	display: block;
+	padding-top: 3px;
+}
+#sideNav-cont ul {
+	position: relative;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+#sideNav-cont ul li {
+	position: relative;
+}
+#sideNav-cont ul li a {
+	color: #1d1d1d;
+	display: inline-block;
+}
+
+/*root*/
+#sideNav-cont ul.sideNav-root {
+	display: block;
+}
+#sideNav-cont ul.sideNav-root > li {
+
+}
+#sideNav-cont ul.sideNav-root > li > a {
+	font-size: 20px;
+	font-weight: 600;
+	color: #cc0033;
+	padding: 8px 0 8px 20px;
+}
+
+/*sub-1*/
+#sideNav-cont ul.sideNav-sub-1 {
+
+}
+#sideNav-cont ul.sideNav-sub-1 > li {
+
+}
+#sideNav-cont ul.sideNav-sub-1 > li > a {
+	padding: 8px 0 8px 20px;
+}
+
+/*sub-2*/
+#sideNav-cont ul.sideNav-sub-2 {
+	display: none;
+}
+#sideNav-cont ul.sideNav-sub-2 > li {
+
+}
+#sideNav-cont ul.sideNav-sub-2 > li > a {
+	padding: 8px 20px 8px 40px;
+}
+
+/*states*/
+#sideNav-cont ul li:hover > ul {
+	display: block;
+}
+#sideNav-cont ul li a:hover  {
+	color: #cc0033;
+}
+
+#sideNav-cont ul.sideNav-sub-1 > li.active > a {
+	color: #1d1d1d;
+	font-weight: bold;
+}
+#sideNav-cont ul > li.active > a {
+	color: #cc0033;
+}
+#sideNav-cont ul li.active > ul {
+	display: block;
+}
+
+

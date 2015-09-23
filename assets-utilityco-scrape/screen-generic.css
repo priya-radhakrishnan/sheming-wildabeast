@@ -8010,29 +8010,3 @@ margin-left: 1em;
 	border-color: transparent transparent #0099cc;
 }
 /* @end */
-
-
-
-.breadcrumb {
-	background: #fff;
-	margin: 10px 0 0 0;
-  padding: 8px 15px 8px 0;
-}
-.breadcrumb a.ms-sitemapdirectional, .breadcrumb .breadcrumbCurrent {
-  padding: 0 3px;
-}
-.breadcrumb a[title="Home"] {
-  padding: 0 3px 0px 0px;
-}
-
-
-
-
-/* re do the comed navigation */
-#main > .container > .row {
-	background:none !important;
-}
-#sideNavBox {
-	background: #fff;
-	padding-top: 10px;
-}
