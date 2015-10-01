@@ -2909,9 +2909,11 @@ body,
 }
 
 /*states*/
+/*
 #sideNav-cont ul li:hover > ul {
 	display: block;
 }
+*/
 #sideNav-cont ul li a:hover  {
 	color: #cc0033;
 }

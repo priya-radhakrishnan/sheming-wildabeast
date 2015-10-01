@@ -545,7 +545,16 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 
 
+						<script>
+							$(document).ready(function() {
 
+								var showSubNav = function() {
+									$('ul', this).slideToggle(200);
+								}
+								$('.sideNav-sub-1 li').on('click', showSubNav);
+
+							});
+						</script>
 
 						<div id="sideNav-cont" class="col-md-3">
 							<div class="sideNav-wrap">
