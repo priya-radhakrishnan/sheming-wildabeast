@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="css/corev15.css">
     <link rel="stylesheet" type="text/css" href="css/EX_Main_COMED_white.css">
     <link rel="stylesheet" type="text/css" href="css/skdslider.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
 
     <script src="js/modernizr.2.6.2.custom.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
@@ -483,8 +484,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 						<script>
 							$(document).ready(function() {
 
+								$('#sideNav-cont li.active > ul').slideToggle(200);
 								var showSubNav = function() {
 									$('ul', this).slideToggle(200);
+									$(this).toggleClass('open-sub');
 								}
 								$('.sideNav-sub-1 li').on('click', showSubNav);
 
@@ -499,21 +502,27 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 										<ul class="sideNav-sub-1">
 
 											<li><a href="#">For Your Home</a>
+<!--
 												<ul class="sideNav-sub-2">
-<!-- 													<li><a href="#">Assesssments</a></li> -->
+													<li><a href="#">Assesssments</a></li>
 												</ul>
+-->
 											</li>
 
 											<li><a href="#">For Your Business</a>
+<!--
 												<ul class="sideNav-sub-2">
-<!-- 													<li><a href="#">Assessments</a></li> -->
+													<li><a href="#">Assessments</a></li>
 												</ul>
+-->
 											</li>
 
 											<li><a href="#">Learn More</a>
+<!--
 												<ul class="sideNav-sub-2">
-<!-- 													<li><a href="#">Email Sign-Up</a></li> -->
+													<li><a href="#">Email Sign-Up</a></li>
 												</ul>
+-->
 											</li>
 
 										</ul>

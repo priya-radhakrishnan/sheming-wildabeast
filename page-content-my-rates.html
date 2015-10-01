@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="css/corev15.css">
     <link rel="stylesheet" type="text/css" href="css/EX_Main_COMED_white.css">
     <link rel="stylesheet" type="text/css" href="css/skdslider.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
 
 
     <script src="js/modernizr.2.6.2.custom.min.js"></script>
@@ -548,8 +549,10 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 						<script>
 							$(document).ready(function() {
 
+								$('#sideNav-cont li.active > ul').slideToggle(200).parent().toggleClass('open-sub');
 								var showSubNav = function() {
 									$('ul', this).slideToggle(200);
+									$(this).toggleClass('open-sub');
 								}
 								$('.sideNav-sub-1 li').on('click', showSubNav);
 
