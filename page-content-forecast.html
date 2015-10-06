@@ -689,14 +689,192 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 <!-- <link rel="stylesheet" href="assets-utilityco-scrape/style.css" type="text/css"> -->
 
 
-
-
-
-
-
-
-
 									<div id="wrapper">
+
+										<style>
+											#threshold-widget {
+										    padding-bottom: 10px;
+										    border-bottom: 1px solid #ddd;
+											}
+											#threshold-widget .threshold-cont {
+										    width: 77%;
+										    float: left;
+										    display: inline-block;
+										    padding: 0px 0 22px 0;
+								        font-size: 16px;
+								        color: #1d1d1d;
+								        position: relative;
+											}
+
+
+											#threshold-widget .threshold-amount-cont {
+												width: 50%;
+										    height: 50px;
+										    float: right;
+										    display: inline-block;
+											}
+											#threshold-widget .threshold-amount-cont label {
+								        font-size: 28px;
+										    display: inline-block;
+										    width: 10%;
+										    color:#666;
+										    position: relative;
+										    left: 0;
+										    -webkit-transition: all .25s;
+												transition: all .25s;
+											}
+											#threshold-widget .threshold-amount-cont input[type="text"] {
+										    background: none;
+										    font-size: 15px;
+										    display: inline-block;
+										    height: 52px;
+										    width: 80%;
+								        top: 0;
+								        border: 1px solid #ccc;
+								        color:#666;
+								        border-radius: 3px;
+								        padding-left:8%;
+								        -webkit-transition: all .25s;
+												transition: all .25s;
+												box-sizing: border-box;
+											}
+
+
+
+											#threshold-widget select {
+
+												  -webkit-appearance: none;
+												     -moz-appearance: none;
+												          appearance: none;
+
+										    height: 50px;
+										    width: 28%;
+										    padding: 0 0 0 80px;
+										    border: 1px solid #ccc;
+										    border-radius: 3px;
+										    color:#666;
+											}
+											#threshold-widget .threshold-filter-cont {
+												position: relative;
+											}
+											#threshold-widget .threshold-filter-cont:before {
+												font-size: 15px;
+											  font-family: 'Open Sans', Arial, Helvetica;
+											  font-weight: normal;
+											  color:#666;
+												content: 'Set by: ';
+												position: absolute;
+										    top: 2px;
+										    left: 27px;
+											}
+											#threshold-widget .threshold-filter-cont:after {
+												content: '';
+												border-left: 10px solid transparent;
+												border-right: 10px solid transparent;
+												border-top: 10px solid #666;
+												position: absolute;
+												top: 7px;
+												right: 20px;
+												background: #fff;
+											}
+
+
+											#threshold-widget .threshold-cont.threshold-on input[type="text"] {
+										    font-size: 26px;
+										    font-weight: bold;
+										    padding-left: 17%;
+										    border: 5px solid #8DC63F;
+										    text-align: center;
+											}
+											#threshold-widget .threshold-cont.threshold-on label {
+										    left: 17%;
+											}
+
+										</style>
+										<script>
+											var threshold_obj = {};
+											threshold_obj.change_threshold = function() {
+													//if amount not set, set it
+													if($(".threshold-cont").hasClass("threshold-off")) {
+
+														$(".threshold-cont").removeClass('threshold-off');
+														$(".threshold-cont").addClass('threshold-on');
+
+														$(".threshold-cont select").prop('disabled', true);
+														$(".threshold-cont input").prop('readonly', true);
+														$('.threshold-btn').html('Change');
+													} else { // if amount is set, change it
+
+														$(".threshold-cont").removeClass('threshold-on');
+														$(".threshold-cont").addClass('threshold-off');
+
+														$(".threshold-cont select").prop('disabled', false);
+														$(".threshold-cont input").prop('readonly', false);
+														$('.threshold-btn').html('Save');
+													}
+											};
+											threshold_obj.change_threshold_currency = function() {
+													var threshold_currency_option = $('#threshold-filter').find('option:selected').val();
+
+													switch(threshold_currency_option) {
+														case 'Euro':
+															$('.threshold-cont label').html('€');
+															break;
+														case 'Yen':
+															$('.threshold-cont label').html('¥');
+															break;
+														default:
+															$('.threshold-cont label').html('$');
+															break;
+													}
+											};
+
+											$(document).ready(function(){
+
+												$('#threshold-filter').change(function() {
+													threshold_obj.change_threshold_currency();
+												});
+
+												$('.threshold-btn').click( function() {
+													threshold_obj.change_threshold();
+												});
+
+											});
+										</script>
+
+										<div id="threshold-widget">
+											<div class="row module" style="position:relative;">
+
+												<h2 class="pagelevel">Set your bill target</h2>
+												<p class="sub-pagelevel">We will notify you when your bill is projected to exceed your threshold.<br><a href="#">Manage my alerts</a>.</p>
+												<div>
+													<span class="threshold-cont threshold-off">
+														<span class="threshold-filter-cont">
+															<select id="threshold-filter" name="threshhold-filter">
+																<option value="Dollar" selected>Dollars</option>
+																<option value="Euro">Euro</option>
+																<option value="Yen">Yen</option>
+															</select>
+														</span>
+														<span class="threshold-amount-cont">
+															<label for="threshold-amount">$</label><input id="threshold-amount" class="" type="text" name="threshold-amount" placeholder="Amount">
+														</span>
+													</span>
+													<a href="#" class="btn opower-btn threshold-btn" style="text-align: center;width:137px; margin-top:1px;">Save</a>
+												</div>
+
+											</div>
+										</div>
+
+
+
+
+
+
+
+
+
+
 
 										<style>
 											#hea-pie-widget {
@@ -1153,38 +1331,66 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 
 		            <!-- START INSERT INSERT -->
-<div id="widget-container-opower" style="margin-bottom: 20px;border:1px solid #ddd;">
+<div id="widget-container-opower">
 
 <!-- <link rel="stylesheet" href="assets-utilityco-scrape/screen-generic.css" type="text/css"> -->
 <style>
-/*
-	#widget-container-opower {
+	.dashboardsidebar {
 		margin-bottom: 20px;
 		border:1px solid #ddd;
 	}
-*/
+	h1.grey-bg {
+		background: #eee;
+    padding: 18px 20px;
+    font-size: 16px !important;
+    margin: 0;
+	}
+	.ci-sidebar-widget {
+		padding: 0 20px;
+	}
+	.ci-sidebar-widget img.icon {
+		padding: 10px 0px;
+	}
 </style>
 
 
 <!-- 	content -->
-    <div class="col col4 dashboardsidebar" >
+    <div class="col col4 dashboardsidebar">
         <div class="module">
             <div class="unusualusage">
-                        <p class="large">Projected electricity cost:</p>
-                        <h1 class="yellow" style="width: 110px"><strong><img src="assets-utilityco-scrape/images/icons/dashboard-unusualusage-units.png"> $78</strong></h1>
-                        <p><a href="#">Based on the last 21 days: $47</a></p><!-- http://www.consensuswork.com/astro/myenergyuse/details/ -->
-                        <p class="nomargin">Projected for:</p>
-                        <h3 class="strong">September<br> 1 – 30</h3>
-                        <p class="nomargin">You typically spend:</p>
-                        <h2><strong>$78</strong></h2>
-                        <div class="hr short"></div>
-                        <p class="nomargin"><a href="#lowermybill" class="colorbox" data-width="635">What can I do?</a></p><!-- data-height="375" -->
+	              <p class="large">Projected electricity cost:</p>
+	              <h1 class="yellow" style="width: 110px"><strong><img src="assets-utilityco-scrape/images/icons/dashboard-unusualusage-units.png"> $78</strong></h1>
+	              <p><a href="#">Based on the last 21 days: $47</a></p><!-- http://www.consensuswork.com/astro/myenergyuse/details/ -->
+	              <p class="nomargin">Projected for:</p>
+	              <h3 class="strong">September<br> 1 – 30</h3>
+	              <p class="nomargin">You typically spend:</p>
+	              <h2><strong>$78</strong></h2>
+	              <div class="hr short"></div>
+	              <p class="nomargin"><a href="#lowermybill" class="colorbox" data-width="635">What can I do?</a></p><!-- data-height="375" -->
             </div>
         </div>
     </div>
 
 
+    <div class="col col4 dashboardsidebar">
+	    	<h1 class="grey-bg">Earn Rewards</h1>
+		    <div class="ci-sidebar-widget">
+		      <p style="text-align: center; width: auto; margin: 0 auto; display: block;"><img class="icon" src="assets-utilityco-scrape/images/dollar-icon-ci.png" width="80" height="80"></p>
+		      <h3 style="text-align: center;" class="strong"><strong><img width="16" height="16" src="assets-utilityco-scrape/images/check-mark-ci.png"> 150 points </strong></h3>
+		      <p class="nomargin">Take the home energy audit and earn reward points. <strong>Don't lose your points!</strong></p>
+		      <a href="hea/index.html" target="_blank" class="btn opower-btn" style="text-align: center; width:100%; padding: 8px 0;">Start Now</a>
+		    </div>
+		</div>
 
+
+		<div class="col col4 dashboardsidebar">
+				<h1 class="grey-bg">Tomorrow is a Peak Day</h1>
+		    <div class="ci-sidebar-widget">
+		      <p style="text-align: center; width: auto; margin: 0 auto; display: block;"><img class="icon" src="assets-utilityco-scrape/images/thermo-icon-ci.png" width="80" height="80"></p>
+		      <p class="nomargin">Reduce your energy use and earn rewards.</p>
+		      <a href="waystosave/index.html" target="_blank" class="btn opower-btn" style="text-align: center; width:100%; padding: 8px 0;">Start Saving</a>
+		    </div>
+		</div>
 
 
 
@@ -1246,6 +1452,11 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                 </div>
             </div>
 						</div>
+
+
+
+
+
 
 
 
