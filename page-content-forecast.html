@@ -1372,8 +1372,36 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
         </div>
     </div>
 
+    <script>
+        $(document).ready(function(){
 
-    <div class="col col4 dashboardsidebar">
+            // Show the rewards widget by default
+            // Hide the peak day widget by default
+            // Show the rewards & peak day widget by a unique url string 
+            // --
+            // ! the peak day widget is hiding by default with a class of `.hide`
+            // --
+            // if the url string is `?widget=rewards`
+            // show `#earnrewards` widget and hide the `#peakday` widget
+
+            if (location.search == "?widget==rewards") {
+                $('#earnrewards').show();
+                $('#peakday').hide();
+            }
+            // if the url string is `?widget=peakday`
+            // hide the `#earnrewards` widget and hide the `#earnrewards` widget
+            // we are also removing the class of `.hide` from the dom
+
+            else if (location.search == "?widget=peakday") {
+                $('#earnrewards').hide();
+                $('#peakday').show().removeClass('hide');
+            }
+        });
+
+    </script>
+
+
+    <div class="col col4 dashboardsidebar" id="earnrewards">
 	    	<h1 class="grey-bg">Earn Rewards</h1>
 		    <div class="ci-sidebar-widget">
 		      <p style="text-align: center; width: auto; margin: 0 auto; display: block;"><img class="icon" src="assets-utilityco-scrape/images/dollar-icon-ci.png" width="80" height="80"></p>
@@ -1384,7 +1412,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 		</div>
 
 
-		<div class="col col4 dashboardsidebar">
+		<div class="col col4 dashboardsidebar hide" id="peakday">
 				<h1 class="grey-bg">Tomorrow is a Peak Day</h1>
 		    <div class="ci-sidebar-widget">
 		      <p style="text-align: center; width: auto; margin: 0 auto; display: block;"><img class="icon" src="assets-utilityco-scrape/images/thermo-icon-ci.png" width="80" height="80"></p>
