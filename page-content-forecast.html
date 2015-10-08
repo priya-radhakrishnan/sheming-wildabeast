@@ -818,11 +818,8 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 													var threshold_currency_option = $('#threshold-filter').find('option:selected').val();
 
 													switch(threshold_currency_option) {
-														case 'Euro':
-															$('.threshold-cont label').html('€');
-															break;
-														case 'Yen':
-															$('.threshold-cont label').html('¥');
+														case 'Percent':
+															$('.threshold-cont label').html('%');
 															break;
 														default:
 															$('.threshold-cont label').html('$');
@@ -853,8 +850,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 														<span class="threshold-filter-cont">
 															<select id="threshold-filter" name="threshhold-filter">
 																<option value="Dollar" selected>Dollars</option>
-																<option value="Euro">Euro</option>
-																<option value="Yen">Yen</option>
+																<option value="Percent">Percent</option>
 															</select>
 														</span>
 														<span class="threshold-amount-cont">
@@ -1377,7 +1373,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
             // Show the rewards widget by default
             // Hide the peak day widget by default
-            // Show the rewards & peak day widget by a unique url string 
+            // Show the rewards & peak day widget by a unique url string
             // --
             // ! the peak day widget is hiding by default with a class of `.hide`
             // --
