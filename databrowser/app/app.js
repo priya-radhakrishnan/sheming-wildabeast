@@ -982,14 +982,14 @@
 					$scope.costFebruary.series[0].data[i].insight = false;
 				}
 			}
-			if($scope.$parent.$parent.month.cimonth === 'july') {
+			if($scope.$parent.$parent.month.cimonth === 'june') {
 				startBlue();
 				$scope.costFebruary.series[0].data[26].color = highlightColor;
 				$scope.costFebruary.series[0].data[26].insight = {
 					disposition: "psd",
 					message: '<div class="ci-tooltip"><h3><strong>Peak Savings Day</strong></h3>This was a Peak Savings Day. You saved: <strong>$2</strong></div>'
 				};
-			} else if($scope.$parent.$parent.month.cimonth === 'august') {
+			} else if($scope.$parent.$parent.month.cimonth === 'july') {
 				startBlue();
 				$scope.costFebruary.series[0].data[28].color = highlightColor;
 				$scope.costFebruary.series[0].data[10].color = highlightColor;
