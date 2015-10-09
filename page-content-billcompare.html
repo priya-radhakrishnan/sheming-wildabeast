@@ -668,7 +668,7 @@ in the head
 
 <!-- content -->
     <div id="wrapper">
-        <div id="content" style="padding-top: 0;">
+        <div id="content" style="padding-top: 0;border-bottom: 1px solid #ddd;">
             <div class="row module" style="padding-top: 0;">
 								<h2 class="pagelevel">Compare my bills</h2>
                 <div class="section billCompare" id="billCompare">
@@ -761,6 +761,196 @@ in the head
             </div>
         </div>
     </div><!-- <div class="hide"> -->
+
+
+
+
+
+
+
+    	<div id="wrapper">
+
+										<style>
+											#threshold-widget {
+										    padding: 20px 31px 0px 20px;
+											}
+											#threshold-widget .threshold-cont {
+										    width: 77%;
+										    float: left;
+										    display: inline-block;
+										    padding: 0px 0 22px 0;
+								        font-size: 16px;
+								        color: #1d1d1d;
+								        position: relative;
+											}
+
+
+											#threshold-widget .threshold-amount-cont {
+												width: 50%;
+										    height: 50px;
+										    float: right;
+										    display: inline-block;
+											}
+											#threshold-widget .threshold-amount-cont label {
+								        font-size: 28px;
+										    display: inline-block;
+										    width: 10%;
+										    color:#666;
+										    position: relative;
+										    left: 0;
+										    -webkit-transition: all .25s;
+												transition: all .25s;
+											}
+											#threshold-widget .threshold-amount-cont input[type="text"] {
+										    background: none;
+										    font-size: 15px;
+										    display: inline-block;
+										    height: 52px;
+										    width: 80%;
+								        top: 0;
+								        border: 1px solid #ccc;
+								        color:#666;
+								        border-radius: 3px;
+								        padding-left:8%;
+								        -webkit-transition: all .25s;
+												transition: all .25s;
+												box-sizing: border-box;
+											}
+
+
+
+											#threshold-widget select {
+
+												  -webkit-appearance: none;
+												     -moz-appearance: none;
+												          appearance: none;
+
+										    height: 50px;
+										    width: 28%;
+										    padding: 0 0 0 80px;
+										    border: 1px solid #ccc;
+										    border-radius: 3px;
+										    color:#666;
+										    font-size: 15px;
+											}
+											#threshold-widget .threshold-filter-cont {
+												position: relative;
+											}
+											#threshold-widget .threshold-filter-cont:before {
+												font-size: 15px;
+											  font-family: 'Open Sans', Arial, Helvetica;
+											  font-weight: normal;
+											  color:#666;
+												content: 'Set by: ';
+												position: absolute;
+										    top: 3px;
+										    left: 27px;
+											}
+											#threshold-widget .threshold-filter-cont:after {
+												content: '';
+												border-left: 10px solid transparent;
+												border-right: 10px solid transparent;
+												border-top: 10px solid #666;
+												position: absolute;
+												top: 7px;
+												right: 20px;
+												background: #fff;
+											}
+
+
+											#threshold-widget .threshold-cont.threshold-on input[type="text"] {
+										    font-size: 26px;
+										    font-weight: bold;
+										    padding-left: 17%;
+										    padding-right: 17%;
+										    border: 5px solid #8DC63F;
+										    text-align: center;
+											}
+											#threshold-widget .threshold-cont.threshold-on label {
+										    left: 17%;
+											}
+
+										</style>
+										<script>
+											var threshold_obj = {};
+											threshold_obj.change_threshold = function() {
+													//if amount not set, set it
+													if($(".threshold-cont").hasClass("threshold-off")) {
+
+														$(".threshold-cont").removeClass('threshold-off');
+														$(".threshold-cont").addClass('threshold-on');
+
+														$(".threshold-cont select").prop('disabled', true);
+														$(".threshold-cont input").prop('readonly', true);
+														$('.threshold-btn').html('Change');
+													} else { // if amount is set, change it
+
+														$(".threshold-cont").removeClass('threshold-on');
+														$(".threshold-cont").addClass('threshold-off');
+
+														$(".threshold-cont select").prop('disabled', false);
+														$(".threshold-cont input").prop('readonly', false);
+														$('.threshold-btn').html('Save');
+													}
+											};
+											threshold_obj.change_threshold_currency = function() {
+													var threshold_currency_option = $('#threshold-filter').find('option:selected').val();
+
+													switch(threshold_currency_option) {
+														case 'Percent':
+															$('.threshold-cont label').html('');
+															break;
+														default:
+															$('.threshold-cont label').html('$');
+															break;
+													}
+											};
+
+											$(document).ready(function(){
+
+												$('#threshold-filter').change(function() {
+													threshold_obj.change_threshold_currency();
+												});
+
+												$('.threshold-btn').click( function() {
+													threshold_obj.change_threshold();
+												});
+
+											});
+										</script>
+
+										<div id="threshold-widget">
+											<div class="row module" style="position:relative;">
+
+												<h2 class="pagelevel">Set your bill target</h2>
+												<p class="sub-pagelevel">We will notify you when your bill is projected to exceed your threshold.<br><a href="#">Manage my alerts</a>.</p>
+												<div>
+													<span class="threshold-cont threshold-off">
+														<span class="threshold-filter-cont">
+															<select id="threshold-filter" name="threshhold-filter">
+																<option value="Dollar" selected>Dollars</option>
+																<option value="Percent">Percent</option>
+															</select>
+														</span>
+														<span class="threshold-amount-cont">
+															<label for="threshold-amount">$</label><input id="threshold-amount" class="" type="text" name="threshold-amount" placeholder="Amount">
+														</span>
+													</span>
+													<a href="#" class="btn opower-btn threshold-btn" style="text-align: center;width:137px; margin-top:1px;">Save</a>
+												</div>
+
+											</div>
+										</div>
+
+
+
+
+
+
+
+
+
+
 
 <!-- 		scripts -->
 <!--     <script type="text/javascript" src="assets-utilityco-scrape/jquery.js"></script> -->
