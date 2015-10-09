@@ -47,12 +47,22 @@ body {
 
 
 
+
+
 .highcharts-tooltip > span .tooltip-series-row {
     margin: 0 10px 10px;
 }
-
-
-
+.highcharts-tooltip > span .tooltip-header.ci {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+.highcharts-tooltip > span .tooltip-header.ci h3 {
+		text-align: center;
+		display: block;
+		border-bottom: 1px solid #ccc;
+		line-height: 1.9;
+		margin:8px;
+}
 
 
 
