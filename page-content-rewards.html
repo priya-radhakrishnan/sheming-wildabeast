@@ -629,11 +629,20 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                     padding:20px 20px 10px 20px;
                     box-shadow: 1px 1px 3px #e9e9e9;
                     box-sizing:border-box;
+                    position: relative;
+                }
+
+
+                .rewards-module:hover {
+                    -webkit-box-shadow: rgba(0,0,0,0.12) 0 0 0 2px;
+                    -moz-box-shadow: rgba(0,0,0,0.12) 0 0 0 2px;
+                    box-shadow: rgba(0,0,0,0.12) 0 0 0 2px;
                 }
 
                     .rewards-module img {
                         display: block;
                         margin:0 auto 15px auto;
+                        border-radius: 5px;
                     }
                 .rewards-module h3 {
                     color: #616161;
@@ -700,6 +709,184 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                     color: #fff;
                 }
 
+                /* Reward Banner */
+                .rewards-module:hover .reward-banner {
+                    display: block;
+                }
+                .reward-banner {
+                    display: none;
+                    background-color: #71C6EF;
+                    position: absolute;
+                    left: -17px;
+                    top: -17px;
+                    z-index: 10;
+                    padding: 2px 12px;
+                    font-weight: bold;
+                    line-height: 23.04px;
+                    color: #fff;
+                }
+
+                .reward-banner .corner {
+                    position: absolute;
+                    left: 0;
+                    bottom: -14px;
+                    width: 14px;
+                    height: 14px;
+                    background: transparent url(images/corner.png) 0 0 no-repeat;
+                }
+
+
+
+                .legend-box {
+                    background: #e9e9e9;
+                    padding: 15px 20px;
+                    clear:both;
+                    margin:25px auto;
+                    overflow: hidden;
+                }
+
+                    .legend-box label {
+                        float: left;
+                        margin:10px 0 0 0;
+                        font-weight: bold;
+                        color:#666;
+                    }
+
+                .legend-box .email-inputContainer {
+                    float:right;
+                    width:45%;
+                }
+                    .legend-box .email-inputContainer input.email {
+                        width:75%;
+                        padding:10px 20px;
+                    }
+
+                    .legend-box .email-inputContainer ::-webkit-input-placeholder,
+                    .legend-box .email-inputContainer input {
+                        color:#ccc;
+                    }
+
+                
+                .emailContainer {
+                    overflow: hidden;
+                    width:90%;
+                    margin:0 auto;
+                }
+                /* Styles dialog content */
+                .dialog-content {
+                    color:#666;
+                }
+                .dialog-content p.lead {
+                    font-weight: bold;
+                }
+                .dialog-content p.rewardRestrictions {
+                    color:#aaa !important;
+                    font-size: 12px;
+                }
+
+                .billCompareModal .button.success {
+                    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8cb941), color-stop(100%, #6f9334));
+                    background-image: -webkit-linear-gradient(#8cb941,#6f9334);
+                    background-image: -moz-linear-gradient(#8cb941,#6f9334);
+                    background-image: -o-linear-gradient(#8cb941,#6f9334);
+                    background-image: linear-gradient(#8cb941,#6f9334);
+                    border: 1px solid #61802d;
+                    background-color: #8cb941; 
+                }
+
+                .billCompareModal .button {
+                    width: auto;
+                    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #99dde6), color-stop(100%, #33bbcc));
+                    background-image: -webkit-linear-gradient(#99dde6,#33bbcc);
+                    background-image: -moz-linear-gradient(#99dde6,#33bbcc);
+                    background-image: -o-linear-gradient(#99dde6,#33bbcc);
+                    background-image: linear-gradient(#99dde6,#33bbcc);
+                    border: 1px solid #3bc;
+                    color: #fff !important;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-family: "Proxima Nova","Helvetica",Helvetica,Arial,sans-serif;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: 16px;
+                    line-height: 1;
+                    margin: 0;
+                    outline: none;
+                    padding: 10px 20px 11px;
+                    position: relative;
+                    text-align: center;
+                    text-decoration: none;
+                    -webkit-box-shadow: rgba(0,0,0,0.4) 0 1px 2px,rgba(255,255,255,0.1) -1px -1px 0 0 inset;
+                    -moz-box-shadow: rgba(0,0,0,0.4) 0 1px 2px,rgba(255,255,255,0.1) -1px -1px 0 0 inset;
+                    box-shadow: rgba(0,0,0,0.4) 0 1px 2px,rgba(255,255,255,0.1) -1px -1px 0 0 inset;
+                    text-shadow: rgba(0,0,0,0.2) 0 -1px 0;
+                }
+
+                .billCompareModal .large.button {
+                    font-size: 23px;
+                    padding: 17px 33px;
+                }
+
+                .billCompareModal .actions {
+                    text-align: center;
+                    margin: 20px auto;
+                }
+
+                /* User Profile Styles */
+
+                .box.outlined {
+                    border: 1px solid #ddd;
+                }
+                .box {
+                    background: #fff;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    border-radius: 5px;
+                    -webkit-box-shadow: rgba(0,0,0,0.12) 0 1px 2px;
+                    -moz-box-shadow: rgba(0,0,0,0.12) 0 1px 2px;
+                    box-shadow: rgba(0,0,0,0.12) 0 1px 2px;
+                }
+                .box {
+                    background: #fff;
+                    border: solid 1px #e6e6e6;
+                    margin: 0 0 22px 0;
+                    padding: 20px;
+                }
+
+                .box-title {
+                    color: #cc0033;
+                    margin-bottom: 18px;
+                }
+                .user-profile-current {
+                    text-align: center;
+                }
+                .user-profile-user-name>h4 {
+                    font-size: 17.6px;
+                    font-weight: 600;
+                    margin: 0 0 5px 0;
+                }
+                .user-profile-user-name>h5 {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #8cb941;
+                    margin: 0 0 5px 0;
+                }
+
+                .user-profile-user-name>p {
+                    font-size: 11.2px;
+                    color: #adadad;
+                }
+
+                .user-profile .legend-box {
+                    text-align: center;
+                }
+                .user-profile .legend-box strong {
+                    display: block;
+                    font-size: 20px;
+                }
+
 
             </style>
 
@@ -716,6 +903,10 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 
                 <div class="rewards-module">
+                    <div class="reward-banner">
+                      <div class="corner"></div>
+                      <span class="reward-amount">49 left</span>
+                    </div>
                     <img src="images/homedepot.jpg" alt="Home Depot">
                     <h3>$5 Home Depot Gift Card</h3>
                     <p><i class="fa fa-check-circle"></i> <strong>475 Points</strong></p>
@@ -725,22 +916,34 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                 </div>
 
                 <div class="rewards-module last">
+                     <div class="reward-banner">
+                      <div class="corner"></div>
+                      <span class="reward-amount">249 left</span>
+                    </div>
                     <img src="images/amazon.jpg" alt="Amazon">
                     <h3>$3 Amazon.com Gift Card</h3>
                     <p><i class="fa fa-check-circle"></i> <strong>290 Points</strong></p>
-                    <p><a href="#">Learn More</a></p>
+                    <p><a href="#amazon-disclaimer" class="colorbox">Learn More</a></p>
                     <a href="#amazon" class="colorbox btn opower-btn">GET THIS REWARD</a>
                 </div>
                 <div class="clear"></div>
                 <div class="rewards-module">
+                    <div class="reward-banner">
+                      <div class="corner"></div>
+                      <span class="reward-amount">31 left</span>
+                    </div>
                     <img src="images/starbucks.jpg" alt="Starbucks">
                     <h3>$5 Starbucks Gift Card</h3>
                     <p><i class="fa fa-check-circle"></i> <strong>475 Points</strong></p>
-                    <p><a href="#">Learn More</a></p>
+                    <p><a href="#starbucks-disclaimer" class="colorbox">Learn More</a></p>
                     <a href="#starbucks" class="colorbox btn opower-btn">GET THIS REWARD</a>
                 </div>
 
                 <div class="rewards-module last">
+                    <div class="reward-banner">
+                      <div class="corner"></div>
+                      <span class="reward-amount">122 left</span>
+                    </div>
                     <img src="images/habitat.jpg" alt="Habitat">
                     <h3>$1 Habitat Donation</h3>
                     <p><i class="fa fa-check-circle"></i> <strong>100 Points</strong></p>
@@ -749,6 +952,10 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                 </div>
                 <div class="clear"></div>
                 <div class="rewards-module">
+                    <div class="reward-banner">
+                      <div class="corner"></div>
+                      <span class="reward-amount">90 left</span>
+                    </div>
                     <img src="images/nationalpark.jpg" alt="National Park Foundation Donation">
                     <h3>$3 National Park Foundation Donation</h3>
                     <p><i class="fa fa-check-circle"></i> <strong>290 Points</strong></p>
@@ -756,6 +963,10 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                     <a href="#" class="btn opower-btn">GET THIS REWARD</a>
                 </div>
                 <div class="rewards-module last">
+                    <div class="reward-banner">
+                      <div class="corner"></div>
+                      <span class="reward-amount">76 left</span>
+                    </div>
                     <img src="images/rei.jpg" alt="REI Gift Card">
                     <h3>$10 REI Gift Card</h3>
                     <p><i class="fa fa-check-circle"></i> <strong>1000 Points</strong></p>
@@ -766,6 +977,10 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                 <div class="clear"></div>
 
                 <div class="rewards-module">
+                    <div class="reward-banner">
+                      <div class="corner"></div>
+                      <span class="reward-amount">12 left</span>
+                    </div>
                     <img src="images/walmart.jpg" alt="Walmart">
                     <h3>$5 Walmart Gift Card</h3>
                     <p><i class="fa fa-check-circle"></i> <strong>500 Points</strong></p>
@@ -773,6 +988,10 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                     <a href="#" class="btn opower-btn">GET THIS REWARD</a>
                 </div>
                 <div class="rewards-module last">
+                    <div class="reward-banner">
+                      <div class="corner"></div>
+                      <span class="reward-amount">54 left</span>
+                    </div>
                     <img src="images/worldofchildren.jpg" alt="World of Children Donation">
                     <h3>$2 World of Children Donation</h3>
                     <p><i class="fa fa-check-circle"></i> <strong>200 Points</strong></p>
@@ -783,6 +1002,10 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                 <div class="clear"></div>
 
                 <div class="rewards-module">
+                    <div class="reward-banner">
+                      <div class="corner"></div>
+                      <span class="reward-amount">11 left</span>
+                    </div>
                     <img src="images/itunes.jpg" alt="iTunes">
                     <h3>$10 iTunes Gift Card</h3>
                     <p><i class="fa fa-check-circle"></i> <strong>1000 Points</strong></p>
@@ -790,10 +1013,14 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                     <a href="#" class="btn opower-btn">GET THIS REWARD</a>
                 </div>
                 <div class="rewards-module last">
+                    <div class="reward-banner">
+                      <div class="corner"></div>
+                      <span class="reward-amount">23 left</span>
+                    </div>
                     <img src="images/amazon.jpg" alt="Amazon">
                     <h3>$10 Amazon.com Gift Card</h3>
                     <p><i class="fa fa-check-circle"></i> <strong>200 Points</strong></p>
-                    <p><a href="#">Learn More</a></p>
+                    <p><a href="#amazon-disclaimer" class="colorbox">Learn More</a></p>
                     <a href="#" class="btn opower-btn">GET THIS REWARD</a>
                 </div>
 
@@ -801,6 +1028,10 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 
                 <div class="rewards-module">
+                    <div class="reward-banner">
+                      <div class="corner"></div>
+                      <span class="reward-amount">30 left</span>
+                    </div>
                     <img src="images/homedepot.jpg" alt="Home Depot">
                     <h3>$10 Home Depot Gift Card</h3>
                     <p><i class="fa fa-check-circle"></i> <strong>900 Points</strong></p>
@@ -808,6 +1039,10 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                     <a href="#" class="btn opower-btn">GET THIS REWARD</a>
                 </div>
                 <div class="rewards-module last">
+                    <div class="reward-banner">
+                      <div class="corner"></div>
+                      <span class="reward-amount">87 left</span>
+                    </div>
                     <img src="images/amc.jpg" alt="AMC">
                     <h3>$15 AMC Gift Card</h3>
                     <p><i class="fa fa-check-circle"></i> <strong>1500 Points</strong></p>
@@ -817,7 +1052,15 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
 
                 <div class="hide">
+ 
 
+                    <script> 
+                        $(document).ready(function() {
+                           $('.actions input[type="submit"]').click(function(){
+                                $(this).attr('value', 'Redeeming..');
+                           });
+                        });
+                   </script>
 
                     <div id="amazon" class="billCompareModal">
                         <div>
@@ -831,7 +1074,25 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
                                 <p class="lead">$3 Amazon Gift Card</p>
 
-                                <p>You've used <strong>290 points</strong>. You have x amount available</p>
+                                <p>Use your Amazon.com Gift Card* towards Books, Electronics, Music, and more. The Amazon.com website is the place to find and discover almost anything you want to buy online at a great price.</p>
+
+                                <div class="legend-box"> 
+                                    <div class="emailContainer">
+                                        <label for="email"><abbr title="required">*</abbr> Your reward will be sent to:</label>
+
+                                        <div class="email-inputContainer">
+                                            <input class="email" required="required" name="email" size="50" type="email" placeholder="email@example.com">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="actions">
+                                      <input class="large button success" type="submit" value="Send it to me!">
+                                </div>
+
+
+
+                                <p class="rewardRestrictions">*Amazon.com is not a sponsor of this promotion. Except as required by law, Amazon.com Gift Cards ("GCs") cannot be transferred for value or redeemed for cash. GCs may be used only for purchases of eligible goods on Amazon.com or certain of its affiliated websites. For complete terms and conditions, see <a href="http://www.amazon.com/gc-legal">www.amazon.com/gc-legal</a>. GCs are issued by ACI Gift Cards, Inc., a Washington corporation. ©,®,™ Amazon.com Inc. and/or its affiliates, 2013. No expiration date or service fees.</p>
 
 
                             </div><!-- eo // dialog-content -->
@@ -851,7 +1112,26 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
 
                                 <p class="lead">$5 Starbucks Gift Card</p>
 
-                                <p>You've used <strong>475 points</strong>. You have x amount available</p>
+                                <p>Use your Amazon.com Gift Card* towards Books, Electronics, Music, and more. The Amazon.com website is the place to find and discover almost anything you want to buy online at a great price.</p>
+
+
+                            <div class="legend-box"> 
+                                    <div class="emailContainer">
+                                        <label for="email"><abbr title="required">*</abbr> Your reward will be sent to:</label>
+
+                                        <div class="email-inputContainer">
+                                            <input class="email" required="required" name="email" size="50" type="email" placeholder="email@example.com">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="actions">
+                                      <input class="large button success" type="submit" value="Send it to me!">
+                                </div>
+
+
+
+                                <p class="rewardRestrictions">*Amazon.com is not a sponsor of this promotion. Except as required by law, Amazon.com Gift Cards ("GCs") cannot be transferred for value or redeemed for cash. GCs may be used only for purchases of eligible goods on Amazon.com or certain of its affiliated websites. For complete terms and conditions, see <a href="http://www.amazon.com/gc-legal">www.amazon.com/gc-legal</a>. GCs are issued by ACI Gift Cards, Inc., a Washington corporation. ©,®,™ Amazon.com Inc. and/or its affiliates, 2013. No expiration date or service fees.</p>
 
 
                             </div><!-- eo // dialog-content -->
@@ -859,227 +1139,103 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                     </div><!-- eo // amazon -->
 
 
+                    <div id="starbucks-disclaimer" class="billCompareModal">
+                        <div>
+
+                            <div class="dialog-head">
+                                <h4>$5 Starbucks Gift Card</h4>
+                            </div>
+
+                            <div class="dialog-content">
+     
+                                <p>A Starbucks Card* can bring a little goodness into everyone's day. Whether you use it for your favorite flavored ice tea or give one to a friend who loves her morning mocha, it's a great way for you or a loved one to enjoy a slice of happiness. For more information, visit www.starbucks.com.</p>
+
+                                <p class="rewardRestrictions">The Starbucks word mark and the Starbucks Logo are trademarks of Starbucks Corporation. Starbucks is also the owner of the Copyrights in the Starbucks Logo and the Starbucks Card designs. All rights reserved. Starbucks is not a participating partner or sponsor in this offer.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="amazon-disclaimer" class="billCompareModal">
+                        <div>
+
+                            <div class="dialog-head">
+                                <h4>$3 Amazon.com Gift Card</h4>
+                            </div>
+
+                            <div class="dialog-content">
+     
+                                <p>Use your Amazon.com Gift Card* towards Books, Electronics, Music, and more. The Amazon.com website is the place to find and discover almost anything you want to buy online at a great price.</p>
+
+                                <p class="rewardRestrictions">*Amazon.com is not a sponsor of this promotion. Except as required by law, Amazon.com Gift Cards ("GCs") cannot be transferred for value or redeemed for cash. GCs may be used only for purchases of eligible goods on Amazon.com or certain of its affiliated websites. For complete terms and conditions, see www.amazon.com/gc-legal. GCs are issued by ACI Gift Cards, Inc., a Washington corporation. ©,®,™ Amazon.com Inc. and/or its affiliates, 2013. No expiration date or service fees.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
 
 
                 </div><!-- eo // hide -->
 
                 </div><!-- eo // EX_colborder -->
-	            <div class="col-sm-3 EX_column3">
+	            <div class="col-sm-3 EX_column3" style="width:200px;margin-left:0">
+                
+                    <div class="box outlined">
+                        <h3 class="box-title">How I'm doing</h3>
+
+                        <div class="user-profile">
+                          <div class="user-profile-current">
+                            <div class="user-profile-thumbnail">
+                              <img alt="Profile-missing" class="user-profile-icon" src="images/profile.png">
+                            </div>
+                          </div>
+                          <div class="user-profile-user-name">
+                            <h4>Ana Cruickshank</h4>
+                            <h5>101 kWh Saved</h5>
+                            <p>Member Since: Apr 23, 2015</p>
+                          </div>
+
+                          <hr>
+
+                          <div class="legend-box user-profile-points">
+                            Available points to spend:
+                            <strong id="current-user-points" data-points="71">
+                              71 points
+                            </strong>
+                          </div>
+                        </div>
+                      </div>
 
 
+                      <div class="box transparent">
+                        <h3 class="box-title">How it works</h3>
 
-		            <!-- START INSERT INSERT -->
-<div id="widget-container-opower">
+                        <p><strong>You get 1 point for every kilowatt hour you save.</strong></p>
 
-<!-- <link rel="stylesheet" href="assets-utilityco-scrape/screen-generic.css" type="text/css"> -->
-<style>
-	.dashboardsidebar {
-		margin-bottom: 20px !important;
-		border:1px solid #ddd;
-	}
-	h1.grey-bg {
-		background: #eee;
-    padding: 18px 20px;
-    font-size: 16px !important;
-    margin: 0;
-	}
-	.ci-sidebar-widget {
-		padding: 0 20px;
-	}
-	.ci-sidebar-widget img.icon {
-		padding: 10px 0px;
-	}
-</style>
+                        <p>What’s that mean? Unplugging electronics when they're not in use saves 1000 kilowatt hours per year on average. That's a lot of points!</p>
 
+                        <p>How do we calculate savings? We compare the energy you used in your last bill to a similar bill from the previous year. Don’t worry -- we keep weather and other factors in mind. </p>
 
-<!-- 	content -->
-    <div class="col col4 dashboardsidebar">
-        <div class="module">
-            <div class="unusualusage">
-	              <p class="large">Projected electricity cost:</p>
-	              <h1 class="yellow" style="width: 110px"><strong><img src="assets-utilityco-scrape/images/icons/dashboard-unusualusage-units.png"> $78</strong></h1>
-	              <p><a href="#">Based on the last 21 days: $47</a></p><!-- http://www.consensuswork.com/astro/myenergyuse/details/ -->
-	              <p class="nomargin">Projected for:</p>
-	              <h3 class="strong">September<br> 1 – 30</h3>
-	              <p class="nomargin">You typically spend:</p>
-	              <h2><strong>$78</strong></h2>
-	              <div class="hr short"></div>
-	              <p class="nomargin"><a href="#lowermybill" class="colorbox" data-width="635">What can I do?</a></p><!-- data-height="375" -->
+                        <p>Want to learn how to save more? Check out <a href="#">Ways to Save</a>.</p>
+
+                        <p>Check back frequently for new rewards!</p>
+
+                        <p>
+                          <a href="#">Frequently Asked Questions</a>
+                        </p>
+                        <p>
+                          <a href="#">Terms and Conditions</a>
+                        </p>
+                      </div>
+ 
+        		</div> <!-- eo // sidebar -->
+
+        <script type="text/javascript" src="assets-utilityco-scrape/core.js"></script>
+        <script type="text/javascript" src="assets-utilityco-scrape/jquery.colorbox.js"></script>
+        <script type="text/javascript" src="assets-utilityco-scrape/dashboard.js"></script>
+
             </div>
-        </div>
-    </div>
-
-    <script>
-        $(document).ready(function(){
-
-            // Show the rewards widget by default
-            // Hide the peak day widget by default
-            // Show the rewards & peak day widget by a unique url string
-            // --
-            // ! the peak day widget is hiding by default with a class of `.hide`
-            // --
-            // if the url string is `?widget=rewards`
-            // show `#earnrewards` widget and hide the `#peakday` widget
-
-            if (location.search == "?widget=rewards") {
-                $('#earnrewards').show();
-                $('#peakday').hide();
-            }
-            // if the url string is `?widget=peakday`
-            // hide the `#earnrewards` widget and hide the `#earnrewards` widget
-            // we are also removing the class of `.hide` from the dom
-
-            else if (location.search == "?widget=peakday") {
-                $('#earnrewards').hide();
-                $('#peakday').show().removeClass('hide');
-            }
-        });
-
-    </script>
-
-
-    <div class="col col4 dashboardsidebar" id="earnrewards">
-	    	<h1 class="grey-bg">Earn Rewards</h1>
-		    <div class="ci-sidebar-widget">
-		      <p style="text-align: center; width: auto; margin: 0 auto; display: block;"><img class="icon" src="assets-utilityco-scrape/images/dollar-icon-ci.png" width="80" height="80"></p>
-		      <h3 style="text-align: center;" class="strong"><strong><img width="16" height="16" src="assets-utilityco-scrape/images/check-mark-ci.png"> 150 points </strong></h3>
-		      <p class="nomargin">Take the home energy audit and earn reward points. <strong>Don't lose your points!</strong></p>
-		      <a href="hea/index.html" target="_blank" class="btn opower-btn" style="text-align: center; width:100%; padding: 8px 0;">Start Now</a>
-		    </div>
-		</div>
-
-
-		<div class="col col4 dashboardsidebar hide" id="peakday">
-				<h1 class="grey-bg">Tomorrow is a Peak Day</h1>
-		    <div class="ci-sidebar-widget">
-		      <p style="text-align: center; width: auto; margin: 0 auto; display: block;"><img class="icon" src="assets-utilityco-scrape/images/thermo-icon-ci.png" width="80" height="80"></p>
-		      <p class="nomargin">Reduce your energy use and earn rewards.</p>
-		      <a href="waystosave/index.html" target="_blank" class="btn opower-btn" style="text-align: center; width:100%; padding: 8px 0;">Start Saving</a>
-		    </div>
-		</div>
-
-
-
-						<div class="hide">
-							<div id="lowermybill" class="billCompareModal">
-									<div>
-	                  <div class="dialog-head">
-	                  	<h4>What can I do to lower my bill?</h4>
-	                	</div>
-	                  <div class="dialog-content">
-
-		                  <div style="clear:both;">
-												<img class="dialog-icon" src="assets-utilityco-scrape/images/structure/bg-prototype-audit-appliance-field-ac1.png" style="margin-top:10px;margin-right:20px;margin-bottom:20px;float:left;width:30px;height:30px;display:inline-block;">
-		                  	<p class="lead" style="margin-bottom:4px;">Adjust your thermostat a few degrees</p>
-												<p>Changes in weather are a big contributor to high bills.</p>
-	                  	</div>
-
-	                  	<div style="clear:both;">
-												<img class="dialog-icon" src="assets-utilityco-scrape/images/icons/icn-waystosave-home1.png" style="margin-top:10px;margin-right:20px;margin-bottom:20px;float:left;width:30px;height:30px;display:inline-block;">
-		                  	<p class="lead" style="margin-bottom:4px;">Improve shading for windows</p>
-												<p>Light-colored drapes reflect the sun's energy, white darker ones absorb it and release heat.</p>
-	                  	</div>
-
-	                  	<div style="clear:both;">
-												<img class="dialog-icon" src="assets-utilityco-scrape/images/icons/icn-usage-hotwater.png" style="margin-top:10px;margin-right:20px;margin-bottom:20px;float:left;width:30px;height:30px;display:inline-block;">
-		                  	<p class="lead" style="margin-bottom:4px;">Shave a minute off shower time</p>
-												<p>Reducing average shower time by one minute can result in 13% reduction in water use.</p>
-	                  	</div>
-
-	                  	<div style="clear:both; background-color:#cfe4ef;padding-top:10px;padding-bottom:5px;">
-												<img class="dialog-icon" src="assets-utilityco-scrape/images/icons/icn-info.png" style="margin-top:2px;margin-right:22px;margin-left:12px;float:left;width:16px;height:16px;display:inline-block;">
-												<p>You still have time to minimize you bill.</p>
-	                  	</div>
-											<a class="btn opower-btn" href="page-content-waystosave.html">See more ways to save</a>
-	                  </div>
-									</div>
-	            </div>
-						</div>
-
-
-
-
-						<div class="hide">
-            <div id="modal_electricity_1" class="billCompareModal">
-                <div>
-	                	<div class="dialog-head">
-                    	<h4>Bill analysis</h4>
-	                	</div>
-                    <div class="dialog-content">
-	                    <p class="lead">These factors contributed to the change in your bill compared to: <strong>previous bill</strong>.</p>
-	                    <ul>
-	                        <li>There was a change in your rate plan. <span class="amount">+ $3</span></li>
-	                        <li>There was 1 more day in the billing period. <span class="amount">+ $4</span></li>
-	                        <li>Weather was a major factor. <span class="amount">+ $10</span></li>
-	                        <li>Other factors: differences in usage not explained by the above reasons could include: being on vacation one month and not another, buying a new appliance, having additional people in your home, or a variety of other reasons. <span class="amount">- $1</span></li>
-	                        <li class="total">Total: <strong>$16 more</strong></li>
-	                    </ul>
-                    </div>
-                </div>
-            </div>
-						</div>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 		popup -->
-
-<!-- 		scripts -->
-<!--     <script type="text/javascript" src="assets-utilityco-scrape/jquery.js"></script> -->
-    <script type="text/javascript" src="assets-utilityco-scrape/core.js"></script>
-		<script type="text/javascript" src="assets-utilityco-scrape/jquery.colorbox.js"></script>
-		<script type="text/javascript" src="assets-utilityco-scrape/dashboard.js"></script>
-
-</div>
-<!-- END INSERT INSERT -->
-
-
-
-
-
-
-
-
-
-
-        			<div class="ms-webpart-zone ms-fullWidth">
-	<div id="MSOZoneCell_WebPartWPQ6" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
-		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div webpartid="347ffe26-28de-490a-9871-06e706324566" haspers="false" id="WebPartWPQ6" width="100%" class="ms-WPBody " allowdelete="false" style=""><div class="ms-rtestate-field"><div class="EX_rightcolbg">
-   <h4 class="EX_rightcoltitle">Outages</h4>
-   <a href="#">Report an outage</a>
-   <a href="#">Check outage status</a>
-   <a href="#">View outage map</a>
-   ​​​​​</div></div><div class="ms-clear"></div></div>
-		</div><div class="ms-PartSpacingVertical"></div>
-	</div><div id="MSOZoneCell_WebPartWPQ7" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
-		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div webpartid="dfa3e6ed-ab19-4cec-8748-55910e9f6b13" haspers="false" id="WebPartWPQ7" width="100%" class="ms-WPBody " allowdelete="false" style=""><div class="ms-rtestate-field"><div class="EX_contact EX_rightcolbg">​<img alt="Contact Us" src="assets-comed-scrape/contactUs.png">
-   <p>Contact Us<br>800-123-4567<br> support@peco.com​​​​​</p>
-</div></div><div class="ms-clear"></div></div>
-		</div><div class="ms-PartSpacingVertical"></div>
-	</div><div id="MSOZoneCell_WebPartWPQ5" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
-		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-			<div webpartid="7dad96bc-2d1b-4909-9c65-610b481ae488" haspers="false" id="WebPartWPQ5" width="100%" class="ms-WPBody " allowdelete="false" style=""><div class="ms-rtestate-field"><div class="EX_rightcolbg EX_savings">
-   <h4 class="EX_rightcoltitle">​Ideas for Savings</h4>
-   <img alt="Ideas for Saving" src="assets-comed-scrape/ideasforsaving.png">
-   <p>&nbsp;</p>
-   <a href="#">Learn More</a> ​​​​​​​​</div></div><div class="ms-clear"></div></div>
-		</div>
-	</div>
-</div>
-        		</div>
-            </div>
-         <div style="display:none" id="hidZone"></div>
-                    </span>
+                     </span>
 
                 </div>
                 <!--/tablet col 9-->
