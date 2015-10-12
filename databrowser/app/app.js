@@ -995,7 +995,6 @@
 		require('../app/controllers/mkr-cont-carbon-month.js');
 		require('../app/controllers/mkr-cont-carbon.js');
 		require('../app/features/op-carbon-chart.js');
-		require('../app/features/op-carbon-year-chart.js');
 
 	}, {
 		"../app/controllers/cost-day.js": 2,
@@ -1017,7 +1016,6 @@
 		"../app/controllers/mkr-cont-carbon.js": 52,
 		"../app/controllers/mkr-cont-carbon-month.js": 51,
 		"../app/controllers/mkr-cont-carbon-day.js": 50,
-		"../app/features/op-carbon-year-chart.js": 58,
 		"../app/features/op-carbon-chart.js": 59
 
 	}],
@@ -1253,140 +1251,153 @@
 	}],
 
 
-		//DATA
+	//DATA CARBON YEAR
 	57: [function (require, module, exports) {
 		module.exports = {
 			"series": [{
-				"name": "costs",
+				"name": "you",
 				"data": [{
-					"y": 72.63,
+					"y": 52.63,
 					"date": "Aug 21 - Sep 19, 2014",
 					"name": "Sep 19",
-					"link": "carbon-february",
-					"temp": "42",
+					"link": "carbon-february2",
+					"slug": "february2",
+					"cimonth": "september",
 					"insight": {
-						"disposition": "positive",
-						"message": "You spent about the same as previous year."
+						"disposition": "neutral",
+						"message": "8% less than all neighbors."
 					}
 				}, {
 					"y": 32.09,
-					"date": "Sept 20 - Oct 20, 2014",
+					"date": "Sep 20 - Oct 20, 2014",
 					"name": "Oct 20",
 					"link": "carbon-march",
-					"temp": "51",
+					"slug": "march",
+					"cimonth": "october",
 					"insight": {
-						"disposition": "positive",
-						"message": "$9 less than previous year."
+						"disposition": "neutral",
+						"message": "19% less than all neighbors."
 					}
 				}, {
 					"y": 35.41,
 					"date": "Oct 21 - Nov 22, 2014",
 					"name": "Nov 22",
 					"link": "carbon-april",
-					"temp": "60",
+					"slug": "april",
+					"cimonth": "november",
 					"insight": {
-						"disposition": "positive",
-						"message": "You spent about the same as previous year."
+						"disposition": "neutral",
+						"message": "2% less than all neighbors."
 					}
 				}, {
-					"y": -26.34,
+					"y": 26.34,
 					"date": "Nov 23 - Dec 20, 2014",
 					"name": "Dec 20",
 					"link": "carbon-may",
-					"temp": "75",
+					"slug": "may",
+					"cimonth": "december",
 					"insight": {
-						"disposition": "positive",
-						"message": "You spent about the same as previous year."
+						"disposition": "neutral",
+						"message": "11% less than all neighbors."
 					}
 				}, {
-					"y": -46.12,
+					"y": 46.12,
 					"date": "Dec 21 - Jan 19, 2015",
 					"name": "Jan 19",
 					"link": "carbon-june",
-					"temp": "93",
+					"slug": "june",
+					"cimonth": "January",
 					"insight": {
-						"disposition": "negative",
-						"message": "$5 more than last year. Weather was not a factor."
+						"disposition": "neutral",
+						"message": "10% less than all neighbors."
 					}
 				}, {
-					"y": -95.08,
+					"y": 95.08,
 					"date": "Jan 20 - Feb 20, 2015",
-					"name": "Feb 20",
+					"name": "feb 20",
 					"link": "carbon-july",
-					"temp": "94",
+					"slug": "july",
+					"cimonth": "february",
 					"insight": {
 						"disposition": "negative",
-						"message": "Cooling cost you $12 compared to $10 the previous year."
+						"message": "16% more than all neighbors."
 					}
 				}, {
-					"y": -98.01,
+					"y": 98.01,
 					"date": "Feb 21 - Mar 20, 2015",
 					"name": "Mar 20",
 					"link": "carbon-august",
-					"temp": "98",
+					"slug": "august",
+					"cimonth": "march",
 					"insight": {
-						"disposition": "positive",
-						"message": "You spent about the same as previous year."
+						"disposition": "negative",
+						"message": "9% more than all neighbors."
 					}
 				}, {
-					"y": -60.91,
+					"y": 60.91,
 					"date": "Mar 21 - Apr 20, 2015",
 					"name": "Apr 20",
 					"link": "carbon-september",
-					"temp": "86",
+					"slug": "september",
+					"cimonth": "april",
 					"insight": {
-						"disposition": "positive",
-						"message": "$3 less than previous year."
+						"disposition": "neutral",
+						"message": "8% less than all neighbors."
 					}
 				}, {
-					"y": -25.83,
+					"y": 16.30,
 					"date": "Apr 21 - May 20, 2015",
 					"name": "May 20",
 					"link": "carbon-october",
-					"temp": "72",
+					"slug": "october",
+					"cimonth": "may",
 					"insight": {
 						"disposition": "positive",
-						"message": "$8 less than previous year."
+						"message": "13% less than efficient neighbors."
 					}
 				}, {
 					"y": 36.34,
 					"date": "May 21 - Jun 20, 2015",
 					"name": "Jun 20",
 					"link": "carbon-november",
-					"temp": "47",
+					"slug": "november",
+					"cimonth": "june",
 					"insight": {
-						"disposition": "positive",
-						"message": "You spent about the same as previous year."
+						"disposition": "neutral",
+						"message": "14% less than all neighbors."
 					}
 				}, {
 					"y": 50.08,
 					"date": "Jun 21 - Jul 19, 2015",
 					"name": "Jul 19",
 					"link": "carbon-december",
-					"temp": "43",
+					"slug": "december",
+					"cimonth": "july",
 					"insight": {
-						"disposition": "positive",
-						"message": "$5 less than previous year."
+						"disposition": "neutral",
+						"message": "10% less than all neighbors."
 					}
 				}, {
 					"y": 55.79,
 					"date": "Jul 20, 2014 - Aug 20, 2015",
 					"name": "Aug 20",
 					"link": "carbon-january",
-					"temp": "40",
+					"slug": "january",
+					"cimonth": "august",
 					"insight": {
-						"disposition": "negative",
-						"message": "Heating cost you $6 more than last year."
+						"disposition": "neutral",
+						"message": "12% less than all neighbors."
 					}
 				}, {
 					"y": 92.63,
 					"date": "Aug 21 - Sep 19, 2015",
 					"name": "Sep 19",
 					"link": "carbon-february",
-					"temp": "33",
+					"slug": "february",
+					"cimonth": "september",
 					"insight": {
 						"disposition": "negative",
-						"message": "Heating cost you $20 more than last year."
+						"message": "20% more than all neighbors."
 					}
 				}]
 			}]
@@ -1394,7 +1405,7 @@
 	}, {}],
 
 
-	//DATA
+	//DATA CARBON DAY
 	55: [function (require, module, exports) {
 		module.exports = {
 			"series": [{
@@ -1403,128 +1414,200 @@
 					"y": 1,
 					"date": "12:00am - 12:59am",
 					"name": "12am",
-					"temp": "15"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "1:00am - 1:59am",
 					"name": null,
-					"temp": "16"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "2:00am - 2:59am",
 					"name": null,
-					"temp": "16"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "3:00am - 3:59am",
 					"name": null,
-					"temp": "17"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "4:00am - 4:59am",
 					"name": null,
-					"temp": "18"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "5:00am - 5:59am",
 					"name": null,
-					"temp": "19"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "6:00am - 6:59am",
 					"name": "6am",
-					"temp": "22"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "7:00am - 7:59am",
 					"name": null,
-					"temp": "24"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "8:00am - 8:59am",
 					"name": null,
-					"temp": "24"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "9:00am - 9:59am",
 					"name": null,
-					"temp": "26"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "10:00am - 10:59am",
 					"name": null,
-					"temp": "30"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "11:00am - 11:59am",
 					"name": null,
-					"temp": "32"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "12:00pm - 12:59pm",
 					"name": "Noon",
-					"temp": "35"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "1:00pm - 1:59pm",
 					"name": null,
-					"temp": "37"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "2:00pm - 2:59pm",
 					"name": null,
-					"temp": "36"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "3:00pm - 3:59pm",
 					"name": null,
-					"temp": "25"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "4:00pm - 4:59pm",
 					"name": null,
-					"temp": "20"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "5:00pm - 5:59pm",
 					"name": null,
-					"temp": "20"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "6:00pm - 6:59pm",
 					"name": "6pm",
-					"temp": "20"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "7:00pm - 7:59pm",
 					"name": null,
-					"temp": "19"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "8:00pm - 8:59pm",
 					"name": null,
-					"temp": "19"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "9:00pm - 9:59pm",
 					"name": null,
-					"temp": "17"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "10:00pm - 10:59pm",
 					"name": null,
-					"temp": "14"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 1,
 					"date": "11:00pm - 11:59pm",
 					"name": "11pm",
-					"temp": "13"
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}]
 			}]
 		}
 	}, {}],
 
-	//DATA
+	//DATA CARBON MONTH
 	56: [function (require, module, exports) {
 		module.exports = {
 			"series": [{
@@ -1532,183 +1615,273 @@
 				"data": [{
 					"y": 2,
 					"date": "Wednesday, January 21",
-					"temp": 36,
 					"name": "Wed 21",
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Thursday, January 22",
-					"temp": 37,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Friday, January 23",
-					"temp": 36,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Saturday, January 24",
-					"temp": 38,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Sunday, January 25",
-					"temp": 40,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Monday, January 26",
-					"temp": 41,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Tuesday, January 27",
-					"temp": 39,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Wednesday, January 28",
-					"temp": 39,
 					"name": "Wed 28",
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Thursday, January 29",
-					"temp": 37,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Friday, January 30",
-					"temp": 38,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Saturday, January 31",
-					"temp": 40,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Sunday, February 1",
-					"temp": 35,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Monday, February 2",
-					"temp": 25,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Tuesday, February 3",
-					"temp": 27,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Wednesday, February 4",
-					"temp": 41,
 					"name": "Wed 4",
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Thursday, February 5",
-					"temp": 39,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Friday, February 6",
-					"temp": 38,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Saturday, February 7",
-					"temp": 37,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Sunday, February 8",
-					"temp": 38,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Monday, February 9",
-					"temp": 36,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Tuesday, February 10",
-					"temp": 30,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Wednesday, February 11",
-					"temp": 24,
 					"name": "Wed 11",
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Thursday, February 12",
-					"temp": 19,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Friday, February 13",
-					"temp": 15,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Saturday, February 14",
-					"temp": 10,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Sunday, February 15",
-					"temp": 13,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Monday, February 16",
-					"temp": 14,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Tuesday, February 17",
-					"temp": 19,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Wednesday, February 18",
-					"temp": 16,
 					"name": "Wed 18",
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}, {
 					"y": 2,
 					"date": "Thursday, February 19",
-					"temp": 12,
 					"name": null,
-					"link": "carbon-day"
+					"link": "carbon-day",
+					"insight": {
+						"disposition": "negative",
+						"message": "20% more than all neighbors."
+					}
 				}]
 			}]
 		}
@@ -2184,6 +2357,8 @@
 			}]
 		}
 	}, {}],
+
+
 
 
 	//DATA
@@ -3436,155 +3611,6 @@
 	}],
 
 
-
-	58: [function (require, module, exports) {
-		'use strict';
-		var app = require('../app'),
-			defaultOptions = require('../default-options').chartTheme(),
-			_ = require('lodash');
-		require('../../js/vendor/highcharts/js/modules/drilldown.js');
-		app.directive('opCarbonYearChart', function () {
-			return {
-				restrict: 'A',
-				scope: {
-					chartData: '=',
-					chartDetails: '=',
-					changeParentChart: '&'
-				},
-				link: function ($scope, elem, attrs) {
-					$scope.activePointIndex = 0;
-					Highcharts.setOptions(defaultOptions);
-					new Highcharts.Chart({
-						chart: {
-							renderTo: elem[0],
-							type: 'area',
-							events: {
-								click: function () {
-									if ($scope.chartDetails.drilldown !== false) {
-										$scope.changeParentChart({
-											chart: $scope.chartData.series[0].data[$scope.activePointIndex].link
-										});
-									}
-								}
-							}
-						},
-						plotOptions: {
-							area: {
-								pointStart: 0
-							},
-							series: {
-								stickyTracking: true,
-								point: {
-									cursor: 'pointer',
-									events: {
-										click: function () {
-											var chart = $scope.chartData.series[0].data[this.index].link;
-											if (chart) {
-												$scope.changeParentChart({
-													chart: chart
-												});
-											}
-										}
-									}
-								}
-							}
-						},
-						tooltip: {
-							useHTML: true,
-							positioner: function (boxWidth, boxHeight, point) {
-								var i = $scope.activePointIndex,
-									chart = this.chart,
-									highestPointY = Math.min(
-										chart.series[0].points[i].plotY, chart.series[1].points[i].plotY, chart.series[2].points[i].plotY);
-								return {
-									x: point.plotX - boxWidth / 4,
-									y: highestPointY - boxHeight - 10
-								};
-							},
-							formatter: function () {
-								$scope.activePointIndex = this.points[0].series.data.indexOf(this.points[0].point);
-								var insight = this.points[0].series.chart.series[5].data[$scope.activePointIndex].insight,
-
-  insightIcon = (insight && insight.disposition == 'positive') ? 'smiley-great' : (insight && insight.disposition == 'neutral') ? 'smiley-good' : 'circle-warn';
-
-								var toolTipInfo = {
-									HEADER: (insight) ? '<div class="tooltip-header"><svg class="icon" viewBox="0 0 80 80"><use xlink:href="#' + insightIcon + '"></use></svg>' + insight.message + '</div>' : null,
-									YOU_USAGE: Math.round(this.points[2].point.y) + ' kWh',
-									tooltipLink: ($scope.chartDetails.toolTipLinkText) ? '<div class="tooltip-link"><a>' + $scope.chartDetails.toolTipLinkText + '</a></div>' : null
-								};
-								var tooltip = _.template('<%= HEADER %><div><div class="tooltip-series-row"><div class="tooltip-center"><%= YOU_USAGE %></div></div><%= tooltipLink %>', toolTipInfo);
-								return tooltip;
-							}
-						},
-						xAxis: {
-							type: 'category'
-						},
-						yAxis: [{
-							min: 0,
-							max: $scope.chartDetails.max,
-							tickInterval: $scope.chartDetails.interval,
-							labels: {
-								formatter: function () {
-									var x = this.value,
-										y = x.toFixed($scope.chartDetails.decimals);
-									if (!this.isLast) {
-										return y;
-									} else {
-										return y + ' kWh';
-									}
-								}
-							}
-						}],
-						series: [{
-							name: 'All Neighbors',
-							data: $scope.chartData.series[0].data,
-							lineWidth: 0,
-							fillColor: defaultOptions.neighborSettings['NEIGHBORS'].fillColor,
-							showInLegend: false
-						}, {
-							name: 'Efficient Neighbors',
-							data: $scope.chartData.series[0].data,
-							lineWidth: 0,
-							fillColor: defaultOptions.neighborSettings['EFFICIENT_NEIGHBORS'].fillColor,
-							showInLegend: false
-						}, {
-							name: "You",
-							data: $scope.chartData.series[0].data,
-							lineWidth: 0,
-							fillColor: defaultOptions.neighborSettings['YOU'].fillColor,
-							showInLegend: false
-						}, {
-							color: defaultOptions.neighborSettings['NEIGHBORS'].lineColor,
-							legendIndex: 2,
-							name: 'All Neighbors',
-							data: $scope.chartData.series[0].data,
-							fillColor: 'rgba(0,0,0,0)'
-						}, {
-							color: defaultOptions.neighborSettings['EFFICIENT_NEIGHBORS'].lineColor,
-							legendIndex: 1,
-							name: 'Efficient Neighbors',
-							data: $scope.chartData.series[0].data,
-							fillColor: 'rgba(0,0,0,0)'
-						}, {
-							color: defaultOptions.neighborSettings['YOU'].lineColor,
-							legendIndex: 0,
-							name: "You",
-							data: $scope.chartData.series[0].data,
-							lineWidth: 4,
-							fillColor: 'rgba(0,0,0,0)'
-						}]
-					});
-				}
-			};
-		});
-	}, {
-		"../../js/vendor/highcharts/js/modules/drilldown.js": 21,
-		"../app": 1,
-		"../default-options": 15,
-		"lodash": 22
-	}],
-
-
 		59: [function (require, module, exports) {
 		'use strict';
 		var app = require('../app'),
@@ -3652,7 +3678,7 @@
 								console.log(insight);
 								var toolTipInfo = {
 									HEADER: (insight) ? '<div class="tooltip-header">' + insight.message + '</div>' : null,
-									YOU_USAGE: this.points[0].point.y + ' kWh',
+									YOU_USAGE: this.points[0].point.y + ' lbs',
 									tooltipLink: ($scope.chartDetails.toolTipLinkText) ? '<div class="tooltip-link"><a>' + $scope.chartDetails.toolTipLinkText + '</a></div>' : null
 								};
 								var tooltip = _.template('<%= HEADER %><div class="tooltip-series-row"><div class="tooltip-center"><%= YOU_USAGE %></div></div><%= tooltipLink %>', toolTipInfo);
