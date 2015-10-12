@@ -3116,7 +3116,7 @@
 					backgroundColor: null,
 					borderRadius: 6,
 					borderWidth: 0,
-					hideDelay: 4000000,
+					hideDelay: 1000,
 					useHTML: true,
 					shared: true,
 					shadow: false,
@@ -3718,7 +3718,7 @@
 									if (!this.isLast) {
 										return y;
 									} else {
-										return y + ' kWh';
+										return y + ' lbs';
 									}
 								}
 							}
