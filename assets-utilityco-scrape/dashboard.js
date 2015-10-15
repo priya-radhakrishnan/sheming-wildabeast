@@ -29,7 +29,7 @@ $('.unusualusage').each(function(){
   var amt = $('h2 strong',this).html();
   var $this = $(this),
     content = '<p>Based on your recent fuel usage. you&rsquo;re headed towards costs that are 30% higher than is typical for you this time of year.</p>';
-    content += '<p><strong>Your typical June usage costs: '+amt+'</strong></p>';
+    content += '<p><strong>Your typical October usage costs: '+amt+'</strong></p>';
     content += '<p><strong>There are 22 days left to save this period.</strong></p>';
     content += '<p class="graytext">Your actual bill will vary based on usage, taxes &amp; fees.</p>';
 
@@ -248,4 +248,3 @@ function buildGraph($container, args) {
 if ($('#module-today').length > 0) {
   buildGraph($('#module-today .elroiGraph'), today_args);
 };
-
