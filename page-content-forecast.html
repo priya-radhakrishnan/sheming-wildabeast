@@ -1222,18 +1222,18 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                         </div>
                         <div class="col-sm-3 EX_colLastPay">
                           <p>Last Payment: $82.11</p>
-                          <p>Received: 8/6/2015</p>
+                          <p>Received: 9/6/2015</p>
                           <p>Late Payment:
                             <span>$230.12</span>
                           </p>
                         </div>
                         <div class="col-sm-5 EX_colCurrentBill">
-                          <p>Current Bill: 9/2/2015</p>
+                          <p>Current Bill: 10/2/2015</p>
                           <p>Amount Due:
                             <span>$89.12</span>
                           </p>
                           <p>Date Due:
-                            <span>9/16/2015</span>
+                            <span>10/16/2015</span>
                           </p>
                           <button class="EX_currentBillButton" type="submit">Change Account</button>
                           <!--Dropdown-->
@@ -1411,7 +1411,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                                     <h4>My Bill</h4>
                                     <p>Current Bill:
                                       <span>$78.99​</span>
-                                      <span><a href="#">View Bill</a></span>
+                                      <span style="margin-right:0px;"><a href="#">View Bill</a></span>
                                     </p>
                                     <p>Past Due:
                                       <span>$65.34</span>
@@ -1422,7 +1422,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                                         <button>Pay Bill</button>
                                       </span>
                                     </p>
-                                    <p>Thank you for your payment of $82.11 on 8/6/2015</p>
+                                    <p style="display:block;">Thank you for your payment of $82.11 on 9/6/2015</p>
                                   </div>
                                   <div class="EX_tablecol2">
                                     <h4>Preferences</h4>
@@ -1432,7 +1432,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                                     </p>
                                     <p>Budget Bill:
                                       <span>Enrolled</span>
-                                      <span><a href="#">Disenroll</a></span>
+                                      <span><a href="#">Unenroll</a></span>
                                     </p>
                                     <p>Paperless:
                                       <span>Not Enrolled</span>
@@ -1600,8 +1600,8 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                               var hea_obj = {};
                               hea_obj.change_hea = function() {
                                 setTimeout(function() {
-                                  $(".hea-pie-cont").removeClass('hea-pie-off');
-                                  $(".hea-pie-cont").addClass('hea-pie-on');
+                                  // $(".hea-pie-cont").removeClass('hea-pie-off');
+                                  // $(".hea-pie-cont").addClass('hea-pie-on');
 
                                   $('.hea-pie-foot').html("Annual energy use: this is based on information you provided about your <a href='hea/index.html' target='_blank'>home.</a>");
 
@@ -1624,7 +1624,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                             <div id="hea-pie-widget">
                               <div class="row module" style="position:relative;">
                                 <h2 class="pagelevel">Analyze your home energy use</h2>
-                                <div class="hea-pie-cont hea-pie-off">
+                                <div class="hea-pie-cont hea-pie-on">
                                   <div class="hea-pie"></div>
                                   <div class="hea-pie-legend">
                                     <ul>
@@ -1797,7 +1797,7 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                                 </style>
 
 
-                                <h2 class="pagelevel">How you’re doing: Aug 1 – 31</h2>
+                                <h2 class="pagelevel">How you’re doing: Oct 1 – 31</h2>
                                 <p class="sub-pagelevel">You used less electricity than your neighbors</p>
                                 <div>
                                   <div class="multiSwitchMe" data-switchset="utility_switch">
@@ -2069,11 +2069,11 @@ _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout"); // ]]>
                               <p><a href="#">Based on the last 21 days: $47</a></p>
                               <!-- http://www.consensuswork.com/astro/myenergyuse/details/ -->
                               <p class="nomargin">Projected for:</p>
-                              <h3 class="strong">September
-                                <br> 1 – 30</h3>
+                              <h3 class="strong">October
+                                <br> 1 – 31</h3>
                               <p class="nomargin">You typically spend:</p>
                               <h2>
-                                <strong>$78</strong>
+                                <strong>$54</strong>
                               </h2>
                               <div class="hr short"></div>
                               <p class="nomargin"><a href="#lowermybill" class="colorbox" data-width="635">What can I do?</a></p>
