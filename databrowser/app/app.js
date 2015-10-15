@@ -3022,9 +3022,16 @@
           },
           column: {
             borderWidth: 0,
-            color: '#107cb2',
+            color: '#2995cb',
             cursor: 'pointer',
-            groupPadding: 0.05
+            groupPadding: 0.05,
+            states: {
+              hover: {
+                enabled: true,
+                color: '#107cb2',
+                lineWidthPlus: 0
+              }
+            }
           },
           line: {
             color: '#990099',
