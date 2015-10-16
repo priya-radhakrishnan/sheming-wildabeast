@@ -1047,7 +1047,7 @@
     var chartData = require('../data/cost-months/cost-february.json');
     app.controller('costMonthController', ['$scope', function($scope) {
 
-
+      console.log(['QQQ',$scope]);
       $scope.costFebruary = chartData;
 
       /**
@@ -1055,7 +1055,7 @@
        * also add content to the tooltip
        */
       var highlightColor = '#8DC63F';
-      var noHighlightColor = '#107cb2';
+      var noHighlightColor = '#2995cb';
 
       function startBlue() {
         for (var i = 0; i < chartData.series[0].data.length; ++i) {
@@ -1839,6 +1839,7 @@
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "cost-february",
+          "cimonth": "september",
           "temp": "42",
           "insight": {
             "disposition": "positive",
@@ -1849,6 +1850,7 @@
           "date": "Sept 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "cost-march",
+          "cimonth": "october",
           "temp": "51",
           "insight": {
             "disposition": "positive",
@@ -1859,6 +1861,7 @@
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "cost-april",
+          "cimonth": "november",
           "temp": "60",
           "insight": {
             "disposition": "positive",
@@ -1869,6 +1872,7 @@
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "cost-may",
+          "cimonth": "december",
           "temp": "75",
           "insight": {
             "disposition": "positive",
@@ -1879,6 +1883,7 @@
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "cost-june",
+          "cimonth": "january",
           "temp": "93",
           "insight": {
             "disposition": "negative",
@@ -1889,6 +1894,7 @@
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "cost-july",
+          "cimonth": "february",
           "temp": "94",
           "insight": {
             "disposition": "negative",
@@ -1899,6 +1905,7 @@
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "cost-august",
+          "cimonth": "march",
           "temp": "98",
           "insight": {
             "disposition": "positive",
@@ -1909,6 +1916,7 @@
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "cost-september",
+          "cimonth": "april",
           "temp": "86",
           "insight": {
             "disposition": "positive",
@@ -1919,6 +1927,7 @@
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "cost-october",
+          "cimonth": "may",
           "temp": "72",
           "insight": {
             "disposition": "positive",
@@ -1929,6 +1938,7 @@
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "cost-november",
+          "cimonth": "june",
           "temp": "47",
           "insight": {
             "disposition": "positive",
@@ -1939,6 +1949,7 @@
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "cost-december",
+          "cimonth": "july",
           "temp": "43",
           "insight": {
             "disposition": "positive",
@@ -1949,6 +1960,7 @@
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "cost-january",
+          "cimonth": "august",
           "temp": "40",
           "insight": {
             "disposition": "negative",
@@ -1959,6 +1971,7 @@
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Sep 19",
           "link": "cost-february",
+          "cimonth": "september",
           "temp": "33",
           "insight": {
             "disposition": "negative",
@@ -3024,14 +3037,14 @@
             borderWidth: 0,
             color: '#2995cb',
             cursor: 'pointer',
-            groupPadding: 0.05,
-            states: {
-              hover: {
-                enabled: true,
-                color: '#107cb2',
-                lineWidthPlus: 0
-              }
-            }
+            groupPadding: 0.05
+            // states: {
+            //   hover: {
+            //     enabled: true,
+            //     color: '#107cb2',
+            //     lineWidthPlus: 0
+            //   }
+            // }
           },
           line: {
             color: '#990099',
@@ -20019,7 +20032,7 @@
               // Set the events on the item group, or in case of useHTML, the item itself (#1249)
               (useHTML ? legendItem : item.legendGroup).on('mouseover', function() {
                 item.setState(HOVER_STATE);
-                legendItem.css(legend.options.itemHoverStyle);
+                legendItem.css(legend.options.itemHoverStyle);  //legend.options.itemHoverStyle
               }).on('mouseout', function() {
                 legendItem.css(item.visible ? itemStyle : itemHiddenStyle);
                 item.setState();
