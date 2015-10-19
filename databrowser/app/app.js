@@ -1835,7 +1835,7 @@
       "series": [{
         "name": "costs",
         "data": [{
-          "y": 72.63,
+          "y": 63.63,
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "cost-february",
@@ -1846,7 +1846,7 @@
             "message": "You spent about the same as previous year."
           }
         }, {
-          "y": 32.09,
+          "y": 71.09,
           "date": "Sept 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "cost-march",
@@ -1857,7 +1857,7 @@
             "message": "$9 less than previous year."
           }
         }, {
-          "y": 35.41,
+          "y": 85.41,
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "cost-april",
@@ -1868,7 +1868,7 @@
             "message": "You spent about the same as previous year."
           }
         }, {
-          "y": -26.34,
+          "y": 98.34,
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "cost-may",
@@ -1879,7 +1879,7 @@
             "message": "You spent about the same as previous year."
           }
         }, {
-          "y": -46.12,
+          "y": 81.12,
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "cost-june",
@@ -1890,7 +1890,7 @@
             "message": "$5 more than last year. Weather was not a factor."
           }
         }, {
-          "y": -95.08,
+          "y": 74.08,
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "cost-july",
@@ -1901,7 +1901,7 @@
             "message": "Cooling cost you $12 compared to $10 the previous year."
           }
         }, {
-          "y": -98.01,
+          "y": 60.01,
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "cost-august",
@@ -1912,7 +1912,7 @@
             "message": "You spent about the same as previous year."
           }
         }, {
-          "y": -60.91,
+          "y": 52.91,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "cost-september",
@@ -1923,7 +1923,7 @@
             "message": "$3 less than previous year."
           }
         }, {
-          "y": -25.83,
+          "y": 38.83,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "cost-october",
@@ -1934,7 +1934,7 @@
             "message": "$8 less than previous year."
           }
         }, {
-          "y": 36.34,
+          "y": 22.34,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "cost-november",
@@ -1945,7 +1945,7 @@
             "message": "You spent about the same as previous year."
           }
         }, {
-          "y": 50.08,
+          "y": 33.08,
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "cost-december",
@@ -1967,7 +1967,7 @@
             "message": "Heating cost you $6 more than last year."
           }
         }, {
-          "y": 92.63,
+          "y": 60.63,
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Sep 19",
           "link": "cost-february",
