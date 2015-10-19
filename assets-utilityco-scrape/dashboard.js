@@ -30,7 +30,7 @@ $('.unusualusage').each(function(){
   var $this = $(this),
     content = '<p>Based on your recent fuel usage. you&rsquo;re headed towards costs that are 30% higher than is typical for you this time of year.</p>';
     content += '<p><strong>Your typical October usage costs: '+amt+'</strong></p>';
-    content += '<p><strong>There are 22 days left to save this period.</strong></p>';
+    content += '<p><strong>There are 10 days left to save this period.</strong></p>';
     content += '<p class="graytext">Your actual bill will vary based on usage, taxes &amp; fees.</p>';
 
   $this.showTooltipDescription({
