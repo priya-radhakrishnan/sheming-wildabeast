@@ -3223,7 +3223,7 @@
               }
             },
             yAxis: [{
-              min: $scope.chartDetails.max - ($scope.chartDetails.max * 2),
+              min: $scope.chartDetails.max - ($scope.chartDetails.max * 1),
               max: $scope.chartDetails.max,
               tickInterval: $scope.chartDetails.interval,
               labels: {
