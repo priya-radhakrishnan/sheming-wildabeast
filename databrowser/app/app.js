@@ -1047,7 +1047,6 @@
     var chartData = require('../data/cost-months/cost-february.json');
     app.controller('costMonthController', ['$scope', function($scope) {
 
-      console.log(['QQQ',$scope]);
       $scope.costFebruary = chartData;
 
       /**
@@ -1068,7 +1067,7 @@
         $scope.costFebruary.series[0].data[26].color = highlightColor;
         $scope.costFebruary.series[0].data[26].insight = {
           disposition: "psd",
-          message: '<div class="ci-tooltip"><h3><strong>Peak Savings Day</strong></h3>This was a Peak Savings Day. You saved: <strong>$3</strong></div>'
+          message: '<div class="ci-tooltip"><h3><strong>Energy Savings Day</strong></h3>This was a Energy Savings Day. You saved: <strong>$3</strong></div>'
         };
       } else if ($scope.$parent.$parent.month.cimonth === 'july') {
         startBlue();
@@ -1076,11 +1075,11 @@
         $scope.costFebruary.series[0].data[10].color = highlightColor;
         $scope.costFebruary.series[0].data[28].insight = {
           disposition: "psd",
-          message: '<div class="ci-tooltip"><h3><strong>Peak Savings Day</strong></h3>This was a Peak Savings Day. You saved: <strong>$2</strong></div>'
+          message: '<div class="ci-tooltip"><h3><strong>Energy Savings Day</strong></h3>This was a Energy Savings Day. You saved: <strong>$2</strong></div>'
         };
         $scope.costFebruary.series[0].data[10].insight = {
           disposition: "psd",
-          message: '<div class="ci-tooltip"><h3><strong>Peak Savings Day</strong></h3>This was a Peak Savings Day. You saved: <strong>$1</strong></div>'
+          message: '<div class="ci-tooltip"><h3><strong>Energy Savings Day</strong></h3>This was a Energy Savings Day. You saved: <strong>$1</strong></div>'
         };
       } else {
         startBlue();
@@ -1316,7 +1315,7 @@
         }, {
           "y": 145,
           "date": "Jan 20 - Feb 20, 2015",
-          "name": "feb 20",
+          "name": "Feb 20",
           "link": "carbon-july",
           "slug": "july",
           "cimonth": "february",
@@ -1840,7 +1839,7 @@
           "name": "Sep 19",
           "link": "cost-february",
           "cimonth": "september",
-          "temp": "42",
+          "temp": "64",
           "insight": {
             "disposition": "positive",
             "message": "You spent about the same as previous year."
@@ -1851,7 +1850,7 @@
           "name": "Oct 20",
           "link": "cost-march",
           "cimonth": "october",
-          "temp": "51",
+          "temp": "52",
           "insight": {
             "disposition": "positive",
             "message": "$9 less than previous year."
@@ -1862,7 +1861,7 @@
           "name": "Nov 22",
           "link": "cost-april",
           "cimonth": "november",
-          "temp": "60",
+          "temp": "40",
           "insight": {
             "disposition": "positive",
             "message": "You spent about the same as previous year."
@@ -1873,7 +1872,7 @@
           "name": "Dec 20",
           "link": "cost-may",
           "cimonth": "december",
-          "temp": "75",
+          "temp": "27",
           "insight": {
             "disposition": "positive",
             "message": "You spent about the same as previous year."
@@ -1884,7 +1883,7 @@
           "name": "Jan 19",
           "link": "cost-june",
           "cimonth": "january",
-          "temp": "93",
+          "temp": "23",
           "insight": {
             "disposition": "negative",
             "message": "$5 more than last year. Weather was not a factor."
@@ -1895,7 +1894,7 @@
           "name": "Feb 20",
           "link": "cost-july",
           "cimonth": "february",
-          "temp": "94",
+          "temp": "27",
           "insight": {
             "disposition": "negative",
             "message": "Cooling cost you $12 compared to $10 the previous year."
@@ -1906,7 +1905,7 @@
           "name": "Mar 20",
           "link": "cost-august",
           "cimonth": "march",
-          "temp": "98",
+          "temp": "37",
           "insight": {
             "disposition": "positive",
             "message": "You spent about the same as previous year."
@@ -1917,7 +1916,7 @@
           "name": "Apr 20",
           "link": "cost-september",
           "cimonth": "april",
-          "temp": "86",
+          "temp": "49",
           "insight": {
             "disposition": "positive",
             "message": "$3 less than previous year."
@@ -1928,7 +1927,7 @@
           "name": "May 20",
           "link": "cost-october",
           "cimonth": "may",
-          "temp": "72",
+          "temp": "59",
           "insight": {
             "disposition": "positive",
             "message": "$8 less than previous year."
@@ -1939,7 +1938,7 @@
           "name": "Jun 20",
           "link": "cost-november",
           "cimonth": "june",
-          "temp": "47",
+          "temp": "68",
           "insight": {
             "disposition": "positive",
             "message": "You spent about the same as previous year."
@@ -1950,7 +1949,7 @@
           "name": "Jul 19",
           "link": "cost-december",
           "cimonth": "july",
-          "temp": "43",
+          "temp": "74",
           "insight": {
             "disposition": "positive",
             "message": "$5 less than previous year."
@@ -1961,7 +1960,7 @@
           "name": "Aug 20",
           "link": "cost-january",
           "cimonth": "august",
-          "temp": "40",
+          "temp": "72",
           "insight": {
             "disposition": "negative",
             "message": "Heating cost you $6 more than last year."
@@ -1972,7 +1971,7 @@
           "name": "Sep 19",
           "link": "cost-february",
           "cimonth": "september",
-          "temp": "33",
+          "temp": "64",
           "insight": {
             "disposition": "negative",
             "message": "Heating cost you $20 more than last year."
@@ -1980,7 +1979,7 @@
         }]
       }, {
         "name": "weather",
-        "data": [42, 56, 62, 64, 88, 92, 93, 76, 74, 46, 45, 32, 29]
+        "data": [64, 52, 40, 27, 23, 27, 37, 49, 59, 68, 74, 72, 64]
       }]
     }
   }, {}],
@@ -2303,7 +2302,7 @@
         }]
       }, {
         "name": "weather",
-        "data": [42, 56, 62, 64, 88, 92, 93, 76, 74, 46, 45, 32, 29]
+        "data": [64, 52, 40, 27, 23, 27, 37, 49, 59, 68, 74, 72, 64]
       }]
     }
   }, {}],
@@ -2373,7 +2372,7 @@
         }, {
           "y": 95.08,
           "date": "Jan 20 - Feb 20, 2015",
-          "name": "feb 20",
+          "name": "Feb 20",
           "link": "usage-july",
           "slug": "july",
           "cimonth": "february",
@@ -3105,7 +3104,8 @@
             autoRotation: 0,
             style: {
               color: '#666666',
-              fontSize: '16px'
+              fontSize: '16px',
+              lineHeight: '22px'
             },
             formatter: function() {
               var newVal = this.value.toString().split(" ");
@@ -3630,14 +3630,12 @@
                 };
               },
               formatter: function() {
-                console.log(this);
                 $scope.activePointIndex = this.points[0].series.data.indexOf(this.points[0].point);
                 var insight = this.points[0].series.chart.series[0].data[$scope.activePointIndex].insight;
-                console.log(insight);
                 var ronded_y = this.points[0].point.y;
                 var avMil = ronded_y * 1.08;
                 var toolTipInfo = {
-                  HEADER: (insight) ? '<div class="tooltip-header"><svg class="icon" viewBox="0 0 80 80"><use xlink:href="#circle-warn"></use></svg>' + (avMil.toFixed(0)) + ' Miles driven by the average car</div>' : null,
+                  HEADER: (insight) ? '<div class="tooltip-header"><img class="icon" height="20" width="20" src="img/2015-10-20.png">' + (avMil.toFixed(0)) + ' Miles driven by the average car</div>' : null,
                   YOU_USAGE: ronded_y.toFixed(2) + ' lbs',
                   tooltipLink: ($scope.chartDetails.toolTipLinkText) ? '<div class="tooltip-link"><a>' + $scope.chartDetails.toolTipLinkText + '</a></div>' : null
                 };
@@ -3936,7 +3934,7 @@
                 //set the appropriate message
                 if (energy_use > solar_gen) {
                   var usage_diff = Math.round((energy_use - solar_gen)) + ' kWh';
-                  var usage_diff_info = 'Drawn form grid';
+                  var usage_diff_info = 'Drawn from grid';
                   var usage_diff_icon = 'circle-warn';
                 } else if (energy_use < solar_gen) {
                   var usage_diff = Math.abs(Math.round((energy_use - solar_gen))) + ' kWh';
@@ -3951,7 +3949,7 @@
                 //object to build the strings for different sections of the tool tip
                 var toolTipInfo = {
                   //s
-                  HEADER: '<div class="tooltip-header"><svg class="icon" viewBox="0 0 80 80"><use xlink:href="#' + usage_diff_icon + '"></use></svg>' + 'Your solar panels produced ' + usage_energy_from_solar + '% of you energy use</div>',
+                  HEADER: '<div class="tooltip-header"><svg class="icon" viewBox="0 0 80 80"><use xlink:href="#' + usage_diff_icon + '"></use></svg>' + 'Your solar panels produced ' + usage_energy_from_solar + '% of your energy use</div>',
                   //e
                   USAGE_DIFF: usage_diff_info + ' ' + usage_diff,
                   tooltipLink: ($scope.chartDetails.toolTipLinkText) ? '<div class="tooltip-link"><a>' + $scope.chartDetails.toolTipLinkText + '</a></div>' : null
