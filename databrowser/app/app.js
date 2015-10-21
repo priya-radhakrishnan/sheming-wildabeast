@@ -1263,7 +1263,7 @@
       "series": [{
         "name": "you",
         "data": [{
-          "y": 24.8,
+          "y": 248,
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "carbon-february2",
@@ -1273,7 +1273,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 55.2,
+          "y": 552,
           "date": "Sep 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "carbon-march",
@@ -1283,7 +1283,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 77.2,
+          "y": 772,
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "carbon-april",
@@ -1293,7 +1293,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 84.8,
+          "y": 848,
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "carbon-may",
@@ -1303,7 +1303,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 141,
+          "y": 1410,
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "carbon-june",
@@ -1313,7 +1313,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 80,
+          "y": 800,
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "carbon-july",
@@ -1323,7 +1323,7 @@
             "disposition": "negative"
           }
         }, {
-          "y": 48.8,
+          "y": 488,
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "carbon-august",
@@ -1333,7 +1333,7 @@
             "disposition": "negative"
           }
         }, {
-          "y": 53.8,
+          "y": 538,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "carbon-september",
@@ -1343,7 +1343,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 40,
+          "y": 400,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "carbon-october",
@@ -1353,7 +1353,7 @@
             "disposition": "positive"
           }
         }, {
-          "y": 70.1,
+          "y": 701,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "carbon-november",
@@ -1363,7 +1363,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 145,
+          "y": 1450,
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "carbon-december",
@@ -1373,7 +1373,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 149,
+          "y": 1490,
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "carbon-january",
@@ -1383,7 +1383,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 92.6,
+          "y": 926,
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Sep 19",
           "link": "carbon-february",
@@ -1404,168 +1404,168 @@
       "series": [{
         "name": "you",
         "data": [{
-          "y": 0.01 * 1.52,
+          "y": 0.1 * 1.52,
           "date": "12:00am - 12:59am",
           "name": "12am",
           "insight": {
             "disposition": "neutral"
 					}
         }, {
-          "y": 0.02 * 1.52,
+          "y": 0.2 * 1.52,
           "date": "1:00am - 1:59am",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.01 * 1.52,
+          "y": 0.1 * 1.52,
           "date": "2:00am - 2:59am",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.02 * 1.52,
+          "y": 0.2 * 1.52,
           "date": "3:00am - 3:59am",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.01 * 1.52,
+          "y": 0.1 * 1.52,
           "date": "4:00am - 4:59am",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.02 * 1.52,
+          "y": 0.2 * 1.52,
           "date": "5:00am - 5:59am",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.05 * 1.52,
+          "y": 0.5 * 1.52,
           "date": "6:00am - 6:59am",
           "name": "6am",
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.06 * 1.52,
+          "y": 0.6 * 1.52,
           "date": "7:00am - 7:59am",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.09 * 1.52,
+          "y": 0.9 * 1.52,
           "date": "8:00am - 8:59am",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.40 * 1.52,
+          "y": 4.0 * 1.52,
           "date": "9:00am - 9:59am",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.51 * 1.52,
+          "y": 5.1 * 1.52,
           "date": "10:00am - 10:59am",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.08 * 1.52,
+          "y": 0.8 * 1.52,
           "date": "11:00am - 11:59am",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.02 * 1.52,
+          "y": 0.2 * 1.52,
           "date": "12:00pm - 12:59pm",
           "name": "Noon",
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.01 * 1.52,
+          "y": 0.1 * 1.52,
           "date": "1:00pm - 1:59pm",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.02 * 1.52,
+          "y": 0.2 * 1.52,
           "date": "2:00pm - 2:59pm",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.25 * 1.52,
+          "y": 2.5 * 1.52,
           "date": "3:00pm - 3:59pm",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.67 * 1.52,
+          "y": 6.7 * 1.52,
           "date": "4:00pm - 4:59pm",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.51 * 1.52,
+          "y": 5.1 * 1.52,
           "date": "5:00pm - 5:59pm",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 1.06 * 1.52,
+          "y": 10.6 * 1.52,
           "date": "6:00pm - 6:59pm",
           "name": "6pm",
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 1.71 * 1.52,
+          "y": 17.1 * 1.52,
           "date": "7:00pm - 7:59pm",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 1.58 * 1.52,
+          "y": 15.8 * 1.52,
           "date": "8:00pm - 8:59pm",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.76 * 1.52,
+          "y": 7.6 * 1.52,
           "date": "9:00pm - 9:59pm",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.25 * 1.52,
+          "y": 2.5 * 1.52,
           "date": "10:00pm - 10:59pm",
           "name": null,
           "insight": {
             "disposition": "neutral"
           }
         }, {
-          "y": 0.13 * 1.52,
+          "y": 1.3 * 1.52,
           "date": "11:00pm - 11:59pm",
           "name": "11pm",
           "insight": {
@@ -1582,7 +1582,7 @@
       "series": [{
         "name": "you",
         "data": [{
-          "y": 1.56 * 1.52,
+          "y": 15.6 * 1.52,
           "date": "Wednesday, January 21",
           "name": "Wed 21",
           "link": "carbon-day",
@@ -1590,7 +1590,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 1.02 * 1.52,
+          "y": 10.2 * 1.52,
           "date": "Thursday, January 22",
           "name": null,
           "link": "carbon-day",
@@ -1598,7 +1598,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 1.22 * 1.52,
+          "y": 12.2 * 1.52,
           "date": "Friday, January 23",
           "name": null,
           "link": "carbon-day",
@@ -1606,7 +1606,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 0.41 * 1.52,
+          "y": 4.1 * 1.52,
           "date": "Saturday, January 24",
           "name": null,
           "link": "carbon-day",
@@ -1614,7 +1614,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 1.09 * 1.52,
+          "y": 10.9 * 1.52,
           "date": "Sunday, January 25",
           "name": null,
           "link": "carbon-day",
@@ -1622,7 +1622,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 1.34 * 1.52,
+          "y": 13.4 * 1.52,
           "date": "Monday, January 26",
           "name": null,
           "link": "carbon-day",
@@ -1630,7 +1630,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 2.12 * 1.52,
+          "y": 21.2 * 1.52,
           "date": "Tuesday, January 27",
           "name": null,
           "link": "carbon-day",
@@ -1638,7 +1638,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 3.41 * 1.52,
+          "y": 34.1 * 1.52,
           "date": "Wednesday, January 28",
           "name": "Wed 28",
           "link": "carbon-day",
@@ -1646,7 +1646,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 2.36 * 1.52,
+          "y": 23.6 * 1.52,
           "date": "Thursday, January 29",
           "name": null,
           "link": "carbon-day",
@@ -1654,7 +1654,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 1.43 * 1.52,
+          "y": 14.3 * 1.52,
           "date": "Friday, January 30",
           "name": null,
           "link": "carbon-day",
@@ -1662,7 +1662,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 2.66 * 1.52,
+          "y": 26.6 * 1.52,
           "date": "Saturday, January 31",
           "name": null,
           "link": "carbon-day",
@@ -1670,7 +1670,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 1.09 * 1.52,
+          "y": 10.9 * 1.52,
           "date": "Sunday, February 1",
           "name": null,
           "link": "carbon-day",
@@ -1678,7 +1678,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 7.23 * 1.52,
+          "y": 72.3 * 1.52,
           "date": "Monday, February 2",
           "name": null,
           "link": "carbon-day",
@@ -1686,7 +1686,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 4.34 * 1.52,
+          "y": 43.4 * 1.52,
           "date": "Tuesday, February 3",
           "name": null,
           "link": "carbon-day",
@@ -1694,7 +1694,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 3.45 * 1.52,
+          "y": 34.5 * 1.52,
           "date": "Wednesday, February 4",
           "name": "Wed 4",
           "link": "carbon-day",
@@ -1702,7 +1702,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 4.43 * 1.52,
+          "y": 44.3 * 1.52,
           "date": "Thursday, February 5",
           "name": null,
           "link": "carbon-day",
@@ -1710,7 +1710,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 2.32 * 1.52,
+          "y": 23.2 * 1.52,
           "date": "Friday, February 6",
           "name": null,
           "link": "carbon-day",
@@ -1718,7 +1718,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 3.21 * 1.52,
+          "y": 32.1 * 1.52,
           "date": "Saturday, February 7",
           "name": null,
           "link": "carbon-day",
@@ -1726,7 +1726,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 2.12 * 1.52,
+          "y": 21.2 * 1.52,
           "date": "Sunday, February 8",
           "name": null,
           "link": "carbon-day",
@@ -1734,7 +1734,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 1.74 * 1.52,
+          "y": 17.4 * 1.52,
           "date": "Monday, February 9",
           "name": null,
           "link": "carbon-day",
@@ -1742,7 +1742,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 1.98 * 1.52,
+          "y": 19.8 * 1.52,
           "date": "Tuesday, February 10",
           "name": null,
           "link": "carbon-day",
@@ -1750,7 +1750,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 4.86 * 1.52,
+          "y": 48.6 * 1.52,
           "date": "Wednesday, February 11",
           "name": "Wed 11",
           "link": "carbon-day",
@@ -1758,7 +1758,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 5.89 * 1.52,
+          "y": 58.9 * 1.52,
           "date": "Thursday, February 12",
           "name": null,
           "link": "carbon-day",
@@ -1766,7 +1766,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 9.36 * 1.52,
+          "y": 93.6 * 1.52,
           "date": "Friday, February 13",
           "name": null,
           "link": "carbon-day",
@@ -1774,7 +1774,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 14.25 * 1.52,
+          "y": 142.5 * 1.52,
           "date": "Saturday, February 14",
           "name": null,
           "link": "carbon-day",
@@ -1782,7 +1782,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 10.85 * 1.52,
+          "y": 108.5 * 1.52,
           "date": "Sunday, February 15",
           "name": null,
           "link": "carbon-day",
@@ -1790,7 +1790,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 8.54 * 1.52,
+          "y": 85.4 * 1.52,
           "date": "Monday, February 16",
           "name": null,
           "link": "carbon-day",
@@ -1798,7 +1798,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 4.36 * 1.52,
+          "y": 43.6 * 1.52,
           "date": "Tuesday, February 17",
           "name": null,
           "link": "carbon-day",
@@ -1806,7 +1806,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 2.65 * 1.52,
+          "y": 26.5 * 1.52,
           "date": "Wednesday, February 18",
           "name": "Wed 18",
           "link": "carbon-day",
@@ -1814,7 +1814,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 2.94 * 1.52,
+          "y": 29.4 * 1.52,
           "date": "Thursday, February 19",
           "name": null,
           "link": "carbon-day",
@@ -1911,7 +1911,7 @@
             "message": "You spent about the same as previous year."
           }
         }, {
-          "y": 52.91,
+          "y": 32.91,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "cost-september",
@@ -1922,7 +1922,7 @@
             "message": "$3 less than previous year."
           }
         }, {
-          "y": 38.83,
+          "y": 13.83,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "cost-october",
@@ -1933,7 +1933,7 @@
             "message": "$8 less than previous year."
           }
         }, {
-          "y": 22.34,
+          "y": -15,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "cost-november",
@@ -1944,7 +1944,7 @@
             "message": "You spent about the same as previous year."
           }
         }, {
-          "y": 33.08,
+          "y": 10.08,
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "cost-december",
@@ -1955,7 +1955,7 @@
             "message": "$5 less than previous year."
           }
         }, {
-          "y": 55.79,
+          "y": 35.79,
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "cost-january",
@@ -2315,7 +2315,7 @@
       "series": [{
         "name": "you",
         "data": [{
-          "y": 16.30,
+          "y": 160.30,
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "usage-february2",
@@ -2326,7 +2326,7 @@
             "message": "8% less than all neighbors."
           }
         }, {
-          "y": 36.34,
+          "y": 360.34,
           "date": "Sep 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "usage-march",
@@ -2337,7 +2337,7 @@
             "message": "19% less than all neighbors."
           }
         }, {
-          "y": 50.08,
+          "y": 500.08,
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "usage-april",
@@ -2348,7 +2348,7 @@
             "message": "2% less than all neighbors."
           }
         }, {
-          "y": 55.79,
+          "y": 550.79,
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "usage-may",
@@ -2359,7 +2359,7 @@
             "message": "11% less than all neighbors."
           }
         }, {
-          "y": 92.63,
+          "y": 920.63,
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "usage-june",
@@ -2370,7 +2370,7 @@
             "message": "10% less than all neighbors."
           }
         }, {
-          "y": 52.63,
+          "y": 520.63,
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "usage-july",
@@ -2381,7 +2381,7 @@
             "message": "16% more than all neighbors."
           }
         }, {
-          "y": 32.09,
+          "y": 320.09,
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "usage-august",
@@ -2392,7 +2392,7 @@
             "message": "9% more than all neighbors."
           }
         }, {
-          "y": 35.41,
+          "y": 350.41,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "usage-september",
@@ -2403,7 +2403,7 @@
             "message": "8% less than all neighbors."
           }
         }, {
-          "y": 26.34,
+          "y": 260.34,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "usage-october",
@@ -2414,7 +2414,7 @@
             "message": "13% less than efficient neighbors."
           }
         }, {
-          "y": 46.12,
+          "y": 460.12,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "usage-november",
@@ -2425,7 +2425,7 @@
             "message": "14% less than all neighbors."
           }
         }, {
-          "y": 95.08,
+          "y": 950.08,
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "usage-december",
@@ -2436,7 +2436,7 @@
             "message": "10% less than all neighbors."
           }
         }, {
-          "y": 98.01,
+          "y": 980.01,
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "usage-january",
@@ -2447,7 +2447,7 @@
             "message": "12% less than all neighbors."
           }
         }, {
-          "y": 60.91,
+          "y": 600.91,
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Sep 19",
           "link": "usage-february",
@@ -2461,78 +2461,78 @@
       }, {
         "name": "neighbors",
         "data": [{
-          "y": 43,
+          "y": 450,
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "usage-september",
         }, {
-          "y": 56,
+          "y": 440,
           "date": "Sep 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "usage-october",
           "temp": "51"
         }, {
-          "y": 72,
+          "y": 560,
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "usage-november",
           "temp": "60"
         }, {
-          "y": 85,
+          "y": 620,
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "usage-december",
           "temp": "75"
         }, {
-          "y": 69,
+          "y": 680,
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "usage-january",
           "temp": "93"
         }, {
-          "y": 45,
+          "y": 630,
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "usage-february",
           "temp": "94"
         }, {
-          "y": 44,
+          "y": 440,
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "usage-march",
           "temp": "98"
         }, {
-          "y": 56,
+          "y": 410,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "usage-april",
           "temp": "86"
         }, {
-          "y": 62,
+          "y": 430,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "usage-may",
           "temp": "72"
         }, {
-          "y": 68,
+          "y": 560,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "usage-june",
           "temp": "47"
         }, {
-          "y": 63,
+          "y": 720,
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "usage-july",
           "temp": "43"
         }, {
-          "y": 44,
+          "y": 850,
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "usage-august",
           "temp": "40"
         }, {
-          "y": 41,
+          "y": 690,
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Sep 19",
           "link": "usage-september",
@@ -2541,78 +2541,78 @@
       }, {
         "name": "efficient",
         "data": [{
-          "y": 16,
+          "y": 160,
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "usage-september",
         }, {
-          "y": 23,
+          "y": 230,
           "date": "Sep 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "usage-october",
           "temp": "51"
         }, {
-          "y": 28,
+          "y": 280,
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "usage-november",
           "temp": "60"
         }, {
-          "y": 35,
+          "y": 350,
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "usage-december",
           "temp": "75"
         }, {
-          "y": 32,
+          "y": 320,
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "usage-january",
           "temp": "93"
         }, {
-          "y": 23,
+          "y": 230,
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "usage-february",
           "temp": "94"
         }, {
-          "y": 22,
+          "y": 220,
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "usage-march",
           "temp": "98"
         }, {
-          "y": 27,
+          "y": 270,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "usage-april",
           "temp": "86"
         }, {
-          "y": 28,
+          "y": 280,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "usage-may",
           "temp": "72"
         }, {
-          "y": 31,
+          "y": 310,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "usage-june",
           "temp": "47"
         }, {
-          "y": 26,
+          "y": 260,
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "usage-july",
           "temp": "43"
         }, {
-          "y": 12,
+          "y": 120,
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "usage-august",
           "temp": "40"
         }, {
-          "y": 10,
+          "y": 100,
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Sep 19",
           "link": "usage-september",
@@ -2628,122 +2628,122 @@
       "series": [{
         "name": "costs",
         "data": [{
-          "y": 0.01,
+          "y": 0.1,
           "date": "12:00am - 12:59am",
           "name": "12am",
           "temp": "15"
         }, {
-          "y": 0.02,
+          "y": 0.2,
           "date": "1:00am - 1:59am",
           "name": null,
           "temp": "16"
         }, {
-          "y": 0.01,
+          "y": 0.1,
           "date": "2:00am - 2:59am",
           "name": null,
           "temp": "16"
         }, {
-          "y": 0.02,
+          "y": 0.2,
           "date": "3:00am - 3:59am",
           "name": null,
           "temp": "17"
         }, {
-          "y": 0.01,
+          "y": 0.1,
           "date": "4:00am - 4:59am",
           "name": null,
           "temp": "18"
         }, {
-          "y": 0.02,
+          "y": 0.2,
           "date": "5:00am - 5:59am",
           "name": null,
           "temp": "19"
         }, {
-          "y": 0.05,
+          "y": 0.5,
           "date": "6:00am - 6:59am",
           "name": "6am",
           "temp": "22"
         }, {
-          "y": 0.06,
+          "y": 0.6,
           "date": "7:00am - 7:59am",
           "name": null,
           "temp": "24"
         }, {
-          "y": 0.09,
+          "y": 0.9,
           "date": "8:00am - 8:59am",
           "name": null,
           "temp": "24"
         }, {
-          "y": 0.40,
+          "y": 4.0,
           "date": "9:00am - 9:59am",
           "name": null,
           "temp": "26"
         }, {
-          "y": 0.51,
+          "y": 5.1,
           "date": "10:00am - 10:59am",
           "name": null,
           "temp": "30"
         }, {
-          "y": 0.08,
+          "y": 0.8,
           "date": "11:00am - 11:59am",
           "name": null,
           "temp": "32"
         }, {
-          "y": 0.02,
+          "y": 0.2,
           "date": "12:00pm - 12:59pm",
           "name": "Noon",
           "temp": "35"
         }, {
-          "y": 0.01,
+          "y": 0.1,
           "date": "1:00pm - 1:59pm",
           "name": null,
           "temp": "37"
         }, {
-          "y": 0.02,
+          "y": 0.2,
           "date": "2:00pm - 2:59pm",
           "name": null,
           "temp": "36"
         }, {
-          "y": 0.25,
+          "y": 2.5,
           "date": "3:00pm - 3:59pm",
           "name": null,
           "temp": "25"
         }, {
-          "y": 0.67,
+          "y": 6.7,
           "date": "4:00pm - 4:59pm",
           "name": null,
           "temp": "20"
         }, {
-          "y": 0.51,
+          "y": 5.1,
           "date": "5:00pm - 5:59pm",
           "name": null,
           "temp": "20"
         }, {
-          "y": 1.06,
+          "y": 10.6,
           "date": "6:00pm - 6:59pm",
           "name": "6pm",
           "temp": "20"
         }, {
-          "y": 1.71,
+          "y": 17.1,
           "date": "7:00pm - 7:59pm",
           "name": null,
           "temp": "19"
         }, {
-          "y": 1.58,
+          "y": 15.8,
           "date": "8:00pm - 8:59pm",
           "name": null,
           "temp": "19"
         }, {
-          "y": 0.76,
+          "y": 7.6,
           "date": "9:00pm - 9:59pm",
           "name": null,
           "temp": "17"
         }, {
-          "y": 0.25,
+          "y": 2.5,
           "date": "10:00pm - 10:59pm",
           "name": null,
           "temp": "14"
         }, {
-          "y": 0.13,
+          "y": 1.3,
           "date": "11:00pm - 11:59pm",
           "name": "11pm",
           "temp": "13"
@@ -2764,181 +2764,181 @@
       "series": [{
         "name": "you",
         "data": [{
-          "y": 1.56,
+          "y": 15.6,
           "date": "Wednesday, January 21",
           "temp": 36,
           "name": "Wed 21",
           "link": "usage-day"
         }, {
-          "y": 1.02,
+          "y": 10.2,
           "date": "Thursday, January 22",
           "temp": 37,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 1.22,
+          "y": 12.2,
           "date": "Friday, January 23",
           "temp": 36,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 0.41,
+          "y": 4.1,
           "date": "Saturday, January 24",
           "temp": 38,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 1.09,
+          "y": 10.9,
           "date": "Sunday, January 25",
           "temp": 40,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 1.34,
+          "y": 13.4,
           "date": "Monday, January 26",
           "temp": 41,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 2.12,
+          "y": 21.2,
           "date": "Tuesday, January 27",
           "temp": 39,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 3.41,
+          "y": 34.1,
           "date": "Wednesday, January 28",
           "temp": 39,
           "name": "Wed 28",
           "link": "usage-day"
         }, {
-          "y": 2.36,
+          "y": 23.6,
           "date": "Thursday, January 29",
           "temp": 37,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 1.43,
+          "y": 14.3,
           "date": "Friday, January 30",
           "temp": 38,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 2.66,
+          "y": 26.6,
           "date": "Saturday, January 31",
           "temp": 40,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 1.09,
+          "y": 10.9,
           "date": "Sunday, February 1",
           "temp": 35,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 7.23,
+          "y": 72.3,
           "date": "Monday, February 2",
           "temp": 25,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 4.34,
+          "y": 43.4,
           "date": "Tuesday, February 3",
           "temp": 27,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 3.45,
+          "y": 34.5,
           "date": "Wednesday, February 4",
           "temp": 41,
           "name": "Wed 4",
           "link": "usage-day"
         }, {
-          "y": 4.43,
+          "y": 44.3,
           "date": "Thursday, February 5",
           "temp": 39,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 2.32,
+          "y": 23.2,
           "date": "Friday, February 6",
           "temp": 38,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 3.21,
+          "y": 32.1,
           "date": "Saturday, February 7",
           "temp": 37,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 2.12,
+          "y": 21.2,
           "date": "Sunday, February 8",
           "temp": 38,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 1.74,
+          "y": 17.4,
           "date": "Monday, February 9",
           "temp": 36,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 1.98,
+          "y": 19.8,
           "date": "Tuesday, February 10",
           "temp": 30,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 4.86,
+          "y": 48.6,
           "date": "Wednesday, February 11",
           "temp": 24,
           "name": "Wed 11",
           "link": "usage-day"
         }, {
-          "y": 5.89,
+          "y": 58.9,
           "date": "Thursday, February 12",
           "temp": 19,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 9.36,
+          "y": 93.6,
           "date": "Friday, February 13",
           "temp": 15,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 14.25,
+          "y": 142.5,
           "date": "Saturday, February 14",
           "temp": 10,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 10.85,
+          "y": 108.5,
           "date": "Sunday, February 15",
           "temp": 13,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 8.54,
+          "y": 85.4,
           "date": "Monday, February 16",
           "temp": 14,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 4.36,
+          "y": 43.6,
           "date": "Tuesday, February 17",
           "temp": 19,
           "name": null,
           "link": "usage-day"
         }, {
-          "y": 2.65,
+          "y": 26.5,
           "date": "Wednesday, February 18",
           "temp": 16,
           "name": "Wed 18",
           "link": "usage-day"
         }, {
-          "y": 2.94,
+          "y": 29.4,
           "date": "Thursday, February 19",
           "temp": 12,
           "name": null,
@@ -3223,7 +3223,7 @@
               }
             },
             yAxis: [{
-              min: $scope.chartDetails.max - ($scope.chartDetails.max * 1),
+              min: $scope.chartDetails.max - ($scope.chartDetails.max * 1.1),
               max: $scope.chartDetails.max,
               tickInterval: $scope.chartDetails.interval,
               labels: {
@@ -4082,79 +4082,79 @@
       "series": [{
         "name": "energy-use",
         "data": [{
-          "y": 2200.63,
+          "y": 160.30,
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "mkrSolar-february2",
           "slug": "february2"
         }, {
-          "y": 2190.09,
+          "y": 360.34,
           "date": "Sep 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "mkrSolar-march",
           "slug": "march"
         }, {
-          "y": 2100.41,
+          "y": 500.08,
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "mkrSolar-april",
           "slug": "april"
         }, {
-          "y": 2000.34,
+          "y": 550.79,
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "mkrSolar-may",
           "slug": "may"
         }, {
-          "y": 1906.12,
+          "y": 920.63,
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "mkrSolar-june",
           "slug": "june"
         }, {
-          "y": 1995.08,
+          "y": 520.63,
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "mkrSolar-july",
           "slug": "july"
         }, {
-          "y": 1998.01,
+          "y": 320.09,
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "mkrSolar-august",
           "slug": "august"
         }, {
-          "y": 2260.91,
+          "y": 350.41,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "mkrSolar-september",
           "slug": "september"
         }, {
-          "y": 2116.30,
+          "y": 260.34,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "mkrSolar-october",
           "slug": "october"
         }, {
-          "y": 2036.34,
+          "y": 460.12,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "mkrSolar-november",
           "slug": "november"
         }, {
-          "y": 1950.08,
+          "y": 950.08,
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "mkrSolar-december",
           "slug": "december"
         }, {
-          "y": 2100.79,
+          "y": 980.01,
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "mkrSolar-january",
           "slug": "january"
         }, {
-          "y": 2001.63,
+          "y": 600.91,
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Sep 19",
           "link": "mkrSolar-february",
@@ -4163,79 +4163,79 @@
       }, {
         "name": "solar-gen",
         "data": [{
-          "y": 763,
+          "y": 190,
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "mkrSolar-february2",
           "temp": "51"
         }, {
-          "y": 844,
+          "y": 185,
           "date": "Sep 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "mkrSolar-march",
           "temp": "51"
         }, {
-          "y": 1041,
+          "y": 175,
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "mkrSolar-april",
           "temp": "60"
         }, {
-          "y": 1143,
+          "y": 150,
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "mkrSolar-may",
           "temp": "75"
         }, {
-          "y": 1356,
+          "y": 160,
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "mkrSolar-june",
           "temp": "93"
         }, {
-          "y": 1472,
+          "y": 170,
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "mkrSolar-july",
           "temp": "94"
         }, {
-          "y": 1685,
+          "y": 200,
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "mkrSolar-august",
           "temp": "98"
         }, {
-          "y": 1469,
+          "y": 280,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "mkrSolar-september",
           "temp": "86"
         }, {
-          "y": 1245,
+          "y": 320,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "mkrSolar-october",
           "temp": "72"
         }, {
-          "y": 1144,
+          "y": 400,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "mkrSolar-november",
           "temp": "47"
         }, {
-          "y": 956,
+          "y": 310,
           "date": "jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "mkrSolar-december",
           "temp": "43"
         }, {
-          "y": 862,
+          "y": 270,
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "mkrSolar-january",
           "temp": "40"
         }, {
-          "y": 768,
+          "y": 190,
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Feb 19",
           "link": "mkrSolar-february",
@@ -4251,181 +4251,181 @@
       "series": [{
         "name": "energy-use",
         "data": [{
-          "y": 70.56,
+          "y": 15.6,
           "date": "Wednesday, January 21",
           "temp": 36,
           "name": "Wed 21",
           "link": "mkrSolar-day"
         }, {
-          "y": 80.02,
+          "y": 10.2,
           "date": "Thursday, January 22",
           "temp": 37,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 70.22,
+          "y": 12.2,
           "date": "Friday, January 23",
           "temp": 36,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 50.41,
+          "y": 4.1,
           "date": "Saturday, January 24",
           "temp": 38,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 50.09,
+          "y": 10.9,
           "date": "Sunday, January 25",
           "temp": 40,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 80.34,
+          "y": 13.4,
           "date": "Monday, January 26",
           "temp": 41,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 80.12,
+          "y": 21.2,
           "date": "Tuesday, January 27",
           "temp": 39,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 70.41,
+          "y": 34.1,
           "date": "Wednesday, January 28",
           "temp": 39,
           "name": "Wed 28",
           "link": "mkrSolar-day"
         }, {
-          "y": 82.36,
+          "y": 23.6,
           "date": "Thursday, January 29",
           "temp": 37,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 71.43,
+          "y": 14.3,
           "date": "Friday, January 30",
           "temp": 38,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 52.66,
+          "y": 26.6,
           "date": "Saturday, January 31",
           "temp": 40,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 51.09,
+          "y": 10.9,
           "date": "Sunday, February 1",
           "temp": 35,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 87.23,
+          "y": 72.3,
           "date": "Monday, February 2",
           "temp": 25,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 84.34,
+          "y": 43.4,
           "date": "Tuesday, February 3",
           "temp": 27,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 83.45,
+          "y": 34.5,
           "date": "Wednesday, February 4",
           "temp": 41,
           "name": "Wed 4",
           "link": "mkrSolar-day"
         }, {
-          "y": 74.43,
+          "y": 44.3,
           "date": "Thursday, February 5",
           "temp": 39,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 82.32,
+          "y": 23.2,
           "date": "Friday, February 6",
           "temp": 38,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 53.21,
+          "y": 32.1,
           "date": "Saturday, February 7",
           "temp": 37,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 52.12,
+          "y": 21.2,
           "date": "Sunday, February 8",
           "temp": 38,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 81.74,
+          "y": 17.4,
           "date": "Monday, February 9",
           "temp": 36,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 81.98,
+          "y": 19.8,
           "date": "Tuesday, February 10",
           "temp": 30,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 74.86,
+          "y": 48.6,
           "date": "Wednesday, February 11",
           "temp": 24,
           "name": "Wed 11",
           "link": "mkrSolar-day"
         }, {
-          "y": 75.89,
+          "y": 58.9,
           "date": "Thursday, February 12",
           "temp": 19,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 79.36,
+          "y": 93.6,
           "date": "Friday, February 13",
           "temp": 15,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 54.25,
+          "y": 142.5,
           "date": "Saturday, February 14",
           "temp": 10,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 50.85,
+          "y": 108.5,
           "date": "Sunday, February 15",
           "temp": 13,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 78.54,
+          "y": 85.4,
           "date": "Monday, February 16",
           "temp": 14,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 84.36,
+          "y": 43.6,
           "date": "Tuesday, February 17",
           "temp": 19,
           "name": null,
           "link": "mkrSolar-day"
         }, {
-          "y": 82.65,
+          "y": 26.5,
           "date": "Wednesday, February 18",
           "temp": 16,
           "name": "Wed 18",
           "link": "mkrSolar-day"
         }, {
-          "y": 82.94,
+          "y": 29.4,
           "date": "Thursday, February 19",
           "temp": 12,
           "name": null,
@@ -4624,122 +4624,122 @@
       "series": [{
         "name": "energy-use",
         "data": [{
-          "y": 2.01,
+          "y": 0.1,
           "date": "12:00am - 12:59am",
           "name": "12am",
           "temp": "15"
         }, {
-          "y": 2.02,
+          "y": 0.2,
           "date": "1:00am - 1:59am",
           "name": null,
           "temp": "16"
         }, {
-          "y": 2.01,
+          "y": 0.1,
           "date": "2:00am - 2:59am",
           "name": null,
           "temp": "16"
         }, {
-          "y": 2.02,
+          "y": 0.2,
           "date": "3:00am - 3:59am",
           "name": null,
           "temp": "17"
         }, {
-          "y": 2.01,
+          "y": 0.1,
           "date": "4:00am - 4:59am",
           "name": null,
           "temp": "18"
         }, {
-          "y": 3.02,
+          "y": 0.2,
           "date": "5:00am - 5:59am",
           "name": null,
           "temp": "19"
         }, {
-          "y": 4.05,
+          "y": 0.5,
           "date": "6:00am - 6:59am",
           "name": "6am",
           "temp": "22"
         }, {
-          "y": 4.06,
+          "y": 0.6,
           "date": "7:00am - 7:59am",
           "name": null,
           "temp": "24"
         }, {
-          "y": 4.09,
+          "y": 0.9,
           "date": "8:00am - 8:59am",
           "name": null,
           "temp": "24"
         }, {
-          "y": 4.40,
+          "y": 4.0,
           "date": "9:00am - 9:59am",
           "name": null,
           "temp": "26"
         }, {
-          "y": 4.51,
+          "y": 5.1,
           "date": "10:00am - 10:59am",
           "name": null,
           "temp": "30"
         }, {
-          "y": 4.08,
+          "y": 0.8,
           "date": "11:00am - 11:59am",
           "name": null,
           "temp": "32"
         }, {
-          "y": 4.02,
+          "y": 0.2,
           "date": "12:00pm - 12:59pm",
           "name": "Noon",
           "temp": "35"
         }, {
-          "y": 4.01,
+          "y": 0.1,
           "date": "1:00pm - 1:59pm",
           "name": null,
           "temp": "37"
         }, {
-          "y": 4.02,
+          "y": 0.2,
           "date": "2:00pm - 2:59pm",
           "name": null,
           "temp": "36"
         }, {
-          "y": 4.25,
+          "y": 2.5,
           "date": "3:00pm - 3:59pm",
           "name": null,
           "temp": "25"
         }, {
-          "y": 4.67,
+          "y": 6.7,
           "date": "4:00pm - 4:59pm",
           "name": null,
           "temp": "20"
         }, {
-          "y": 4.51,
+          "y": 5.1,
           "date": "5:00pm - 5:59pm",
           "name": null,
           "temp": "20"
         }, {
-          "y": 3.06,
+          "y": 10.6,
           "date": "6:00pm - 6:59pm",
           "name": "6pm",
           "temp": "20"
         }, {
-          "y": 2.71,
+          "y": 17.1,
           "date": "7:00pm - 7:59pm",
           "name": null,
           "temp": "19"
         }, {
-          "y": 2.58,
+          "y": 15.8,
           "date": "8:00pm - 8:59pm",
           "name": null,
           "temp": "19"
         }, {
-          "y": 2.76,
+          "y": 7.6,
           "date": "9:00pm - 9:59pm",
           "name": null,
           "temp": "17"
         }, {
-          "y": 2.25,
+          "y": 2.5,
           "date": "10:00pm - 10:59pm",
           "name": null,
           "temp": "14"
         }, {
-          "y": 2.13,
+          "y": 1.3,
           "date": "11:00pm - 11:59pm",
           "name": "11pm",
           "temp": "13"
