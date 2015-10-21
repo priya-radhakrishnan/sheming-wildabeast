@@ -1263,7 +1263,7 @@
       "series": [{
         "name": "you",
         "data": [{
-          "y": 80,
+          "y": 24.8,
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "carbon-february2",
@@ -1273,7 +1273,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 48.8,
+          "y": 55.2,
           "date": "Sep 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "carbon-march",
@@ -1283,7 +1283,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 53.8,
+          "y": 77.2,
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "carbon-april",
@@ -1293,7 +1293,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 40,
+          "y": 84.8,
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "carbon-may",
@@ -1303,7 +1303,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 70.1,
+          "y": 141,
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "carbon-june",
@@ -1313,7 +1313,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 145,
+          "y": 80,
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "carbon-july",
@@ -1323,7 +1323,7 @@
             "disposition": "negative"
           }
         }, {
-          "y": 149,
+          "y": 48.8,
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "carbon-august",
@@ -1333,7 +1333,7 @@
             "disposition": "negative"
           }
         }, {
-          "y": 92.6,
+          "y": 53.8,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "carbon-september",
@@ -1343,7 +1343,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 24.8,
+          "y": 40,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "carbon-october",
@@ -1353,7 +1353,7 @@
             "disposition": "positive"
           }
         }, {
-          "y": 55.2,
+          "y": 70.1,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "carbon-november",
@@ -1363,7 +1363,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 77.2,
+          "y": 145,
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "carbon-december",
@@ -1373,7 +1373,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 84.8,
+          "y": 149,
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "carbon-january",
@@ -1383,7 +1383,7 @@
             "disposition": "neutral"
           }
         }, {
-          "y": 141,
+          "y": 92.6,
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Sep 19",
           "link": "carbon-february",
@@ -2315,7 +2315,7 @@
       "series": [{
         "name": "you",
         "data": [{
-          "y": 52.63,
+          "y": 16.30,
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "usage-february2",
@@ -2326,7 +2326,7 @@
             "message": "8% less than all neighbors."
           }
         }, {
-          "y": 32.09,
+          "y": 36.34,
           "date": "Sep 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "usage-march",
@@ -2337,7 +2337,7 @@
             "message": "19% less than all neighbors."
           }
         }, {
-          "y": 35.41,
+          "y": 50.08,
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "usage-april",
@@ -2348,7 +2348,7 @@
             "message": "2% less than all neighbors."
           }
         }, {
-          "y": 26.34,
+          "y": 55.79,
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "usage-may",
@@ -2359,7 +2359,7 @@
             "message": "11% less than all neighbors."
           }
         }, {
-          "y": 46.12,
+          "y": 92.63,
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "usage-june",
@@ -2370,7 +2370,7 @@
             "message": "10% less than all neighbors."
           }
         }, {
-          "y": 95.08,
+          "y": 52.63,
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "usage-july",
@@ -2381,7 +2381,7 @@
             "message": "16% more than all neighbors."
           }
         }, {
-          "y": 98.01,
+          "y": 32.09,
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "usage-august",
@@ -2392,7 +2392,7 @@
             "message": "9% more than all neighbors."
           }
         }, {
-          "y": 60.91,
+          "y": 35.41,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "usage-september",
@@ -2403,7 +2403,7 @@
             "message": "8% less than all neighbors."
           }
         }, {
-          "y": 16.30,
+          "y": 26.34,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "usage-october",
@@ -2414,7 +2414,7 @@
             "message": "13% less than efficient neighbors."
           }
         }, {
-          "y": 36.34,
+          "y": 46.12,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "usage-november",
@@ -2425,7 +2425,7 @@
             "message": "14% less than all neighbors."
           }
         }, {
-          "y": 50.08,
+          "y": 95.08,
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "usage-december",
@@ -2436,7 +2436,7 @@
             "message": "10% less than all neighbors."
           }
         }, {
-          "y": 55.79,
+          "y": 98.01,
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "usage-january",
@@ -2447,7 +2447,7 @@
             "message": "12% less than all neighbors."
           }
         }, {
-          "y": 92.63,
+          "y": 60.91,
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Sep 19",
           "link": "usage-february",
@@ -2461,78 +2461,78 @@
       }, {
         "name": "neighbors",
         "data": [{
-          "y": 63,
+          "y": 43,
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "usage-september",
         }, {
-          "y": 44,
+          "y": 56,
           "date": "Sep 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "usage-october",
           "temp": "51"
         }, {
-          "y": 41,
+          "y": 72,
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "usage-november",
           "temp": "60"
         }, {
-          "y": 43,
+          "y": 85,
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "usage-december",
           "temp": "75"
         }, {
-          "y": 56,
+          "y": 69,
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "usage-january",
           "temp": "93"
         }, {
-          "y": 72,
+          "y": 45,
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "usage-february",
           "temp": "94"
         }, {
-          "y": 85,
+          "y": 44,
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "usage-march",
           "temp": "98"
         }, {
-          "y": 69,
+          "y": 56,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "usage-april",
           "temp": "86"
         }, {
-          "y": 45,
+          "y": 62,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "usage-may",
           "temp": "72"
         }, {
-          "y": 44,
+          "y": 68,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "usage-june",
           "temp": "47"
         }, {
-          "y": 56,
+          "y": 63,
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "usage-july",
           "temp": "43"
         }, {
-          "y": 62,
+          "y": 44,
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "usage-august",
           "temp": "40"
         }, {
-          "y": 68,
+          "y": 41,
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Sep 19",
           "link": "usage-september",
@@ -2541,78 +2541,78 @@
       }, {
         "name": "efficient",
         "data": [{
-          "y": 26,
+          "y": 16,
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "usage-september",
         }, {
-          "y": 12,
+          "y": 23,
           "date": "Sep 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "usage-october",
           "temp": "51"
         }, {
-          "y": 10,
+          "y": 28,
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "usage-november",
           "temp": "60"
         }, {
-          "y": 16,
+          "y": 35,
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "usage-december",
           "temp": "75"
         }, {
-          "y": 23,
+          "y": 32,
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "usage-january",
           "temp": "93"
         }, {
-          "y": 28,
+          "y": 23,
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "usage-february",
           "temp": "94"
         }, {
-          "y": 35,
+          "y": 22,
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "usage-march",
           "temp": "98"
         }, {
-          "y": 32,
+          "y": 27,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "usage-april",
           "temp": "86"
         }, {
-          "y": 23,
+          "y": 28,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "usage-may",
           "temp": "72"
         }, {
-          "y": 22,
+          "y": 31,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "usage-june",
           "temp": "47"
         }, {
-          "y": 27,
+          "y": 26,
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "usage-july",
           "temp": "43"
         }, {
-          "y": 28,
+          "y": 12,
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "usage-august",
           "temp": "40"
         }, {
-          "y": 31,
+          "y": 10,
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Sep 19",
           "link": "usage-september",
