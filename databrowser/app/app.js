@@ -1,4 +1,3 @@
-// test
 (function e(t, n, r) {
   function s(o, u) {
     if (!n[o]) {
