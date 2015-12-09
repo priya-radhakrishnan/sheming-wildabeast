@@ -1834,152 +1834,152 @@
       "series": [{
         "name": "costs",
         "data": [{
-          "y": 63.63,
+          "y": 1589,
           "date": "Aug 21 - Sep 19, 2014",
           "name": "Sep 19",
           "link": "cost-february",
           "cimonth": "september",
-          "temp": "64",
+          "temp": "28",
           "insight": {
             "disposition": "positive",
             "message": "You spent about the same as previous year."
           }
         }, {
-          "y": 71.09,
+          "y": 1602,
           "date": "Sept 20 - Oct 20, 2014",
           "name": "Oct 20",
           "link": "cost-march",
           "cimonth": "october",
-          "temp": "52",
+          "temp": "29",
           "insight": {
             "disposition": "positive",
-            "message": "$9 less than previous year."
+            "message": "Rs.43 less than previous year."
           }
         }, {
-          "y": 85.41,
+          "y": 1784,
           "date": "Oct 21 - Nov 22, 2014",
           "name": "Nov 22",
           "link": "cost-april",
           "cimonth": "november",
-          "temp": "40",
+          "temp": "27.5",
           "insight": {
             "disposition": "positive",
             "message": "You spent about the same as previous year."
           }
         }, {
-          "y": 98.34,
+          "y": 1906,
           "date": "Nov 23 - Dec 20, 2014",
           "name": "Dec 20",
           "link": "cost-may",
           "cimonth": "december",
-          "temp": "27",
+          "temp": "26",
           "insight": {
             "disposition": "positive",
             "message": "You spent about the same as previous year."
           }
         }, {
-          "y": 81.12,
+          "y": 1703,
           "date": "Dec 21 - Jan 19, 2015",
           "name": "Jan 19",
           "link": "cost-june",
           "cimonth": "january",
-          "temp": "23",
+          "temp": "24",
           "insight": {
             "disposition": "negative",
-            "message": "$5 more than last year. Weather was not a factor."
+            "message": "Rs.27 more than last year. Weather was not a factor."
           }
         }, {
-          "y": 74.08,
+          "y": 1658,
           "date": "Jan 20 - Feb 20, 2015",
           "name": "Feb 20",
           "link": "cost-july",
           "cimonth": "february",
-          "temp": "27",
+          "temp": "24.5",
           "insight": {
             "disposition": "negative",
-            "message": "Cooling cost you $12 compared to $10 the previous year."
+            "message": "Cooling cost you Rs.458 compared to Rs.373 the previous year."
           }
         }, {
-          "y": 60.01,
+          "y": 1514,
           "date": "Feb 21 - Mar 20, 2015",
           "name": "Mar 20",
           "link": "cost-august",
           "cimonth": "march",
-          "temp": "37",
+          "temp": "26.5",
           "insight": {
             "disposition": "positive",
             "message": "You spent about the same as previous year."
           }
         }, {
-          "y": 32.91,
+          "y": 849,
           "date": "Mar 21 - Apr 20, 2015",
           "name": "Apr 20",
           "link": "cost-september",
           "cimonth": "april",
-          "temp": "49",
+          "temp": "29.5",
           "insight": {
             "disposition": "positive",
-            "message": "$3 less than previous year."
+            "message": "Rs.36 less than previous year."
           }
         }, {
-          "y": 13.83,
+          "y": 548,
           "date": "Apr 21 - May 20, 2015",
           "name": "May 20",
           "link": "cost-october",
           "cimonth": "may",
-          "temp": "59",
+          "temp": "31",
           "insight": {
             "disposition": "positive",
-            "message": "$8 less than previous year."
+            "message": "$92 less than previous year."
           }
         }, {
-          "y": -15,
+          "y": -107,
           "date": "May 21 - Jun 20, 2015",
           "name": "Jun 20",
           "link": "cost-november",
           "cimonth": "june",
-          "temp": "68",
+          "temp": "28",
           "insight": {
             "disposition": "positive",
             "message": "You spent about the same as previous year."
           }
         }, {
-          "y": 10.08,
+          "y": 458,
           "date": "Jun 21 - Jul 19, 2015",
           "name": "Jul 19",
           "link": "cost-december",
           "cimonth": "july",
-          "temp": "74",
+          "temp": "27",
           "insight": {
             "disposition": "positive",
-            "message": "$5 less than previous year."
+            "message": "Rs.52 less than previous year."
           }
         }, {
-          "y": 35.79,
+          "y": 937,
           "date": "Jul 20, 2014 - Aug 20, 2015",
           "name": "Aug 20",
           "link": "cost-january",
           "cimonth": "august",
-          "temp": "72",
+          "temp": "26.5",
           "insight": {
             "disposition": "negative",
-            "message": "Heating cost you $6 more than last year."
+            "message": "Cooling cost you Rs.106 more than last year."
           }
         }, {
-          "y": 60.63,
+          "y": 1562,
           "date": "Aug 21 - Sep 19, 2015",
           "name": "Sep 19",
           "link": "cost-february",
           "cimonth": "september",
-          "temp": "64",
+          "temp": "28",
           "insight": {
             "disposition": "negative",
-            "message": "Heating cost you $20 more than last year."
+            "message": "Cooling cost you Rs.57 more than last year."
           }
         }]
       }, {
         "name": "weather",
-        "data": [64, 52, 40, 27, 23, 27, 37, 49, 59, 68, 74, 72, 64]
+        "data": [28, 29, 27.5, 26, 24, 24.5, 26.5, 29.5, 31, 28, 27, 26.5, 28]
       }]
     }
   }, {}],
@@ -1990,122 +1990,122 @@
       "series": [{
         "name": "costs",
         "data": [{
-          "y": 0.01,
+          "y": 2,
           "date": "12:00am - 12:59am",
           "name": "12am",
           "temp": "15"
         }, {
-          "y": 0.02,
+          "y": 2,
           "date": "1:00am - 1:59am",
           "name": null,
           "temp": "16"
         }, {
-          "y": 0.01,
+          "y": 2,
           "date": "2:00am - 2:59am",
           "name": null,
           "temp": "16"
         }, {
-          "y": 0.02,
+          "y": 2,
           "date": "3:00am - 3:59am",
           "name": null,
           "temp": "17"
         }, {
-          "y": 0.01,
+          "y": 2,
           "date": "4:00am - 4:59am",
           "name": null,
           "temp": "18"
         }, {
-          "y": 0.02,
+          "y": 2,
           "date": "5:00am - 5:59am",
           "name": null,
           "temp": "19"
         }, {
-          "y": 0.05,
+          "y": 4,
           "date": "6:00am - 6:59am",
           "name": "6am",
           "temp": "22"
         }, {
-          "y": 0.06,
+          "y": 9,
           "date": "7:00am - 7:59am",
           "name": null,
           "temp": "24"
         }, {
-          "y": 0.09,
+          "y": 11,
           "date": "8:00am - 8:59am",
           "name": null,
           "temp": "24"
         }, {
-          "y": 0.40,
+          "y": 7,
           "date": "9:00am - 9:59am",
           "name": null,
           "temp": "26"
         }, {
-          "y": 0.51,
+          "y": 8,
           "date": "10:00am - 10:59am",
           "name": null,
           "temp": "30"
         }, {
-          "y": 0.08,
+          "y": 8,
           "date": "11:00am - 11:59am",
           "name": null,
           "temp": "32"
         }, {
-          "y": 0.02,
+          "y": 9,
           "date": "12:00pm - 12:59pm",
           "name": "Noon",
           "temp": "35"
         }, {
-          "y": 0.01,
+          "y": 11,
           "date": "1:00pm - 1:59pm",
           "name": null,
           "temp": "37"
         }, {
-          "y": 0.02,
+          "y": 15,
           "date": "2:00pm - 2:59pm",
           "name": null,
           "temp": "36"
         }, {
-          "y": 0.25,
+          "y": 12,
           "date": "3:00pm - 3:59pm",
           "name": null,
           "temp": "25"
         }, {
-          "y": 0.67,
+          "y": 11,
           "date": "4:00pm - 4:59pm",
           "name": null,
           "temp": "20"
         }, {
-          "y": 0.51,
+          "y": 11,
           "date": "5:00pm - 5:59pm",
           "name": null,
           "temp": "20"
         }, {
-          "y": 1.06,
+          "y": 7,
           "date": "6:00pm - 6:59pm",
           "name": "6pm",
           "temp": "20"
         }, {
-          "y": 1.71,
+          "y": 7,
           "date": "7:00pm - 7:59pm",
           "name": null,
           "temp": "19"
         }, {
-          "y": 1.58,
+          "y": 8,
           "date": "8:00pm - 8:59pm",
           "name": null,
           "temp": "19"
         }, {
-          "y": 0.76,
+          "y": 8,
           "date": "9:00pm - 9:59pm",
           "name": null,
           "temp": "17"
         }, {
-          "y": 0.25,
+          "y": 5,
           "date": "10:00pm - 10:59pm",
           "name": null,
           "temp": "14"
         }, {
-          "y": 0.13,
+          "y": 2,
           "date": "11:00pm - 11:59pm",
           "name": "11pm",
           "temp": "13"
@@ -2120,189 +2120,189 @@
       "series": [{
         "name": "costs",
         "data": [{
-          "y": 1.56,
+          "y": 62,
           "date": "Wednesday, January 21",
-          "temp": 36,
+          "temp": 30,
           "name": "Wed 21",
           "link": "cost-day"
         }, {
-          "y": 1.02,
+          "y": 64,
           "date": "Thursday, January 22",
-          "temp": 37,
+          "temp": 31,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 0.22,
+          "y": 67,
           "date": "Friday, January 23",
-          "temp": 36,
+          "temp": 32,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 0.41,
+          "y": 65,
           "date": "Saturday, January 24",
-          "temp": 38,
+          "temp": 32,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 1.09,
+          "y": 60,
           "date": "Sunday, January 25",
-          "temp": 40,
+          "temp": 30,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 1.34,
+          "y": 51,
           "date": "Monday, January 26",
-          "temp": 41,
+          "temp": 29,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 2.12,
+          "y": 52,
           "date": "Tuesday, January 27",
-          "temp": 39,
+          "temp": 29,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 3.41,
+          "y": 49,
           "date": "Wednesday, January 28",
-          "temp": 39,
+          "temp": 28,
           "name": "Wed 28",
           "link": "cost-day"
         }, {
-          "y": 2.36,
+          "y": 45,
           "date": "Thursday, January 29",
-          "temp": 37,
+          "temp": 28,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 1.43,
+          "y": 42,
           "date": "Friday, January 30",
-          "temp": 38,
+          "temp": 27,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 1,
+          "y": 20,
           "date": "Saturday, January 31",
-          "temp": 40,
+          "temp": 27,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 1.09,
+          "y": 45,
           "date": "Sunday, February 1",
-          "temp": 35,
+          "temp": 26,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 7.23,
+          "y": 40,
           "date": "Monday, February 2",
           "temp": 25,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 4.34,
+          "y": 47,
           "date": "Tuesday, February 3",
           "temp": 27,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 3.45,
+          "y": 54,
           "date": "Wednesday, February 4",
-          "temp": 41,
+          "temp": 30,
           "name": "Wed 4",
           "link": "cost-day"
         }, {
-          "y": 4.43,
+          "y": 40,
           "date": "Thursday, February 5",
-          "temp": 39,
+          "temp": 27,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 2.32,
+          "y": 38,
           "date": "Friday, February 6",
-          "temp": 38,
+          "temp": 26,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 3.21,
+          "y": 37,
           "date": "Saturday, February 7",
-          "temp": 37,
+          "temp": 24,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 2.12,
+          "y": 34,
           "date": "Sunday, February 8",
-          "temp": 38,
+          "temp": 24,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 1.74,
+          "y": 32,
           "date": "Monday, February 9",
-          "temp": 36,
+          "temp": 24,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 1.98,
+          "y": 29,
           "date": "Tuesday, February 10",
-          "temp": 30,
+          "temp": 23,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 4.86,
+          "y": 31,
           "date": "Wednesday, February 11",
           "temp": 24,
           "name": "Wed 11",
           "link": "cost-day"
         }, {
-          "y": 5.89,
+          "y": 30,
           "date": "Thursday, February 12",
+          "temp": 22,
+          "name": null,
+          "link": "cost-day"
+        }, {
+          "y": 31,
+          "date": "Friday, February 13",
+          "temp": 22,
+          "name": null,
+          "link": "cost-day"
+        }, {
+          "y": 28,
+          "date": "Saturday, February 14",
+          "temp": 21,
+          "name": null,
+          "link": "cost-day"
+        }, {
+          "y": 28,
+          "date": "Sunday, February 15",
+          "temp": 21,
+          "name": null,
+          "link": "cost-day"
+        }, {
+          "y": 25,
+          "date": "Monday, February 16",
           "temp": 19,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 9.36,
-          "date": "Friday, February 13",
-          "temp": 15,
-          "name": null,
-          "link": "cost-day"
-        }, {
-          "y": 14.25,
-          "date": "Saturday, February 14",
-          "temp": 10,
-          "name": null,
-          "link": "cost-day"
-        }, {
-          "y": 10.85,
-          "date": "Sunday, February 15",
-          "temp": 13,
-          "name": null,
-          "link": "cost-day"
-        }, {
-          "y": 4,
-          "date": "Monday, February 16",
-          "temp": 14,
-          "name": null,
-          "link": "cost-day"
-        }, {
-          "y": 4.36,
+          "y": 24,
           "date": "Tuesday, February 17",
           "temp": 19,
           "name": null,
           "link": "cost-day"
         }, {
-          "y": 1,
+          "y": 26,
           "date": "Wednesday, February 18",
-          "temp": 16,
+          "temp": 20,
           "name": "Wed 18",
           "link": "cost-day"
         }, {
-          "y": 2.94,
+          "y": 31,
           "date": "Thursday, February 19",
-          "temp": 12,
+          "temp": 21,
           "name": null,
           "link": "cost-day"
         }]
       }, {
         "name": "weather",
-        "data": [64, 52, 40, 27, 23, 27, 37, 49, 59, 68, 74, 72, 64]
+        "data": [28, 29, 27.5, 26, 24, 24.5, 26.5, 29.5, 31, 28, 27, 26.5, 28]
       }]
     }
   }, {}],
@@ -3208,8 +3208,8 @@
 
                 var toolTipInfo = {
                   HEADER: (insight) ? '<div class="' + ci_header_tool + '"><svg class="icon" viewBox="0 0 80 80"><use xlink:href="#' + insightIcon + '"></use></svg>' + insight.message + '</div>' : null,
-                  YOU_COSTS: '$' + this.points[0].point.y.toFixed($scope.chartDetails.decimals),
-                  WEATHER: Math.round(this.points[1].point.y) + '°F',
+                  YOU_COSTS: 'Rs.' + this.points[0].point.y.toFixed($scope.chartDetails.decimals),
+                  WEATHER: Math.round(this.points[1].point.y) + '°C',
                   tooltipLink: ($scope.chartDetails.toolTipLinkText) ? '<div class="tooltip-link"><a>' + $scope.chartDetails.toolTipLinkText + '</a></div>' : null
                 };
                 var tooltip = _.template('<%= HEADER %><div><div class="tooltip-series-row"><div class="tooltip-left"><%= YOU_COSTS %></div><div class="tooltip-right"><%= WEATHER %></div></div><%= tooltipLink %>', toolTipInfo);
@@ -3229,11 +3229,11 @@
               labels: {
                 formatter: function() {
                   if (this.isFirst) {
-                    return '$' + this.value;
+                    return 'Rs.' + this.value;
                   } else {
                     var x = this.value,
                       y = x.toFixed($scope.chartDetails.decimals);
-                    return '$' + y;
+                    return 'Rs.' + y;
                   }
                 }
               }
@@ -3250,7 +3250,7 @@
               type: 'column',
               data: $scope.chartData.series[0].data
             }, {
-              name: 'Average Outdoor Temp (°F)',
+              name: 'Average Outdoor Temp (°C)',
               data: $scope.weather,
               type: 'line',
               color: '#990099',

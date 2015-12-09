@@ -99,6 +99,19 @@
                          chart-data="costYear"
                          chart-details="{
                                 toolTipLinkText: 'View each day',
+                                max: 2000,
+                                interval: 400,
+                                decimals: 0
+                            }"
+                         weather="weatherYear"
+                         change-parent-chart="changeChartFromWithin(chart)">
+                     </div>
+                     <!--orig
+					<div class="chart-inner"
+                         op-cost-chart
+                         chart-data="costYear"
+                         chart-details="{
+                                toolTipLinkText: 'View each day',
                                 max: 100,
                                 interval: 20,
                                 decimals: 0
@@ -106,6 +119,7 @@
                          weather="weatherYear"
                          change-parent-chart="changeChartFromWithin(chart)">
                      </div>
+					-->
                 </div>
 
 
@@ -359,14 +373,29 @@
                              chart-details="{
                                     toolTipLinkText: 'View each hour',
                                     steps: 7,
+                                    max: 100,
+                                    interval: 25,
+                                    decimals: 0
+                                }"
+                             change-parent-chart="changeChartFromWithin(chart)">
+                         </div>
+                         <!-- orig
+                        <div class="chart-inner"
+                             op-cost-chart
+                             chart-data="costFebruary"
+                             weather="weatherFebruary"
+                             chart-details="{
+                                    toolTipLinkText: 'View each hour',
+                                    steps: 7,
                                     max: 20,
                                     interval: 5,
                                     decimals: 0
                                 }"
                              change-parent-chart="changeChartFromWithin(chart)">
                          </div>
+                         -->
                     </div>
-
+                    	
 
 
 
@@ -819,6 +848,20 @@
                          chart-data="costDay"
                          chart-details="{
                                 steps: 6,
+                                max: 10,
+                                interval: 2,
+                                decimals: 0,
+                                drilldown: false
+                            }"
+                         weather="weatherDay"
+                         change-parent-chart="changeChartFromWithin(chart)">
+                     </div>
+                     <!-- orig
+                     <div class="chart-inner"
+                         op-cost-chart
+                         chart-data="costDay"
+                         chart-details="{
+                                steps: 6,
                                 max: 2,
                                 interval: 0.5,
                                 decimals: 0,
@@ -827,6 +870,7 @@
                          weather="weatherDay"
                          change-parent-chart="changeChartFromWithin(chart)">
                      </div>
+                     -->
                 </div>
 
 
