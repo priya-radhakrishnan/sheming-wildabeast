@@ -36,7 +36,7 @@ switch(opco) {
         break;
 	default:
 		$('#main_slider > li:eq(2) > div > p').text("Open for Illinos Customers");
-		$('.EX_copyright').text("© 2015 Commonwealth Edison Company All Rights Reserved.");
+		$('.EX_copyright').text("© 2016 UtilityCo Energy Company All Rights Reserved.");
 
     }
 
