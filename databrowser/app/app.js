@@ -3227,6 +3227,26 @@
               max: $scope.chartDetails.max,
               tickInterval: $scope.chartDetails.interval,
               labels: {
+                //PR edit : new
+                formatter: function() {
+                 if (this.isFirst) {
+                    if (this.value>=0){
+                      var x = this.value,
+                      z = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");return 'Rs.' + z;
+                    } else {
+                      var x = this.value,
+                      y = x * -1;
+                      z = y.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                      return '- Rs.' + z;
+                    }
+                 } else {
+                    var x = this.value,
+                    y = x.toFixed($scope.chartDetails.decimals);
+                    z = y.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    return 'Rs.' + z;
+                 }
+               }
+               /* PR edit - orig
                 formatter: function() {
                   if (this.isFirst) {
                     return 'Rs.' + this.value;
@@ -3236,6 +3256,7 @@
                     return 'Rs.' + y;
                   }
                 }
+                */
               }
             }, {
               min: -10,
