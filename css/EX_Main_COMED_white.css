@@ -158,7 +158,7 @@ button:hover {
   padding-bottom: 0px;
 }
 .ms-siteicon-a {
-  // max-width: 205px;
+  //max-width: 205px;
   max-width: 236px;
 }
 /*=====NOTIFICATION BAR=======*/
@@ -1576,8 +1576,10 @@ body,
     margin: 3px 0 0 25px;
   }
   #DeltaSiteLogo a {
-	  // background: url("../assets-comed-scrape/EX_logo_COMED_W.png");
+	  //background: url("../assets-comed-scrape/EX_logo_COMED_W.png");
     background: url("../assets-comed-scrape/UtilityCoLogo.png");
+    //height: 73px;
+    //width: 335px;
     height: 53px;
     width: 236px;
     max-height: none;
