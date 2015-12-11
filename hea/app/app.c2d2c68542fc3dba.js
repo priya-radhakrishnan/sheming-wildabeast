@@ -2485,6 +2485,24 @@ module.exports=[
         id: "temp-when-cold",
         selections: [
             {
+                text: "17°C or lower"
+            }, {
+                text: "18 - 19°C"
+            }, {
+                text: "20 - 22°C"
+            }, {
+                text: "22 - 23°C"
+            }, {
+                text: "24°C or higher"
+            }, {
+                text: "Don't have a thermostat"
+            }
+        /*
+        title: "In the winter, where do you set your thermostat when you're home?",
+        type: "dropdown",
+        id: "temp-when-cold",
+        selections: [
+            {
                 text: "63°F or lower"
             }, {
                 text: "64 - 66°F"
@@ -2499,6 +2517,7 @@ module.exports=[
             }, {
                 text: "Don't have a thermostat"
             }
+            */
         ],
         answer: null,
         status: "unanswered",
@@ -2506,7 +2525,9 @@ module.exports=[
         trim: false,
         unsureOption: true,
         submitStatus: ""
-    }, {
+    }, 
+/*
+    {
         code: "S",
         num: 11,
         title: "How many fireplaces do you have?",
@@ -2530,7 +2551,9 @@ module.exports=[
         trim: false,
         noImages: true,
         submitStatus: ""
-    }, {
+    },
+    */
+     {
         code: "S",
         num: 13,
         title: "Which of the following have air leaks in your home?",
@@ -2665,6 +2688,26 @@ module.exports=[
     }, {
         code: "S",
         num: 19,
+        title: "When you're home in the summer, what temperature do your set your AC to?",
+        type: "dropdown",
+        id: "cooling-temp",
+        selections: [
+            {
+                text: "20°C or lower"
+            }, {
+                text: "21°C"
+            }, {
+                text: "22 - 23°C"
+            }, {
+                text: "24 - 25°C"
+            }, {
+                text: "26 - 27°C"
+            }, {
+                text: "28°C or higher"
+            }, {
+                text: "Don't have a thermostat"
+            }
+            /* PR edit : orig
         title: "When you're home in the summer, where do you set your thermostat?",
         type: "dropdown",
         id: "cooling-temp",
@@ -2684,6 +2727,8 @@ module.exports=[
             }, {
                 text: "Don't have a thermostat"
             }
+             */
+
         ],
         answer: null,
         status: "unanswered",
@@ -3169,6 +3214,24 @@ module.exports=[
         id: "pool-temperature",
         selections: [
             {
+                text: "26°C or lower"
+            }, {
+                text: "27 - 28°C"
+            }, {
+                text: "29 - 30°C"
+            }, {
+                text: "31 - 32°C"
+            }, {
+                text: "33°C or higher"
+            }, {
+                text: "Pool is never heated"
+            }
+        /*
+        title: "What do set your pool temperature to?",
+        type: "dropdown",
+        id: "pool-temperature",
+        selections: [
+            {
                 text: "82°F or lower"
             }, {
                 text: "83 - 84°F"
@@ -3180,7 +3243,8 @@ module.exports=[
                 text: "89°F or higher"
             }, {
                 text: "Pool is never heated"
-            }
+            } 
+            */
         ],
         answer: null,
         status: "unanswered",
